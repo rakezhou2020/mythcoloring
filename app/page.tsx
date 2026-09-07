@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://mythcoloring.com" },
+};
+
 const creatures = [
   { name: "Taotie", local: "饕餮", type: "Ancient Beast", tone: "ember" },
   { name: "Qiongqi", local: "穷奇", type: "Mythical Beast", tone: "ink" },
