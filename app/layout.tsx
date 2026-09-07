@@ -1,32 +1,41 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://mythcoloring.com"),
-  title: {
-    default: "Myth Coloring — Free Mythical Creature Coloring Pages",
-    template: "%s | Myth Coloring",
-  },
+  title: { default: "Myth Coloring", template: "%s | Myth Coloring" },
   description:
-    "Discover legendary creatures from China, Japan, and myths around the world with free printable coloring pages, color-by-number art, and creature lore.",
-  openGraph: {
-    title: "Myth Coloring",
-    description:
-      "Free mythical creature coloring pages, color-by-number art, and the stories behind every creature.",
-    url: "https://mythcoloring.com",
-    siteName: "Myth Coloring",
-    type: "website",
-  },
+    "Free mythical creature coloring pages and the stories behind them.",
 };
-
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
+        <header className="site-header wrap">
+          <Link className="brand" href="/" aria-label="Myth Coloring home">
+            <span className="brand-mark">MC</span>Myth Coloring
+          </Link>
+          <nav aria-label="Primary navigation">
+            <Link href="/coloring-pages/">Coloring Pages</Link>
+            <Link href="/themes/">Themes</Link>
+            <Link href="/creatures/">Creatures</Link>
+            <Link href="/about/">About</Link>
+          </nav>
+        </header>
+        <main id="main">{children}</main>
+        <footer className="footer wrap">
+          <Link className="brand" href="/">
+            Myth Coloring
+          </Link>
+          <p>Myths to discover. Creatures to color.</p>
+          <span>© 2026 Myth Coloring</span>
+        </footer>
+      </body>
     </html>
   );
 }

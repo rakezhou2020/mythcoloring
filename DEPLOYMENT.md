@@ -46,3 +46,15 @@ success for the latest `main` commit, then verify:
 
 `npm run dev` remains the local development command. The exported `out` folder
 can be served by a static HTTP server; `next start` does not serve static exports.
+
+## Content framework
+
+- Edit `data/coloring-pages.ts`, `data/themes.ts`, and `data/creatures.ts` to add content.
+- Only `status: "published"` entries are rendered. Dynamic theme and creature routes
+  use `generateStaticParams`, so drafts have no exported page or sitemap entry.
+- All current artwork is explicitly labeled as a placeholder. Replace null image
+  fields with local public asset paths when artwork is ready. Set `printImage` for
+  printing and `pdfUrl` for downloading; unavailable resources remain disabled.
+- Product fields support later theme, type, difficulty, and creature filtering.
+- Run `npm run build` and `node scripts/verify-export.mjs` before pushing.
+- Trailing-slash routes export to directory index files for Cloudflare Pages.
