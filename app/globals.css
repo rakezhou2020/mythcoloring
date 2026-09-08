@@ -508,11 +508,17 @@ p {
   overflow: hidden;
 }
 .print-dialog {
-  width: min(600px, calc(100% - 28px));
-  max-height: 90dvh;
-  padding: 24px;
+  position: fixed;
+  inset: 14px;
+  z-index: 2147483647;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: clamp(18px, 3vw, 40px);
   border: 1px solid var(--line);
-  border-radius: 15px;
+  border-radius: 20px;
   color: var(--ink);
   background: var(--white);
   overflow: auto;
@@ -719,7 +725,7 @@ p {
 /* Existing product preview: three views and a touch-friendly full-screen image. */
 .print-only { display: none; }
 .print-preload { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
-.screen-sheet { max-width: 350px; margin: 18px auto; }
+.screen-sheet { max-width: min(720px, 100%); margin: 18px auto; }
 .artwork-views, .zoom-controls { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
 .artwork-views button, .zoom-controls button { min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 20px; background: white; }
 .artwork-views button[aria-pressed="true"] { background: var(--ink); color: white; }
@@ -745,13 +751,13 @@ p {
 
 @media (max-width: 760px) {
   .print-dialog:not(.artwork-fullscreen) {
-    width: 100%;
-    height: 100dvh;
+    inset: 10px;
+    width: auto;
+    height: auto;
     max-height: none;
     margin: 0;
     padding: max(14px, env(safe-area-inset-top)) 12px max(14px, env(safe-area-inset-bottom));
-    border: 0;
-    border-radius: 0;
+    border-radius: 16px;
   }
   .dialog-toolbar {
     min-height: 34px;

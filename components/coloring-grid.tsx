@@ -6,7 +6,6 @@ import { ZoomArtwork } from "./zoom-artwork";
 export function ColoringGrid({ items }: { items: ColoringPage[] }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const [selected, setSelected] = useState<ColoringPage | null>(null);
-  const [ready, setReady] = useState(false);
   const [view, setView] = useState<"lineArtImage" | "colorGuideImage" | "finishedImage">("lineArtImage");
   const [expanded, setExpanded] = useState(false);
   const viewLabels = {
@@ -14,10 +13,9 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
     colorGuideImage: "Color",
     finishedImage: "Poster",
   } as const;
-  function open(item: ColoringPage, printing = false) {
+  function open(item: ColoringPage) {
     setSelected(item);
-    setReady(false);
-    setView(!printing && item.colorGuideImage ? "colorGuideImage" : "lineArtImage");
+    setView(item.colorGuideImage ? "colorGuideImage" : "lineArtImage");
     setExpanded(false);
     dialog.current?.showModal();
   }
@@ -47,7 +45,15 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
                 {item.difficulty}
               </p>
               <div className="card-actions">
-                <button onClick={() => open(item, true)}>Print</button>
+                {item.printPdf ? (
+                  <a href={item.printPdf} target="_blank" rel="noreferrer">
+                    Print
+                  </a>
+                ) : (
+                  <button disabled aria-label={item.title + " print unavailable"}>
+                    Print
+                  </button>
+                )}
                 {item.printPdf ? (
                   <a href={item.printPdf} download>
                     Download
@@ -80,16 +86,6 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
       >
         {selected && (
           <>
-            {selected.lineArtImage && (
-              <img
-                className="print-preload"
-                src={selected.lineArtImage}
-                alt=""
-                aria-hidden="true"
-                onLoad={() => setReady(true)}
-                onError={() => setReady(false)}
-              />
-            )}
             <div className="dialog-toolbar">
               <span>{viewLabels[view]}</span>
               {expanded && <button onClick={() => setExpanded(false)}>Exit full screen</button>}
@@ -122,8 +118,6 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
                   alt={selected.title + " printable coloring artwork"}
                   width={600}
                   height={750}
-                  onLoad={() => setReady(true)}
-                  onError={() => setReady(false)}
                 />
               ) : (
                 <Artwork name={selected.title} src={selected.lineArtImage} />
@@ -136,13 +130,20 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
                   ? "Printing always uses the clean black-and-white Line Art."
                   : "This is a layout sample. Printable artwork is being prepared."}
               </p>
-              <button
-                className="button primary"
-                disabled={!selected.lineArtImage || !ready}
-                onClick={() => window.print()}
-              >
-                Print this page
-              </button>
+              {selected.printPdf ? (
+                <a
+                  className="button primary"
+                  href={selected.printPdf}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Print this page
+                </a>
+              ) : (
+                <button className="button primary" disabled>
+                  Print unavailable
+                </button>
+              )}
             </div>
           </>
         )}
