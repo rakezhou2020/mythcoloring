@@ -25,15 +25,16 @@ export const creatures: Creature[] = [
     name: "White Ape",
     localName: "白猿",
     themeSlug: "shan-hai-jing",
-    origin: "Chinese myth-inspired coloring artwork.",
+    origin:
+      "The White Ape appears in the Southern Mountains section of the Shan Hai Jing, where Tangting Mountain is described as a place rich in yan trees, water jade, gold, and many white apes. The ancient text gives only a brief glimpse, but later Chinese storytelling transformed the white ape into something far more mysterious: a long-lived mountain spirit, a shapeshifter, and even a master of swordsmanship.",
     shortDescription:
-      "A white ape sits among mountains beneath a moonlit sky, carrying a flame-like mane and a branching crown.",
+      "High in the mountains lives the White Ape—an ancient creature whose legend grew from a fleeting line in the Shan Hai Jing into stories of hidden wisdom, transformation, and impossible swordplay.",
     appearance:
-      "White fur, a crown-like bare tree, feathered wings, green beads, and flowing vermilion fire make its silhouette distinct.",
+      "The Shan Hai Jing simply places white apes among the wild riches of Tangting Mountain, leaving their exact form to the imagination. Later tradition pictures the white ape as an unusually old and intelligent mountain being: pale-furred, swift, elusive, and close to the boundary between animal and immortal. Our artwork builds on that tradition, presenting it as a supernatural guardian of the high mountains rather than an ordinary ape.",
     legend:
-      "Its finished poster presents the ape as a quiet guardian within a mountain landscape.",
+      "One of the most famous later white-ape stories appears in the Wu Yue Chun Qiu. A legendary swordswoman of Yue was traveling north to meet the king when an old man stopped her on the road. He called himself Yuan Gong and asked to test her sword skill. The two fought using a bamboo branch as a weapon. The woman matched his attacks and struck back. In an instant, the mysterious old man sprang into a tree and transformed into a white ape before disappearing into the forest. That brief encounter became one of the classic images of the White Ape in Chinese legend: an ancient being hiding extraordinary skill behind an ordinary shape, appearing only long enough to test a worthy human before vanishing again into the mountains.",
     symbolism:
-      "The scene pairs stillness, wild mountain space, and a small bright flame.",
+      "The White Ape stands at the edge between wilderness and wisdom. In the Shan Hai Jing it belongs to a remote mountain world filled with strange animals, precious stone, and gold; in later legend it becomes a creature of transformation and hidden mastery. That combination makes the White Ape feel less like a monster to be defeated and more like a secret of the mountains—watchful, ancient, and never fully understood.",
     heroImage: "/products/winged-monkey/finished.jpg",
     featured: true,
     status: "published",
