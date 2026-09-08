@@ -16,7 +16,7 @@ export const creatures: Creature[] = [
       "Long ago, beside the Ganges River, the Nine-Colored Deer heard a man crying for help and pulled him from the water. The rescued man offered a reward, but the deer asked for only one thing: never reveal where it lived. Later, a queen dreamed of the extraordinary deer and longed to possess its beautiful hide. The king announced a rich reward for anyone who could lead him to it, and the man who owed the deer his life surrendered its secret. When the hunting party surrounded the deer, it did not flee in terror. Instead, it stood before the king and told him how the informer had once been saved from drowning. Moved by the deer's courage and compassion—and ashamed by the betrayal—the king abandoned the hunt and ordered that the deer be protected. In the famous Dunhuang mural, the story unfolds like an ancient picture scroll, beginning from both ends and drawing the viewer toward this final confrontation.",
     symbolism:
       "The Nine-Colored Deer endures because its legend is more than a story about a magical animal. It is a tale about kindness offered without price, the danger of greed, the weight of a promise, and the power of truth when violence seems inevitable. The deer answers betrayal not with revenge, but with dignity—and that is what makes the story feel legendary even after more than a thousand years.",
-    heroImage: "/products/nine-colored-deer/finished.png",
+    heroImage: "/products/nine-colored-deer/finished.jpg",
     featured: true,
     status: "published",
   },
@@ -34,7 +34,7 @@ export const creatures: Creature[] = [
       "Its finished poster presents the ape as a quiet guardian within a mountain landscape.",
     symbolism:
       "The scene pairs stillness, wild mountain space, and a small bright flame.",
-    heroImage: "/products/winged-monkey/finished.png",
+    heroImage: "/products/winged-monkey/finished.jpg",
     featured: true,
     status: "published",
   },
@@ -52,7 +52,7 @@ export const creatures: Creature[] = [
       "Its poster presents the armadillo as a calm traveler in a detailed garden landscape.",
     symbolism:
       "The art balances a protected shell with a gentle, living garden.",
-    heroImage: "/products/armadillo/finished.png",
+    heroImage: "/products/armadillo/finished.jpg",
     featured: true,
     status: "published",
   },
