@@ -61,7 +61,7 @@ const sampleColoringPages: ColoringPage[] = [
     finishedImage: null,
     printPdf: null,
     featured: true,
-    status: "published",
+    status: "draft",
   })),
 );
 

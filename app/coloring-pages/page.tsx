@@ -18,10 +18,7 @@ export default function Page() {
         </p>
       </header>
       <section aria-label="Coloring pages">
-        <p className="catalog-note">
-          Sample previews · Printable files are in preparation. All pages will
-          be free.
-        </p>
+        <p className="catalog-note">All printable pages are free.</p>
         <ColoringGrid items={publishedColoringPages} />
       </section>
     </div>

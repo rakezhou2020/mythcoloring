@@ -30,9 +30,7 @@ export default async function Page({ params }: Props) {
         <p>{t.shortDescription}</p>
       </header>
       <section aria-label={t.name + " coloring pages"}>
-        <p className="catalog-note">
-          Sample previews · Printable artwork is being prepared.
-        </p>
+        <p className="catalog-note">Printable artwork is available below.</p>
         <ColoringGrid
           items={publishedColoringPages.filter((p) => p.themeSlug === slug)}
         />
