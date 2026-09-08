@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "../components/json-ld";
+import { siteName, siteUrl } from "../lib/seo";
 import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://mythcoloring.com"),
@@ -17,6 +19,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                name: siteName,
+                url: siteUrl,
+              },
+              {
+                "@type": "Organization",
+                name: siteName,
+                url: siteUrl,
+                logo: siteUrl + "/brand-mark.png",
+              },
+            ],
+          }}
+        />
         <a className="skip-link" href="#main">
           Skip to content
         </a>

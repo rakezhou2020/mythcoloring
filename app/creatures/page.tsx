@@ -3,8 +3,8 @@ import { publishedCreatures } from "../../data/creatures";
 import { Artwork } from "../../components/artwork";
 import { pageMetadata } from "../../lib/seo";
 export const metadata = pageMetadata(
-  "Mythical Creatures and Their Stories",
-  "Meet the creatures behind our coloring pages through introductory creature notes.",
+  "Mythical Creature Coloring Pages – Free Printables",
+  "Explore free printable mythical creature coloring pages, fantasy creature line art, and coloring inspiration from MythColoring.",
   "/creatures/",
 );
 export default function Page() {
@@ -12,10 +12,10 @@ export default function Page() {
     <div className="wrap page-content">
       <header className="page-heading">
         <p className="eyebrow">Stories behind the pages</p>
-        <h1>Mythical Creatures</h1>
+        <h1>Free Mythical Creature Coloring Pages</h1>
         <p>
-          A small, growing guide to the creatures that inspire our coloring
-          collection.
+          Explore free printable mythical and fantasy creature coloring pages,
+          then discover the stories and coloring inspiration behind each design.
         </p>
       </header>
       <div className="creature-grid">

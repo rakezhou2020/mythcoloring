@@ -2,22 +2,24 @@ export function Artwork({
   name,
   src,
   colored = false,
+  alt,
+  priority = false,
 }: {
   name: string;
   src?: string | null;
   colored?: boolean;
+  alt?: string;
+  priority?: boolean;
 }) {
   if (src)
     return (
       <img
         src={src}
-        alt={
-          name +
-          (colored ? " color reference" : " black-and-white coloring page")
-        }
+        alt={alt ?? name + (colored ? " coloring inspiration" : " free printable coloring page")}
         width={600}
         height={750}
-        loading="lazy"
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
       />
     );
   return (

@@ -6,3 +6,10 @@ out
 .DS_Store
 *.log
 .vercel
+.deploy-desktop-dialog
+.playwright-cli
+output/playwright
+test-results
+tsconfig.tsbuildinfo
+tmp-*.png
+mythcoloring-workflow/config/review-*

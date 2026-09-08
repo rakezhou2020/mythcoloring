@@ -30,20 +30,31 @@ for (const file of files) {
   assert.equal((html.match(/<h1(?:\s|>)/g) || []).length, 1, `H1: ${path}`);
   assert(html.includes('name="description" content="'), `Description: ${path}`);
   assert(html.includes(`rel="canonical" href="${origin + path}"`), `Canonical: ${path}`);
+  assert(!html.includes('name="robots" content="noindex"'), `Unexpected noindex: ${path}`);
 }
 const sitemap = readFileSync(join(root, 'sitemap.xml'), 'utf8');
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m => m[1]);
 assert.equal(urls.length, titles.size, 'Sitemap must cover public pages');
 for (const url of urls) assert(existsSync(resolve(new URL(url).pathname)), `Sitemap: ${url}`);
 assert(readFileSync(join(root, 'robots.txt'), 'utf8').includes(origin + '/sitemap.xml'));
-assert.equal((readFileSync(join(root, 'index.html'), 'utf8').match(/class="coloring-card"/g) || []).length, 8);
-const deerAssets = ['lineart.png', 'color-guide.png', 'finished.png', 'print.pdf'];
+assert(readFileSync(join(root, 'index.html'), 'utf8').includes('<h1>Free Printable Coloring Pages</h1>'));
+assert(readFileSync(join(root, 'index.html'), 'utf8').includes('"@type":"WebSite"'));
+assert(readFileSync(join(root, 'creatures', 'index.html'), 'utf8').includes('<h1>Free Mythical Creature Coloring Pages</h1>'));
+for (const creature of readdirSync(join(root, 'creatures'), { withFileTypes: true }).filter(entry => entry.isDirectory()).map(entry => entry.name)) {
+  const creatureHtml = readFileSync(join(root, 'creatures', creature, 'index.html'), 'utf8');
+  assert(creatureHtml.includes('"@type":"BreadcrumbList"'), `Breadcrumb schema: ${creature}`);
+  assert(creatureHtml.includes('"@type":"WebPage"'), `WebPage schema: ${creature}`);
+  assert(creatureHtml.includes('Related Coloring Pages'), `Related pages: ${creature}`);
+  assert(creatureHtml.includes('mythical creature coloring pages'), `Hub link: ${creature}`);
+}
+assert.equal((readFileSync(join(root, 'index.html'), 'utf8').match(/class="coloring-card"/g) || []).length, 4);
+const deerAssets = ['lineart.png', 'color-guide.jpg', 'finished.jpg', 'print.pdf'];
 for (const asset of deerAssets) assert(existsSync(join(root, 'products', 'nine-colored-deer', asset)), `Missing published deer asset: ${asset}`);
 const home = readFileSync(join(root, 'index.html'), 'utf8');
 assert.equal(home.match(/<article class="coloring-card" id="([^"]+)"/)?.[1], 'nine-colored-deer', 'Nine-Colored Deer must be the first homepage card');
 assert(home.includes('/products/nine-colored-deer/lineart.png'), 'Homepage hero must contain deer line art');
-assert(home.includes('/products/nine-colored-deer/finished.png'), 'Homepage hero must contain deer finished artwork');
+assert(home.includes('/products/nine-colored-deer/color-guide.jpg'), 'Homepage hero must contain deer color artwork');
 assert(readFileSync(join(root, 'creatures', 'nine-colored-deer', 'index.html'), 'utf8').includes('/products/nine-colored-deer/print.pdf'), 'Deer detail must provide its printable PDF');
 for (const draft of ['japanese-yokai', 'korean-folklore', 'greek-mythology', 'norse-mythology']) assert(!existsSync(join(root, 'themes', draft)));
 assert(readFileSync(join(root, '_redirects'), 'utf8').includes('https://www.mythcoloring.com/* https://mythcoloring.com/:splat 301'));
-console.log(`Verified ${titles.size} public pages, ${links} internal links/assets, sitemap, robots, 8 homepage cards, Nine-Colored Deer assets, and redirects.`);
+console.log(`Verified ${titles.size} public pages, ${links} internal links/assets, sitemap, robots, 4 homepage cards, Nine-Colored Deer assets, and redirects.`);
