@@ -9,6 +9,11 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
   const [ready, setReady] = useState(false);
   const [view, setView] = useState<"lineArtImage" | "colorGuideImage" | "finishedImage">("lineArtImage");
   const [expanded, setExpanded] = useState(false);
+  const viewLabels = {
+    lineArtImage: "Line Art",
+    colorGuideImage: "Color Guide",
+    finishedImage: "Finished",
+  } as const;
   function open(item: ColoringPage, printing = false) {
     setSelected(item);
     setReady(false);
@@ -32,6 +37,7 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
               <div className="art-layer color-layer" aria-hidden="true">
                 <Artwork name={item.title} src={item.finishedImage} colored />
               </div>
+              <span className="preview-hint" aria-hidden="true">View color guide</span>
             </button>
             <div className="card-body">
               <p className="eyebrow">{item.type}</p>
@@ -85,23 +91,27 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
               />
             )}
             <div className="dialog-toolbar">
-              <span>Coloring preview</span>
+              <span>{viewLabels[view]}</span>
               {expanded && <button onClick={() => setExpanded(false)}>Exit full screen</button>}
-              <button autoFocus onClick={() => dialog.current?.close()}>
-                Close ×
+              <button autoFocus onClick={() => dialog.current?.close()} aria-label="Close preview">
+                ×
               </button>
             </div>
             {selected.colorGuideImage && selected.finishedImage && (
               <div className="artwork-views screen-only" aria-label="Artwork views">
-                {([["lineArtImage", "Line Art"], ["colorGuideImage", "Color Guide"], ["finishedImage", "Finished Preview"]] as const).map(([key, label]) =>
+                {([["lineArtImage", "Line Art"], ["colorGuideImage", "Color Guide"], ["finishedImage", "Finished"]] as const).map(([key, label]) =>
                   <button key={key} aria-pressed={view === key} onClick={() => setView(key)}>{label}</button>)}
               </div>
             )}
             <div className="screen-sheet screen-only">
-              <h2>{selected.title}</h2>
               {selected[view] ? <ZoomArtwork key={view + String(expanded)} src={selected[view]!}
                 alt={selected.title + " " + view.replace("Image", "")} expanded={expanded}
                 onExpand={() => setExpanded(true)} /> : <Artwork name={selected.title} src={selected.lineArtImage} />}
+              {view === "finishedImage" && selected.amazonPosterUrl && (
+                <a className="button poster-link" href={selected.amazonPosterUrl} target="_blank" rel="noreferrer">
+                  Get This Artwork as a Poster
+                </a>
+              )}
             </div>
             <div className="print-sheet print-only">
               <h2>{selected.title}</h2>

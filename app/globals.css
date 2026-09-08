@@ -297,6 +297,21 @@ p {
   padding: 0;
   background: var(--white);
 }
+.preview-hint {
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  z-index: 2;
+  padding: 5px 7px;
+  border: 1px solid #fffdf8aa;
+  border-radius: 20px;
+  background: #1d211dc9;
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.1;
+  opacity: 0.84;
+}
 .art-layer {
   position: absolute;
   inset: 0;
@@ -473,6 +488,7 @@ p {
   border-radius: 15px;
   color: var(--ink);
   background: var(--white);
+  overflow: auto;
 }
 .print-dialog::backdrop {
   background: #1d211daa;
@@ -676,8 +692,7 @@ p {
 /* Existing product preview: three views and a touch-friendly full-screen image. */
 .print-only { display: none; }
 .print-preload { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
-.screen-sheet { max-width: 350px; margin: 22px auto; }
-.screen-sheet h2 { text-align: center; font-size: 28px; margin-bottom: 18px; }
+.screen-sheet { max-width: 350px; margin: 18px auto; }
 .artwork-views, .zoom-controls { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
 .artwork-views button, .zoom-controls button { min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 20px; background: white; }
 .artwork-views button[aria-pressed="true"] { background: var(--ink); color: white; }
@@ -685,6 +700,7 @@ p {
 .enlarge-artwork { display: block; padding: 0; border: 0; background: white; width: 100%; }
 .enlarge-artwork img { width: 100%; height: auto; }
 .enlarge-artwork span { display: block; font-size: 12px; margin: 12px; }
+.poster-link { width: 100%; margin-top: 14px; }
 .artwork-fullscreen { width: 100vw; height: 100dvh; max-width: none; max-height: none; inset: 0; margin: 0; border: 0; border-radius: 0; padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom)); }
 .artwork-fullscreen .screen-sheet { max-width: none; margin: 0; }
 .artwork-fullscreen .screen-sheet h2, .artwork-fullscreen .dialog-actions { display: none; }
@@ -698,4 +714,59 @@ p {
   dialog[open].artwork-fullscreen { height: auto; }
   .print-brand { text-align: center; font-size: 9pt; margin: 4mm 0 0; }
   .print-sheet img { max-height: 230mm; }
+}
+
+@media (max-width: 760px) {
+  .print-dialog:not(.artwork-fullscreen) {
+    width: 100%;
+    height: 100dvh;
+    max-height: none;
+    margin: 0;
+    padding: max(14px, env(safe-area-inset-top)) 12px max(14px, env(safe-area-inset-bottom));
+    border: 0;
+    border-radius: 0;
+  }
+  .dialog-toolbar {
+    min-height: 34px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .dialog-toolbar button {
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0 10px;
+    font-size: 24px;
+    line-height: 1;
+  }
+  .artwork-views {
+    flex-wrap: nowrap;
+    gap: 6px;
+    margin: 10px 0;
+  }
+  .artwork-views button {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 38px;
+    padding: 7px 4px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .screen-sheet {
+    max-width: none;
+    margin: 0 auto 14px;
+  }
+  .enlarge-artwork img {
+    width: 100%;
+    max-height: calc(100dvh - 235px);
+    object-fit: contain;
+  }
+  .enlarge-artwork span {
+    margin: 7px 0 0;
+    color: var(--muted);
+    font-size: 11px;
+  }
+  .dialog-actions p { margin: 10px 0; }
+  .dialog-actions .button { width: 100%; }
+  .artwork-fullscreen .zoom-viewport { height: calc(100dvh - 164px); }
+  .artwork-fullscreen .artwork-views { margin-bottom: 8px; }
 }

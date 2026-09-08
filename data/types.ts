@@ -34,6 +34,8 @@ export type ColoringPage = {
   colorGuideImage: string | null;
   finishedImage: string | null;
   printPdf: string | null;
+  /** Optional destination for a finished-art poster. It is intentionally absent from free-product cards. */
+  amazonPosterUrl?: string | null;
   featured: boolean;
   status: Status;
 };
