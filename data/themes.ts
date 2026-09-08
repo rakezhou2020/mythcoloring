@@ -7,7 +7,7 @@ export const themes: Theme[] = [
       "Explore strange beasts and legendary creatures from one of ancient China’s most fascinating mythological texts.",
     longDescription:
       "Our Shan Hai Jing collection brings a world of strange creatures into a quiet creative activity. Begin with a coloring page, then explore a short creature introduction if you would like to learn more. This introductory collection will grow as artwork and editorial notes are prepared.",
-    heroImage: null,
+    heroImage: "/themes/shan-hai-jing-banner.jpg",
     status: "published",
   },
 ];

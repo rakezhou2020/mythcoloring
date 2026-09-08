@@ -373,11 +373,34 @@ p {
   gap: 24px;
 }
 .theme-card {
-  display: block;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 340px;
   padding: 40px;
   border: 1px solid #435e4c40;
   border-radius: 16px;
   background: #e8e9df;
+  overflow: hidden;
+  isolation: isolate;
+}
+.theme-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(248, 245, 237, 0.95) 0%,
+    rgba(248, 245, 237, 0.86) 34%,
+    rgba(248, 245, 237, 0.28) 68%,
+    rgba(248, 245, 237, 0.08) 100%
+  );
+}
+.theme-card > :not(img) {
+  position: relative;
+  z-index: 2;
 }
 .theme-card h3 {
   font-size: 36px;
@@ -391,10 +414,12 @@ p {
   border-color: var(--jade);
 }
 .theme-card > img {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  aspect-ratio: 2/1;
-  margin-bottom: 24px;
 }
 .brand-story {
   text-align: center;
