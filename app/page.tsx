@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Artwork } from "../components/artwork";
 import { ColoringGrid } from "../components/coloring-grid";
 import { ThemeCards } from "../components/theme-cards";
-import { publishedColoringPages } from "../data/coloring-pages";
+import { homeHeroProduct, publishedColoringPages } from "../data/coloring-pages";
 import { pageMetadata } from "../lib/seo";
 export const metadata = pageMetadata(
   "Free Mythical Creature Coloring Pages",
@@ -10,7 +10,7 @@ export const metadata = pageMetadata(
   "/",
 );
 export default function Home() {
-  const hero = publishedColoringPages[0];
+  const hero = homeHeroProduct;
   return (
     <>
       <section className="hero wrap">
@@ -44,10 +44,10 @@ export default function Home() {
               →
             </span>
             <figure>
-              <Artwork name={hero.title} src={hero.colorImage} colored />
-              <figcaption>Color reference</figcaption>
+              <Artwork name={hero.title} src={hero.finishedImage} colored />
+              <figcaption>Finished artwork</figcaption>
             </figure>
-            <p>{hero.title} · Concept preview</p>
+            <p>{hero.title}</p>
           </div>
         )}
       </section>
@@ -62,8 +62,8 @@ export default function Home() {
           </Link>
         </div>
         <p className="catalog-note">
-          A first look at our collection. Sample previews are shown while
-          printable artwork is prepared.
+          Start with our first finished printable, then explore the growing
+          collection.
         </p>
         <ColoringGrid
           items={publishedColoringPages.filter((p) => p.featured).slice(0, 8)}

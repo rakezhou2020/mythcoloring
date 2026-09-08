@@ -1,0 +1,23 @@
+{
+  "slug": "nine-colored-deer",
+  "title": "Nine-Colored Deer Coloring Page",
+  "themeSlug": "shan-hai-jing",
+  "lineArtImage": "/products/nine-colored-deer/lineart.png",
+  "colorGuideImage": "/products/nine-colored-deer/color-guide.png",
+  "finishedImage": "/products/nine-colored-deer/finished.png",
+  "printPdf": "/products/nine-colored-deer/print.pdf",
+  "status": "draft",
+  "workflowVersion": 3,
+  "display": {
+    "card": "lineArtImage",
+    "hover": "finishedImage",
+    "detail": "colorGuideImage"
+  },
+  "quality": {
+    "status": "passed",
+    "unclassifiedRegions": 0,
+    "unexpectedWhitePixels": 0,
+    "coloredRegions": 84,
+    "intentionalWhiteRegions": 5
+  }
+}

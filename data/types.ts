@@ -31,9 +31,9 @@ export type ColoringPage = {
   difficulty: "Easy" | "Medium" | "Detailed";
   colorCount: number | null;
   lineArtImage: string | null;
-  colorImage: string | null;
-  pdfUrl: string | null;
-  printImage: string | null;
+  colorGuideImage: string | null;
+  finishedImage: string | null;
+  printPdf: string | null;
   featured: boolean;
   status: Status;
 };

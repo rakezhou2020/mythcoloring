@@ -673,3 +673,29 @@ p {
   body:has(dialog[open]) main *:not(dialog):not(dialog *):not(:has(dialog[open])) { display: none !important; }
   body:has(dialog[open]) main *:has(dialog[open]) { display: block; margin: 0; padding: 0; min-height: 0; }
 }
+/* Existing product preview: three views and a touch-friendly full-screen image. */
+.print-only { display: none; }
+.print-preload { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.screen-sheet { max-width: 350px; margin: 22px auto; }
+.screen-sheet h2 { text-align: center; font-size: 28px; margin-bottom: 18px; }
+.artwork-views, .zoom-controls { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
+.artwork-views button, .zoom-controls button { min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 20px; background: white; }
+.artwork-views button[aria-pressed="true"] { background: var(--ink); color: white; }
+.zoom-controls span { align-self: center; min-width: 52px; text-align: center; }
+.enlarge-artwork { display: block; padding: 0; border: 0; background: white; width: 100%; }
+.enlarge-artwork img { width: 100%; height: auto; }
+.enlarge-artwork span { display: block; font-size: 12px; margin: 12px; }
+.artwork-fullscreen { width: 100vw; height: 100dvh; max-width: none; max-height: none; inset: 0; margin: 0; border: 0; border-radius: 0; padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom)); }
+.artwork-fullscreen .screen-sheet { max-width: none; margin: 0; }
+.artwork-fullscreen .screen-sheet h2, .artwork-fullscreen .dialog-actions { display: none; }
+.zoom-viewport { height: calc(100dvh - 225px); min-height: 180px; width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; touch-action: none; cursor: grab; background: #eee; }
+.zoom-viewport:active { cursor: grabbing; }
+.zoom-viewport img { width: 100%; height: 100%; object-fit: contain; max-width: none; user-select: none; pointer-events: none; }
+@media print {
+  .screen-only, .zoom-artwork { display: none !important; }
+  .print-preload { display: none !important; }
+  .print-only { display: block !important; }
+  dialog[open].artwork-fullscreen { height: auto; }
+  .print-brand { text-align: center; font-size: 9pt; margin: 4mm 0 0; }
+  .print-sheet img { max-height: 230mm; }
+}

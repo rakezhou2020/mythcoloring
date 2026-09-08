@@ -2,13 +2,18 @@
 import { useRef, useState } from "react";
 import type { ColoringPage } from "../data/types";
 import { Artwork } from "./artwork";
+import { ZoomArtwork } from "./zoom-artwork";
 export function ColoringGrid({ items }: { items: ColoringPage[] }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const [selected, setSelected] = useState<ColoringPage | null>(null);
   const [ready, setReady] = useState(false);
-  function open(item: ColoringPage) {
+  const [view, setView] = useState<"lineArtImage" | "colorGuideImage" | "finishedImage">("lineArtImage");
+  const [expanded, setExpanded] = useState(false);
+  function open(item: ColoringPage, printing = false) {
     setSelected(item);
     setReady(false);
+    setView(!printing && item.colorGuideImage ? "colorGuideImage" : "lineArtImage");
+    setExpanded(false);
     dialog.current?.showModal();
   }
   return (
@@ -25,7 +30,7 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
                 <Artwork name={item.title} src={item.lineArtImage} />
               </div>
               <div className="art-layer color-layer" aria-hidden="true">
-                <Artwork name={item.title} src={item.colorImage} colored />
+                <Artwork name={item.title} src={item.finishedImage} colored />
               </div>
             </button>
             <div className="card-body">
@@ -36,9 +41,9 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
                 {item.difficulty}
               </p>
               <div className="card-actions">
-                <button onClick={() => open(item)}>Print</button>
-                {item.pdfUrl ? (
-                  <a href={item.pdfUrl} download>
+                <button onClick={() => open(item, true)}>Print</button>
+                {item.printPdf ? (
+                  <a href={item.printPdf} download>
                     Download
                   </a>
                 ) : (
@@ -50,7 +55,7 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
                   </button>
                 )}
               </div>
-              {!item.pdfUrl && (
+              {!item.printPdf && (
                 <p className="availability">
                   Sample preview · printable coming soon
                 </p>
@@ -61,7 +66,7 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
       </div>
       <dialog
         ref={dialog}
-        className="print-dialog"
+        className={"print-dialog" + (expanded ? " artwork-fullscreen" : "")}
         aria-label="Coloring page preview"
         onClick={(e) => {
           if (e.target === e.currentTarget) dialog.current?.close();
@@ -69,18 +74,41 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
       >
         {selected && (
           <>
+            {selected.lineArtImage && (
+              <img
+                className="print-preload"
+                src={selected.lineArtImage}
+                alt=""
+                aria-hidden="true"
+                onLoad={() => setReady(true)}
+                onError={() => setReady(false)}
+              />
+            )}
             <div className="dialog-toolbar">
               <span>Coloring preview</span>
+              {expanded && <button onClick={() => setExpanded(false)}>Exit full screen</button>}
               <button autoFocus onClick={() => dialog.current?.close()}>
                 Close ×
               </button>
             </div>
-            <div className="print-sheet">
+            {selected.colorGuideImage && selected.finishedImage && (
+              <div className="artwork-views screen-only" aria-label="Artwork views">
+                {([["lineArtImage", "Line Art"], ["colorGuideImage", "Color Guide"], ["finishedImage", "Finished Preview"]] as const).map(([key, label]) =>
+                  <button key={key} aria-pressed={view === key} onClick={() => setView(key)}>{label}</button>)}
+              </div>
+            )}
+            <div className="screen-sheet screen-only">
               <h2>{selected.title}</h2>
-              {selected.printImage ? (
+              {selected[view] ? <ZoomArtwork key={view + String(expanded)} src={selected[view]!}
+                alt={selected.title + " " + view.replace("Image", "")} expanded={expanded}
+                onExpand={() => setExpanded(true)} /> : <Artwork name={selected.title} src={selected.lineArtImage} />}
+            </div>
+            <div className="print-sheet print-only">
+              <h2>{selected.title}</h2>
+              {selected.lineArtImage ? (
                 <img
-                  key={selected.printImage}
-                  src={selected.printImage}
+                  key={selected.id}
+                  src={selected.lineArtImage}
                   alt={selected.title + " printable coloring artwork"}
                   width={600}
                   height={750}
@@ -90,16 +118,17 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
               ) : (
                 <Artwork name={selected.title} src={selected.lineArtImage} />
               )}
+              <p className="print-brand">Myth Coloring · mythcoloring.com</p>
             </div>
             <div className="dialog-actions">
               <p>
-                {selected.printImage
-                  ? "Print your coloring page on plain paper."
+                {selected.lineArtImage
+                  ? "Printing always uses the clean black-and-white Line Art."
                   : "This is a layout sample. Printable artwork is being prepared."}
               </p>
               <button
                 className="button primary"
-                disabled={!selected.printImage || !ready}
+                disabled={!selected.lineArtImage || !ready}
                 onClick={() => window.print()}
               >
                 Print this page

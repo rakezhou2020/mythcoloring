@@ -52,9 +52,11 @@ can be served by a static HTTP server; `next start` does not serve static export
 - Edit `data/coloring-pages.ts`, `data/themes.ts`, and `data/creatures.ts` to add content.
 - Only `status: "published"` entries are rendered. Dynamic theme and creature routes
   use `generateStaticParams`, so drafts have no exported page or sitemap entry.
-- All current artwork is explicitly labeled as a placeholder. Replace null image
-  fields with local public asset paths when artwork is ready. Set `printImage` for
-  printing and `pdfUrl` for downloading; unavailable resources remain disabled.
+- Product assets live at `public/products/[slug]/`. Set `lineArtImage`,
+  `finishedImage`, `colorGuideImage`, and `printPdf` from its reviewed product
+  metadata. Cards show line art, hover to finished artwork, open the color guide,
+  print only line art, and download only `printPdf`; unavailable resources remain
+  disabled.
 - Product fields support later theme, type, difficulty, and creature filtering.
 - Run `npm run build` and `node scripts/verify-export.mjs` before pushing.
 - Trailing-slash routes export to directory index files for Cloudflare Pages.
