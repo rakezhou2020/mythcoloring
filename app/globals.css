@@ -278,6 +278,8 @@ p {
   gap: 22px;
 }
 .coloring-card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--line);
   background: var(--white);
   border-radius: 13px;
@@ -326,6 +328,9 @@ p {
   transition: opacity 250ms ease;
 }
 .card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 21px 18px;
 }
 .card-body .eyebrow {
@@ -340,6 +345,7 @@ p {
 .card-actions {
   display: flex;
   gap: 8px;
+  margin-top: auto;
 }
 .card-actions > * {
   flex: 1;
