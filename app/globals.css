@@ -558,6 +558,27 @@ p {
   font-size: 13px;
   color: var(--muted);
 }
+@media (min-width: 761px) {
+  .print-dialog:not(.artwork-fullscreen) {
+    inset: 50% auto auto 50%;
+    width: min(760px, calc(100vw - 48px));
+    max-height: calc(100dvh - 48px);
+    transform: translate(-50%, -50%);
+  }
+  .print-dialog:not(.artwork-fullscreen) .screen-sheet {
+    max-width: 620px;
+  }
+  .print-dialog:not(.artwork-fullscreen) .enlarge-artwork img {
+    width: auto;
+    max-width: 100%;
+    max-height: calc(100dvh - 310px);
+    margin-inline: auto;
+    object-fit: contain;
+  }
+  .print-dialog:not(.artwork-fullscreen) .enlarge-artwork span {
+    margin-block: 8px;
+  }
+}
 @media (hover: hover) and (pointer: fine) {
   .preview-button:hover .color-layer {
     opacity: 1;
