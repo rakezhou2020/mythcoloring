@@ -41,18 +41,19 @@ export const creatures: Creature[] = [
   },
   {
     slug: "armadillo",
-    name: "Armadillo",
+    name: "Qiuyu",
     localName: "犰狳",
     themeSlug: "shan-hai-jing",
-    origin: "Myth-inspired coloring artwork.",
+    origin:
+      "The Qiuyu appears in the Eastern Mountains section of the Shan Hai Jing, on Mount Yu'e. The ancient text describes a strange beast living among the mountain's forests and waterways, and treats its appearance not as a simple animal sighting, but as an omen of disaster.",
     shortDescription:
-      "A small armored creature rests among curling leaves, golden flower heads, and ornamental forms.",
+      "A rabbit-bodied beast with a bird's beak, owl-like eyes, and a snake's tail, the Qiuyu hides behind stillness—and in the Shan Hai Jing, its arrival foretells swarms of locusts and ruin in the fields.",
     appearance:
-      "Its long tail, layered dark shell, tall ears, and plant-filled setting make it easy to recognize.",
+      "The Qiuyu is one of the Shan Hai Jing's unsettling hybrid creatures. It is said to have the body of a rabbit, the beak of a bird, the eyes of an owl, and the tail of a snake. When it encounters people, it lies motionless as if asleep or dead. Even its cry is uncanny: the creature is said to call out its own name.",
     legend:
-      "Its poster presents the armadillo as a calm traveler in a detailed garden landscape.",
+      "The Shan Hai Jing gives the Qiuyu only a few lines, but they are enough to make it memorable. Travelers who reached Mount Yu'e were warned of a creature that did not charge, roar, or flee. Instead, it became completely still at the sight of a person. That eerie stillness was only part of the warning. Wherever the Qiuyu appeared, locusts were said to follow, descending on the land and devastating crops. In a world where harvests meant survival, this made the creature far more frightening than a predator. It was an omen that the landscape itself was about to turn hostile.",
     symbolism:
-      "The art balances a protected shell with a gentle, living garden.",
+      "The Qiuyu embodies a recurring idea in the Shan Hai Jing: strange creatures are often signs that the balance of the world is changing. Its mixed animal features make it feel unnatural, while its motionless response to humans gives it an almost ghostlike presence. Most of all, its connection with locust plague turns it into a symbol of anxiety about famine, failed harvests, and forces of nature that people could neither predict nor control.",
     heroImage: "/products/armadillo/finished.jpg",
     featured: true,
     status: "published",
