@@ -21,20 +21,38 @@ export const creatures: Creature[] = [
     status: "published",
   },
   {
-    slug: "nine-tailed-fox",
-    name: "Nine-Tailed Fox",
-    localName: "九尾狐",
+    slug: "white-ape",
+    name: "White Ape",
+    localName: "白猿",
     themeSlug: "shan-hai-jing",
-    origin: "Chinese mythology.",
+    origin: "Chinese myth-inspired coloring artwork.",
     shortDescription:
-      "A fox with nine tails, imagined here as a starting point for coloring.",
+      "A white ape sits among mountains beneath a moonlit sky, carrying a flame-like mane and a branching crown.",
     appearance:
-      "Nine flowing tails give this creature a distinctive silhouette.",
+      "White fur, a crown-like bare tree, feathered wings, green beads, and flowing vermilion fire make its silhouette distinct.",
     legend:
-      "Detailed story notes are being prepared for this introductory creature entry.",
+      "Its finished poster presents the ape as a quiet guardian within a mountain landscape.",
     symbolism:
-      "An expanded editorial introduction will explore how its meanings vary across stories.",
-    heroImage: null,
+      "The scene pairs stillness, wild mountain space, and a small bright flame.",
+    heroImage: "/products/winged-monkey/finished.png",
+    featured: true,
+    status: "published",
+  },
+  {
+    slug: "armadillo",
+    name: "Armadillo",
+    localName: "犰狳",
+    themeSlug: "shan-hai-jing",
+    origin: "Myth-inspired coloring artwork.",
+    shortDescription:
+      "A small armored creature rests among curling leaves, golden flower heads, and ornamental forms.",
+    appearance:
+      "Its long tail, layered dark shell, tall ears, and plant-filled setting make it easy to recognize.",
+    legend:
+      "Its poster presents the armadillo as a calm traveler in a detailed garden landscape.",
+    symbolism:
+      "The art balances a protected shell with a gentle, living garden.",
+    heroImage: "/products/armadillo/finished.png",
     featured: true,
     status: "published",
   },

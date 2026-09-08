@@ -1,0 +1,781 @@
+{
+  "version": 3,
+  "size": [
+    2100,
+    2970
+  ],
+  "lineart_sha256": "e6df37ca4ebb7272ab9807eb6a2a92eb236341176c13cbe402106bc9fc3d4994",
+  "palette": [
+    {
+      "id": "cream",
+      "name": "Cream",
+      "hex": "#F7E6B5"
+    },
+    {
+      "id": "gold",
+      "name": "Yellow",
+      "hex": "#F4CE4E"
+    },
+    {
+      "id": "coral",
+      "name": "Coral red",
+      "hex": "#E86D62"
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "hex": "#F1A44E"
+    },
+    {
+      "id": "green",
+      "name": "Leaf green",
+      "hex": "#91BC70"
+    },
+    {
+      "id": "teal",
+      "name": "Teal",
+      "hex": "#58ADA4"
+    },
+    {
+      "id": "blue",
+      "name": "Sky blue",
+      "hex": "#83BDE2"
+    },
+    {
+      "id": "purple",
+      "name": "Lavender",
+      "hex": "#AD96C9"
+    },
+    {
+      "id": "pink",
+      "name": "Pink",
+      "hex": "#EFA7BD"
+    }
+  ],
+  "guide_layout": {
+    "art_band": [
+      150,
+      2630
+    ],
+    "heading_y": 80,
+    "note_y": 2674,
+    "palette_y": 2735
+  },
+  "regions": [
+    {
+      "seed": [
+        1153,
+        304
+      ],
+      "expected_area": 10530,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        839,
+        543
+      ],
+      "expected_area": 6169,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1372,
+        1655
+      ],
+      "expected_area": 500420,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        645,
+        611
+      ],
+      "expected_area": 6565,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        728,
+        704
+      ],
+      "expected_area": 1922,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        732,
+        1206
+      ],
+      "expected_area": 1849,
+      "color": "green"
+    },
+    {
+      "seed": [
+        822,
+        1349
+      ],
+      "expected_area": 12428,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        1226,
+        1188
+      ],
+      "expected_area": 955,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1159,
+        1211
+      ],
+      "expected_area": 3599,
+      "color": "orange"
+    },
+    {
+      "seed": [
+        1201,
+        1199
+      ],
+      "expected_area": 593,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1309,
+        1430
+      ],
+      "expected_area": 26698,
+      "color": "coral"
+    },
+    {
+      "seed": [
+        803,
+        1225
+      ],
+      "expected_area": 684,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        1335,
+        1224
+      ],
+      "expected_area": 417,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1270,
+        1230
+      ],
+      "expected_area": 872,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1231,
+        1272
+      ],
+      "expected_area": 29605,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        1062,
+        1272
+      ],
+      "expected_area": 2476,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        884,
+        1283
+      ],
+      "expected_area": 657,
+      "color": "green"
+    },
+    {
+      "seed": [
+        951,
+        1320
+      ],
+      "expected_area": 4316,
+      "color": "coral"
+    },
+    {
+      "seed": [
+        1366,
+        1290
+      ],
+      "expected_area": 1321,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1021,
+        1291
+      ],
+      "expected_area": 1043,
+      "color": "orange"
+    },
+    {
+      "seed": [
+        835,
+        1316
+      ],
+      "expected_area": 1266,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        935,
+        1296
+      ],
+      "expected_area": 766,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1218,
+        1310
+      ],
+      "expected_area": 2696,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1332,
+        1298
+      ],
+      "expected_area": 654,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1168,
+        1320
+      ],
+      "expected_area": 894,
+      "color": "orange"
+    },
+    {
+      "seed": [
+        1122,
+        1324
+      ],
+      "expected_area": 951,
+      "color": "green"
+    },
+    {
+      "seed": [
+        985,
+        1327
+      ],
+      "expected_area": 344,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1434,
+        1343
+      ],
+      "expected_area": 1859,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        924,
+        1430
+      ],
+      "expected_area": 8475,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        1330,
+        1380
+      ],
+      "expected_area": 2343,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        938,
+        1402
+      ],
+      "expected_area": 1032,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1282,
+        1369
+      ],
+      "expected_area": 729,
+      "color": "orange"
+    },
+    {
+      "seed": [
+        926,
+        1380
+      ],
+      "expected_area": 307,
+      "color": "orange"
+    },
+    {
+      "seed": [
+        1102,
+        1398
+      ],
+      "expected_area": 1450,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1065,
+        1381
+      ],
+      "expected_area": 477,
+      "color": "orange"
+    },
+    {
+      "seed": [
+        1239,
+        1446
+      ],
+      "expected_area": 6000,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        1193,
+        1440
+      ],
+      "expected_area": 1339,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1385,
+        1488
+      ],
+      "expected_area": 2383,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        1372,
+        1469
+      ],
+      "expected_area": 831,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1308,
+        1480
+      ],
+      "expected_area": 1152,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1285,
+        1470
+      ],
+      "expected_area": 323,
+      "color": "orange"
+    },
+    {
+      "seed": [
+        1230,
+        1500
+      ],
+      "expected_area": 507,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1377,
+        1522
+      ],
+      "expected_area": 1042,
+      "color": "green"
+    },
+    {
+      "seed": [
+        682,
+        1693
+      ],
+      "expected_area": 24239,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1210,
+        1786
+      ],
+      "expected_area": 42721,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1545,
+        2349
+      ],
+      "expected_area": 177854,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        639,
+        2071
+      ],
+      "expected_area": 1754,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        312,
+        2221
+      ],
+      "expected_area": 94492,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        1274,
+        2141
+      ],
+      "expected_area": 141205,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        560,
+        2417
+      ],
+      "expected_area": 106673,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        1189,
+        2558
+      ],
+      "expected_area": 15429,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        903,
+        2566
+      ],
+      "expected_area": 11027,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        660,
+        634
+      ],
+      "expected_area": 196,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        622,
+        653
+      ],
+      "expected_area": 1,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        606,
+        660
+      ],
+      "expected_area": 2,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        657,
+        692
+      ],
+      "expected_area": 1,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1523,
+        979
+      ],
+      "expected_area": 2,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        759,
+        1145
+      ],
+      "expected_area": 169,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1188,
+        1216
+      ],
+      "expected_area": 113,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1141,
+        1219
+      ],
+      "expected_area": 30,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1324,
+        1235
+      ],
+      "expected_area": 39,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1248,
+        1244
+      ],
+      "expected_area": 178,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        747,
+        1258
+      ],
+      "expected_area": 214,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        960,
+        1270
+      ],
+      "expected_area": 43,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        915,
+        1296
+      ],
+      "expected_area": 90,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1121,
+        1298
+      ],
+      "expected_area": 227,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1728,
+        1311
+      ],
+      "expected_area": 1,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1402,
+        1348
+      ],
+      "expected_area": 208,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1692,
+        1397
+      ],
+      "expected_area": 1,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1522,
+        1450
+      ],
+      "expected_area": 3,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1523,
+        1452
+      ],
+      "expected_area": 1,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1524,
+        1453
+      ],
+      "expected_area": 1,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1525,
+        1454
+      ],
+      "expected_area": 1,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        651,
+        1508
+      ],
+      "expected_area": 2,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1111,
+        1779
+      ],
+      "expected_area": 2,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1115,
+        1792
+      ],
+      "expected_area": 3,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        834,
+        1944
+      ],
+      "expected_area": 5,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        768,
+        2186
+      ],
+      "expected_area": 23138,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        876,
+        2148
+      ],
+      "expected_area": 10030,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        1539,
+        2127
+      ],
+      "expected_area": 2055,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        1199,
+        2127
+      ],
+      "expected_area": 30,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        627,
+        2214
+      ],
+      "expected_area": 108,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1469,
+        2283
+      ],
+      "expected_area": 144,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        795,
+        2305
+      ],
+      "expected_area": 143,
+      "color": "cream"
+    }
+  ],
+  "notes": "Every white connected component is reviewed: all subject/ornament/hoof/cloud regions colored, including 1px islands; only exterior scenery, three leg negative spaces and one tiny mountain region intentionally white. Cloud boundary endpoints repaired before filling. No automatic small-area exclusions.",
+  "intentional_white": [
+    {
+      "seed": [
+        0,
+        0
+      ],
+      "expected_area": 4436460,
+      "reason": "Open sky and mountain scenery intentionally left white."
+    },
+    {
+      "seed": [
+        1010,
+        1937
+      ],
+      "expected_area": 135129,
+      "reason": "Negative space between front and bent rear leg."
+    },
+    {
+      "seed": [
+        745,
+        1995
+      ],
+      "expected_area": 16860,
+      "reason": "Negative space between the two front legs, above the closed cloud."
+    },
+    {
+      "seed": [
+        1404,
+        1973
+      ],
+      "expected_area": 66651,
+      "reason": "Negative space between the two rear legs, above the clouds."
+    },
+    {
+      "seed": [
+        1847,
+        1585
+      ],
+      "expected_area": 16,
+      "reason": "Small mountain contour interior intentionally left white with the mountains."
+    }
+  ]
+}

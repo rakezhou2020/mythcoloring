@@ -1,0 +1,29 @@
+{
+  "slug": "armadillo",
+  "title": "Armadillo Coloring Page",
+  "themeSlug": "shan-hai-jing",
+  "lineArtImage": "/products/armadillo/lineart.png",
+  "colorGuideImage": "/products/armadillo/color-guide.png",
+  "finishedImage": "/products/armadillo/finished.png",
+  "printPdf": "/products/armadillo/print.pdf",
+  "status": "draft",
+  "workflowVersion": 4,
+  "display": {
+    "card": "lineArtImage",
+    "hover": "finishedImage",
+    "detail": "colorGuideImage"
+  },
+  "quality": {
+    "status": "user-supplied",
+    "lineart": "pure black and white",
+    "colorArtwork": "provided by creator",
+    "poster": "provided by creator",
+    "pdf": "one-page A4 line art with logo"
+  },
+  "artworkSource": "user-supplied",
+  "assetLabels": {
+    "lineArtImage": "Line Art",
+    "colorGuideImage": "Color",
+    "finishedImage": "Poster"
+  }
+}

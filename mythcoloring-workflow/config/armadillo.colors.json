@@ -1,0 +1,2192 @@
+{
+  "version": 4,
+  "size": [
+    2100,
+    2970
+  ],
+  "lineart_sha256": "a2d642c10edd3d8ad8942f4131c2c5b3a78e8a97d2352daf94004c354d01cf78",
+  "palette": [
+    {
+      "id": "ivory",
+      "name": "Body ivory",
+      "hex": "#F7E6B5"
+    },
+    {
+      "id": "chocolate",
+      "name": "Shell chocolate",
+      "hex": "#4A332E"
+    },
+    {
+      "id": "tan",
+      "name": "Ear tan",
+      "hex": "#D9A878"
+    },
+    {
+      "id": "sage",
+      "name": "Sage green",
+      "hex": "#87A95E"
+    },
+    {
+      "id": "gold",
+      "name": "Golden yellow",
+      "hex": "#F4C84A"
+    },
+    {
+      "id": "ochre",
+      "name": "Ornament ochre",
+      "hex": "#B8782F"
+    },
+    {
+      "id": "terracotta",
+      "name": "Terracotta",
+      "hex": "#B7503A"
+    },
+    {
+      "id": "pink",
+      "name": "Muted pink",
+      "hex": "#D98791"
+    }
+  ],
+  "regions": [
+    {
+      "seed": [
+        821,
+        368
+      ],
+      "expected_area": 1441,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        875,
+        366
+      ],
+      "expected_area": 2235,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        774,
+        354
+      ],
+      "expected_area": 280,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        917,
+        364
+      ],
+      "expected_area": 1008,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1147,
+        388
+      ],
+      "expected_area": 922,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        757,
+        366
+      ],
+      "expected_area": 274,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        969,
+        387
+      ],
+      "expected_area": 2761,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1062,
+        410
+      ],
+      "expected_area": 2826,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        784,
+        378
+      ],
+      "expected_area": 599,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        842,
+        399
+      ],
+      "expected_area": 1351,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        900,
+        399
+      ],
+      "expected_area": 1517,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        1009,
+        427
+      ],
+      "expected_area": 3398,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1105,
+        429
+      ],
+      "expected_area": 863,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        930,
+        423
+      ],
+      "expected_area": 1161,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        1738,
+        1304
+      ],
+      "expected_area": 11678,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1163,
+        469
+      ],
+      "expected_area": 209,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1229,
+        491
+      ],
+      "expected_area": 782,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        812,
+        590
+      ],
+      "expected_area": 794,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1619,
+        632
+      ],
+      "expected_area": 3622,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1024,
+        608
+      ],
+      "expected_area": 384,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        1614,
+        698
+      ],
+      "expected_area": 5398,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        744,
+        641
+      ],
+      "expected_area": 1501,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        616,
+        651
+      ],
+      "expected_area": 2970,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        687,
+        658
+      ],
+      "expected_area": 5223,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        863,
+        627
+      ],
+      "expected_area": 2391,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        529,
+        670
+      ],
+      "expected_area": 3256,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        1003,
+        672
+      ],
+      "expected_area": 1861,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1141,
+        912
+      ],
+      "expected_area": 35723,
+      "color": "tan"
+    },
+    {
+      "seed": [
+        576,
+        691
+      ],
+      "expected_area": 2342,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        483,
+        691
+      ],
+      "expected_area": 1300,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        428,
+        697
+      ],
+      "expected_area": 467,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        517,
+        713
+      ],
+      "expected_area": 1317,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        469,
+        731
+      ],
+      "expected_area": 1426,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        410,
+        714
+      ],
+      "expected_area": 329,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1553,
+        1021
+      ],
+      "expected_area": 5034,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1615,
+        777
+      ],
+      "expected_area": 436,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1605,
+        765
+      ],
+      "expected_area": 464,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1337,
+        946
+      ],
+      "expected_area": 70744,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1579,
+        775
+      ],
+      "expected_area": 2,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1527,
+        919
+      ],
+      "expected_area": 3262,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1550,
+        922
+      ],
+      "expected_area": 2682,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1581,
+        885
+      ],
+      "expected_area": 1011,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1664,
+        1122
+      ],
+      "expected_area": 31622,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1566,
+        991
+      ],
+      "expected_area": 2514,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1513,
+        1003
+      ],
+      "expected_area": 1487,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1536,
+        1033
+      ],
+      "expected_area": 392,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1118,
+        1824
+      ],
+      "expected_area": 480049,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1107,
+        1059
+      ],
+      "expected_area": 6290,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1198,
+        1060
+      ],
+      "expected_area": 2048,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        855,
+        1177
+      ],
+      "expected_area": 39103,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1777,
+        1121
+      ],
+      "expected_area": 2404,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1613,
+        1085
+      ],
+      "expected_area": 1,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1621,
+        1164
+      ],
+      "expected_area": 2883,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1572,
+        1151
+      ],
+      "expected_area": 1439,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1623,
+        1462
+      ],
+      "expected_area": 8085,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1624,
+        1583
+      ],
+      "expected_area": 11684,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1141,
+        1185
+      ],
+      "expected_area": 344,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1495,
+        1194
+      ],
+      "expected_area": 1637,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1113,
+        1183
+      ],
+      "expected_area": 172,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1124,
+        1190
+      ],
+      "expected_area": 112,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1431,
+        1210
+      ],
+      "expected_area": 1143,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        960,
+        1195
+      ],
+      "expected_area": 1,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1471,
+        1218
+      ],
+      "expected_area": 571,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1270,
+        1252
+      ],
+      "expected_area": 14928,
+      "color": "tan"
+    },
+    {
+      "seed": [
+        930,
+        1211
+      ],
+      "expected_area": 1,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1515,
+        1233
+      ],
+      "expected_area": 272,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1430,
+        1237
+      ],
+      "expected_area": 535,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        927,
+        1250
+      ],
+      "expected_area": 282,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        939,
+        1276
+      ],
+      "expected_area": 325,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1490,
+        1243
+      ],
+      "expected_area": 102,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1504,
+        1240
+      ],
+      "expected_area": 23,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1477,
+        1240
+      ],
+      "expected_area": 9,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1523,
+        1243
+      ],
+      "expected_area": 3,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1401,
+        1328
+      ],
+      "expected_area": 35288,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1445,
+        1253
+      ],
+      "expected_area": 441,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1519,
+        1250
+      ],
+      "expected_area": 22,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1476,
+        1250
+      ],
+      "expected_area": 46,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1488,
+        1258
+      ],
+      "expected_area": 87,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1512,
+        1256
+      ],
+      "expected_area": 23,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1525,
+        1255
+      ],
+      "expected_area": 14,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1502,
+        1256
+      ],
+      "expected_area": 38,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1461,
+        1273
+      ],
+      "expected_area": 114,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1526,
+        1277
+      ],
+      "expected_area": 330,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1794,
+        1413
+      ],
+      "expected_area": 8120,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        959,
+        1268
+      ],
+      "expected_area": 1,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1475,
+        1281
+      ],
+      "expected_area": 412,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1508,
+        1306
+      ],
+      "expected_area": 1440,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1119,
+        1289
+      ],
+      "expected_area": 1,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1532,
+        1295
+      ],
+      "expected_area": 106,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1485,
+        1308
+      ],
+      "expected_area": 71,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1538,
+        1307
+      ],
+      "expected_area": 61,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1493,
+        1321
+      ],
+      "expected_area": 82,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1547,
+        1340
+      ],
+      "expected_area": 95,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1511,
+        1358
+      ],
+      "expected_area": 443,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1501,
+        1338
+      ],
+      "expected_area": 56,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1166,
+        1344
+      ],
+      "expected_area": 53,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1527,
+        1362
+      ],
+      "expected_area": 174,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1171,
+        1356
+      ],
+      "expected_area": 63,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1546,
+        1370
+      ],
+      "expected_area": 369,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1535,
+        1362
+      ],
+      "expected_area": 57,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1468,
+        1461
+      ],
+      "expected_area": 47945,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1558,
+        1383
+      ],
+      "expected_area": 58,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1551,
+        1394
+      ],
+      "expected_area": 442,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1530,
+        1396
+      ],
+      "expected_area": 134,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1177,
+        1396
+      ],
+      "expected_area": 1,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1564,
+        1440
+      ],
+      "expected_area": 611,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1575,
+        1458
+      ],
+      "expected_area": 301,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1588,
+        1500
+      ],
+      "expected_area": 299,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1223,
+        1502
+      ],
+      "expected_area": 51,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1591,
+        1526
+      ],
+      "expected_area": 115,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        980,
+        1517
+      ],
+      "expected_area": 79,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1222,
+        1522
+      ],
+      "expected_area": 2,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        946,
+        1606
+      ],
+      "expected_area": 760,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1156,
+        1592
+      ],
+      "expected_area": 8,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1243,
+        1609
+      ],
+      "expected_area": 1,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1242,
+        1610
+      ],
+      "expected_area": 1,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        972,
+        1625
+      ],
+      "expected_area": 138,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        952,
+        1624
+      ],
+      "expected_area": 8,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        942,
+        1666
+      ],
+      "expected_area": 3392,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        898,
+        1650
+      ],
+      "expected_area": 230,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1241,
+        1644
+      ],
+      "expected_area": 8,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        926,
+        1648
+      ],
+      "expected_area": 9,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1005,
+        1668
+      ],
+      "expected_area": 1319,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1649,
+        1772
+      ],
+      "expected_area": 7191,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        809,
+        1727
+      ],
+      "expected_area": 5261,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        913,
+        1664
+      ],
+      "expected_area": 2,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        783,
+        1767
+      ],
+      "expected_area": 5478,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1244,
+        1681
+      ],
+      "expected_area": 44,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        992,
+        1693
+      ],
+      "expected_area": 1083,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        960,
+        1784
+      ],
+      "expected_area": 3898,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        831,
+        1789
+      ],
+      "expected_area": 4563,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        915,
+        1745
+      ],
+      "expected_area": 1573,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        977,
+        1736
+      ],
+      "expected_area": 420,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        961,
+        1738
+      ],
+      "expected_area": 20,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        958,
+        1893
+      ],
+      "expected_area": 8460,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        882,
+        1762
+      ],
+      "expected_area": 34,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        881,
+        1779
+      ],
+      "expected_area": 157,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        871,
+        1796
+      ],
+      "expected_area": 302,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1374,
+        1860
+      ],
+      "expected_area": 3035,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        811,
+        1820
+      ],
+      "expected_area": 2766,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        886,
+        1833
+      ],
+      "expected_area": 386,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1353,
+        1844
+      ],
+      "expected_area": 427,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        896,
+        1863
+      ],
+      "expected_area": 372,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1344,
+        1925
+      ],
+      "expected_area": 2618,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        912,
+        1893
+      ],
+      "expected_area": 183,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1462,
+        2007
+      ],
+      "expected_area": 11310,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1407,
+        1946
+      ],
+      "expected_area": 13644,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        907,
+        1908
+      ],
+      "expected_area": 1,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        929,
+        1916
+      ],
+      "expected_area": 219,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        918,
+        1921
+      ],
+      "expected_area": 19,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1309,
+        2005
+      ],
+      "expected_area": 886,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1295,
+        2018
+      ],
+      "expected_area": 1583,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1289,
+        1976
+      ],
+      "expected_area": 1,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1610,
+        2011
+      ],
+      "expected_area": 1438,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1283,
+        2007
+      ],
+      "expected_area": 423,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1328,
+        2039
+      ],
+      "expected_area": 1997,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1300,
+        2095
+      ],
+      "expected_area": 2418,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1551,
+        2064
+      ],
+      "expected_area": 1319,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        907,
+        2054
+      ],
+      "expected_area": 1429,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1525,
+        2040
+      ],
+      "expected_area": 17,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1509,
+        2059
+      ],
+      "expected_area": 1250,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1483,
+        2049
+      ],
+      "expected_area": 104,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1459,
+        2052
+      ],
+      "expected_area": 447,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1371,
+        2073
+      ],
+      "expected_area": 1473,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1390,
+        2170
+      ],
+      "expected_area": 22991,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        1458,
+        2074
+      ],
+      "expected_area": 594,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1407,
+        2085
+      ],
+      "expected_area": 1468,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        924,
+        2071
+      ],
+      "expected_area": 1,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        923,
+        2072
+      ],
+      "expected_area": 1,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1573,
+        2108
+      ],
+      "expected_area": 1691,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1482,
+        2092
+      ],
+      "expected_area": 1286,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1532,
+        2101
+      ],
+      "expected_area": 1527,
+      "color": "terracotta"
+    },
+    {
+      "seed": [
+        1524,
+        2079
+      ],
+      "expected_area": 1,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1523,
+        2080
+      ],
+      "expected_area": 1,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1521,
+        2081
+      ],
+      "expected_area": 4,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1451,
+        2124
+      ],
+      "expected_area": 1838,
+      "color": "terracotta"
+    },
+    {
+      "seed": [
+        1421,
+        2099
+      ],
+      "expected_area": 2,
+      "color": "chocolate"
+    },
+    {
+      "seed": [
+        1380,
+        2111
+      ],
+      "expected_area": 189,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1440,
+        2197
+      ],
+      "expected_area": 1394,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        1192,
+        2240
+      ],
+      "expected_area": 3007,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1299,
+        2124
+      ],
+      "expected_area": 261,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        1153,
+        2137
+      ],
+      "expected_area": 4609,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1276,
+        2128
+      ],
+      "expected_area": 388,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        1487,
+        2127
+      ],
+      "expected_area": 45,
+      "color": "terracotta"
+    },
+    {
+      "seed": [
+        1432,
+        2137
+      ],
+      "expected_area": 722,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        1300,
+        2150
+      ],
+      "expected_area": 861,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1422,
+        2150
+      ],
+      "expected_area": 242,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        1101,
+        2144
+      ],
+      "expected_area": 6,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1180,
+        2155
+      ],
+      "expected_area": 9,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1100,
+        2157
+      ],
+      "expected_area": 22,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1198,
+        2162
+      ],
+      "expected_area": 143,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1209,
+        2159
+      ],
+      "expected_area": 28,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1182,
+        2165
+      ],
+      "expected_area": 19,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1102,
+        2169
+      ],
+      "expected_area": 106,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1135,
+        2172
+      ],
+      "expected_area": 16,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1345,
+        2173
+      ],
+      "expected_area": 2,
+      "color": "terracotta"
+    },
+    {
+      "seed": [
+        1185,
+        2183
+      ],
+      "expected_area": 115,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1127,
+        2184
+      ],
+      "expected_area": 61,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1238,
+        2221
+      ],
+      "expected_area": 6667,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1136,
+        2184
+      ],
+      "expected_area": 2,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1114,
+        2198
+      ],
+      "expected_area": 240,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1146,
+        2189
+      ],
+      "expected_area": 20,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1100,
+        2188
+      ],
+      "expected_area": 7,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1157,
+        2200
+      ],
+      "expected_area": 148,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1179,
+        2207
+      ],
+      "expected_area": 394,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1127,
+        2213
+      ],
+      "expected_area": 1,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1106,
+        2215
+      ],
+      "expected_area": 1,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1165,
+        2225
+      ],
+      "expected_area": 1,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1194,
+        2264
+      ],
+      "expected_area": 275,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1300,
+        2338
+      ],
+      "expected_area": 2787,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        1347,
+        2265
+      ],
+      "expected_area": 9,
+      "color": "terracotta"
+    },
+    {
+      "seed": [
+        1211,
+        2269
+      ],
+      "expected_area": 18,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1179,
+        2266
+      ],
+      "expected_area": 13,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1269,
+        2268
+      ],
+      "expected_area": 17,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        1348,
+        2277
+      ],
+      "expected_area": 181,
+      "color": "terracotta"
+    },
+    {
+      "seed": [
+        1281,
+        2273
+      ],
+      "expected_area": 26,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        1207,
+        2279
+      ],
+      "expected_area": 51,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1185,
+        2280
+      ],
+      "expected_area": 56,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1275,
+        2280
+      ],
+      "expected_area": 40,
+      "color": "terracotta"
+    },
+    {
+      "seed": [
+        1295,
+        2280
+      ],
+      "expected_area": 52,
+      "color": "pink"
+    },
+    {
+      "seed": [
+        1221,
+        2279
+      ],
+      "expected_area": 7,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1311,
+        2283
+      ],
+      "expected_area": 84,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        1330,
+        2286
+      ],
+      "expected_area": 142,
+      "color": "terracotta"
+    },
+    {
+      "seed": [
+        1199,
+        2292
+      ],
+      "expected_area": 128,
+      "color": "ivory"
+    },
+    {
+      "seed": [
+        1232,
+        2290
+      ],
+      "expected_area": 20,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1277,
+        2295
+      ],
+      "expected_area": 95,
+      "color": "terracotta"
+    },
+    {
+      "seed": [
+        1241,
+        2299
+      ],
+      "expected_area": 52,
+      "color": "sage"
+    },
+    {
+      "seed": [
+        1256,
+        2309
+      ],
+      "expected_area": 118,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1268,
+        2303
+      ],
+      "expected_area": 1,
+      "color": "ochre"
+    },
+    {
+      "seed": [
+        1278,
+        2317
+      ],
+      "expected_area": 234,
+      "color": "terracotta"
+    },
+    {
+      "seed": [
+        1272,
+        2334
+      ],
+      "expected_area": 2,
+      "color": "pink"
+    }
+  ],
+  "intentional_white": [
+    {
+      "seed": [
+        0,
+        0
+      ],
+      "expected_area": 4571732,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1695,
+        1514
+      ],
+      "expected_area": 41171,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1684,
+        1876
+      ],
+      "expected_area": 36474,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        363,
+        1525
+      ],
+      "expected_area": 10819,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        407,
+        1568
+      ],
+      "expected_area": 16342,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        276,
+        1569
+      ],
+      "expected_area": 12021,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        551,
+        1574
+      ],
+      "expected_area": 20148,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        260,
+        1660
+      ],
+      "expected_area": 9468,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        515,
+        1678
+      ],
+      "expected_area": 10649,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1827,
+        1880
+      ],
+      "expected_area": 36229,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        238,
+        1686
+      ],
+      "expected_area": 1,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1814,
+        1704
+      ],
+      "expected_area": 235,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1724,
+        1718
+      ],
+      "expected_area": 3,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1768,
+        1861
+      ],
+      "expected_area": 995,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        520,
+        1825
+      ],
+      "expected_area": 4,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        287,
+        1890
+      ],
+      "expected_area": 950,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1659,
+        1852
+      ],
+      "expected_area": 1,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1752,
+        1885
+      ],
+      "expected_area": 828,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        330,
+        1871
+      ],
+      "expected_area": 1,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        304,
+        1923
+      ],
+      "expected_area": 613,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1712,
+        1912
+      ],
+      "expected_area": 537,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1683,
+        1933
+      ],
+      "expected_area": 4422,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        328,
+        1927
+      ],
+      "expected_area": 1,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1718,
+        1967
+      ],
+      "expected_area": 2379,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1681,
+        2009
+      ],
+      "expected_area": 111,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1668,
+        2194
+      ],
+      "expected_area": 28972,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        321,
+        2250
+      ],
+      "expected_area": 6935,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        284,
+        2334
+      ],
+      "expected_area": 5075,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        409,
+        2366
+      ],
+      "expected_area": 2154,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1765,
+        2402
+      ],
+      "expected_area": 3200,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        269,
+        2395
+      ],
+      "expected_area": 808,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        359,
+        2415
+      ],
+      "expected_area": 8,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1651,
+        2433
+      ],
+      "expected_area": 827,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1748,
+        2446
+      ],
+      "expected_area": 37,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    },
+    {
+      "seed": [
+        1741,
+        2449
+      ],
+      "expected_area": 2,
+      "reason": "Light garden background deliberately remains black-and-white line art."
+    }
+  ],
+  "guide_layout": {
+    "art_band": [
+      150,
+      2630
+    ],
+    "heading_y": 80,
+    "note_y": 2674,
+    "palette_y": 2735
+  },
+  "notes": "Armadillo scope standard: the armadillo, its tied foliage, flower heads, and base ornament are completely flat-filled; all environmental ground, distant grass, and left background plants are deliberately line-only."
+}

@@ -2,6 +2,7 @@ import type { ColoringPage } from "./types";
 import { publishedThemes } from "./themes";
 import deerProduct from "../mythcoloring-workflow/output/nine-colored-deer/product.json";
 import wingedMonkeyProduct from "../mythcoloring-workflow/output/winged-monkey/product.json";
+import armadilloProduct from "../mythcoloring-workflow/output/armadillo/product.json";
 
 const nineColoredDeer: ColoringPage = {
   ...deerProduct,
@@ -17,10 +18,23 @@ const nineColoredDeer: ColoringPage = {
 const wingedMonkey: ColoringPage = {
   ...wingedMonkeyProduct,
   id: wingedMonkeyProduct.slug,
-  creatureSlug: wingedMonkeyProduct.slug,
+  creatureSlug: "white-ape",
   type: "Coloring Page",
   difficulty: "Medium",
   colorCount: 9,
+  featured: true,
+  status: "published",
+};
+
+// Creator-supplied artwork is registered locally as a draft. It becomes
+// visible in the public catalog only after its status is intentionally changed.
+const armadillo: ColoringPage = {
+  ...armadilloProduct,
+  id: armadilloProduct.slug,
+  creatureSlug: armadilloProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Medium",
+  colorCount: null,
   featured: true,
   status: "published",
 };
@@ -54,6 +68,7 @@ const sampleColoringPages: ColoringPage[] = [
 export const coloringPages: ColoringPage[] = [
   nineColoredDeer,
   wingedMonkey,
+  armadillo,
   ...sampleColoringPages,
 ];
 export const publishedColoringPages = coloringPages.filter(

@@ -1,0 +1,28 @@
+Edit the attached original artwork into a printable coloring page. Preserve the
+original subject's identity, anatomy, pose, proportions and overall composition.
+Do not invent a replacement scene. Subject first; background optional to color.
+
+For the Nine-Colored Deer: preserve its head, antlers, body, all four limbs, tail,
+main decorative markings and clouds under its feet. Keep the moon, only a few
+major mountain silhouettes, and basic depth. Remove repeated small mountains,
+fine mountain textures, tiny hatching and unnecessary fragments.
+
+Draw clean black outlines on pure white. No shading, gray fills, gradients,
+texture, noise or large solid black regions. Use slightly heavier, continuous
+subject outlines and lighter, thinner, fewer background lines. Keep the subject
+silhouette and main pattern areas closed, with generous spaces for colored
+pencils. Preserve clear leg and antler structure. Do not crop any subject parts.
+The deer and clouds alone must form a satisfying finished coloring page even
+when the background is left white. Suitable for children and general audiences.
+No text, borders, signatures or watermarks. Recompose for A4 portrait 210:297.
+Scale proportionally, crop peripheral scenery or extend white space; never stretch.
+Remove screenshot sidebars. Keep all antlers, limbs, tail and clouds safely in frame.
+Export a high-resolution PNG, preferably at least 2400 px on its longest side.
+
+HUMAN VISUAL REVIEW (required before using the image as the lineart input):
+- Compare subject anatomy, antlers, limbs, tail and markings with the original.
+- Confirm closed major contours and fillable areas; no doubled/missing limbs.
+- Ensure the deer stands out immediately, with fewer/thinner background lines.
+- Reject gray filled regions, shadows, textures and tiny fragmented regions.
+- Check composition and alignment against the source; regenerate or repair if needed.
+For other subjects, replace the deer-specific details above before generation.

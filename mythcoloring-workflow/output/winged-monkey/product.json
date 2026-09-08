@@ -19,5 +19,11 @@
     "unexpectedWhitePixels": 0,
     "coloredRegions": 140,
     "intentionalWhiteRegions": 2
+  },
+  "artworkSource": "user-supplied",
+  "assetLabels": {
+    "lineArtImage": "Line Art",
+    "colorGuideImage": "Color",
+    "finishedImage": "Poster"
   }
 }

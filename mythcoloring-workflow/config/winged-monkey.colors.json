@@ -1,0 +1,1205 @@
+{
+  "version": 3,
+  "size": [
+    2100,
+    2970
+  ],
+  "lineart_sha256": "6d445a543047a54c11e544fbcfa1f6875388ea4c553cb7b266612ead8225ddb5",
+  "palette": [
+    {
+      "id": "cream",
+      "name": "Cream",
+      "hex": "#F7E6B5"
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "hex": "#F1A44E"
+    },
+    {
+      "id": "coral",
+      "name": "Coral red",
+      "hex": "#E86D62"
+    },
+    {
+      "id": "gold",
+      "name": "Yellow",
+      "hex": "#F4CE4E"
+    },
+    {
+      "id": "brown",
+      "name": "Tree brown",
+      "hex": "#A97245"
+    },
+    {
+      "id": "green",
+      "name": "Leaf green",
+      "hex": "#91BC70"
+    },
+    {
+      "id": "teal",
+      "name": "Teal",
+      "hex": "#58ADA4"
+    },
+    {
+      "id": "blue",
+      "name": "Sky blue",
+      "hex": "#83BDE2"
+    },
+    {
+      "id": "purple",
+      "name": "Lavender",
+      "hex": "#AD96C9"
+    }
+  ],
+  "regions": [
+    {
+      "seed": [
+        817,
+        759
+      ],
+      "expected_area": 73303,
+      "color": "brown"
+    },
+    {
+      "seed": [
+        1646,
+        558
+      ],
+      "expected_area": 131218,
+      "color": "gold"
+    },
+    {
+      "seed": [
+        1261,
+        928
+      ],
+      "expected_area": 18045,
+      "color": "orange"
+    },
+    {
+      "seed": [
+        1464,
+        1026
+      ],
+      "expected_area": 18082,
+      "color": "coral"
+    },
+    {
+      "seed": [
+        911,
+        907
+      ],
+      "expected_area": 57856,
+      "color": "brown"
+    },
+    {
+      "seed": [
+        1382,
+        935
+      ],
+      "expected_area": 4023,
+      "color": "coral"
+    },
+    {
+      "seed": [
+        1164,
+        999
+      ],
+      "expected_area": 40049,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1612,
+        1037
+      ],
+      "expected_area": 12255,
+      "color": "coral"
+    },
+    {
+      "seed": [
+        993,
+        1212
+      ],
+      "expected_area": 101611,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        997,
+        981
+      ],
+      "expected_area": 9,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        790,
+        1689
+      ],
+      "expected_area": 120992,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1015,
+        1049
+      ],
+      "expected_area": 67,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        972,
+        1069
+      ],
+      "expected_area": 9,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        967,
+        1071
+      ],
+      "expected_area": 18,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        933,
+        1075
+      ],
+      "expected_area": 14,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        928,
+        1079
+      ],
+      "expected_area": 19,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1372,
+        1136
+      ],
+      "expected_area": 6097,
+      "color": "orange"
+    },
+    {
+      "seed": [
+        783,
+        1121
+      ],
+      "expected_area": 41,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        795,
+        1122
+      ],
+      "expected_area": 9,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        772,
+        1125
+      ],
+      "expected_area": 22,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        804,
+        1128
+      ],
+      "expected_area": 24,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1185,
+        1687
+      ],
+      "expected_area": 301038,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        786,
+        1272
+      ],
+      "expected_area": 8681,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1532,
+        1350
+      ],
+      "expected_area": 13536,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        1533,
+        1208
+      ],
+      "expected_area": 10757,
+      "color": "orange"
+    },
+    {
+      "seed": [
+        1045,
+        1295
+      ],
+      "expected_area": 11951,
+      "color": "green"
+    },
+    {
+      "seed": [
+        921,
+        1263
+      ],
+      "expected_area": 339,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        682,
+        1332
+      ],
+      "expected_area": 4007,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        808,
+        1287
+      ],
+      "expected_area": 12,
+      "color": "green"
+    },
+    {
+      "seed": [
+        748,
+        1323
+      ],
+      "expected_area": 3425,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        794,
+        1308
+      ],
+      "expected_area": 2135,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        955,
+        1368
+      ],
+      "expected_area": 3814,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1115,
+        1315
+      ],
+      "expected_area": 51,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        644,
+        1392
+      ],
+      "expected_area": 7259,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        1115,
+        1323
+      ],
+      "expected_area": 109,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1023,
+        1480
+      ],
+      "expected_area": 19609,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1115,
+        1334
+      ],
+      "expected_area": 9,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1459,
+        1385
+      ],
+      "expected_area": 12507,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        731,
+        1393
+      ],
+      "expected_area": 4253,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1113,
+        1349
+      ],
+      "expected_area": 113,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1122,
+        1350
+      ],
+      "expected_area": 9,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1111,
+        1357
+      ],
+      "expected_area": 174,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1113,
+        1371
+      ],
+      "expected_area": 15,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        828,
+        1376
+      ],
+      "expected_area": 9,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1113,
+        1379
+      ],
+      "expected_area": 172,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        822,
+        1391
+      ],
+      "expected_area": 216,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        843,
+        1402
+      ],
+      "expected_area": 374,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1121,
+        1390
+      ],
+      "expected_area": 145,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1370,
+        1417
+      ],
+      "expected_area": 5595,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        1094,
+        1389
+      ],
+      "expected_area": 400,
+      "color": "green"
+    },
+    {
+      "seed": [
+        711,
+        1459
+      ],
+      "expected_area": 5132,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1100,
+        1414
+      ],
+      "expected_area": 12,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        843,
+        1427
+      ],
+      "expected_area": 182,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1088,
+        1424
+      ],
+      "expected_area": 68,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        622,
+        1467
+      ],
+      "expected_area": 5466,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        1099,
+        1428
+      ],
+      "expected_area": 94,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1094,
+        1440
+      ],
+      "expected_area": 371,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1398,
+        1474
+      ],
+      "expected_area": 5359,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        857,
+        1438
+      ],
+      "expected_area": 41,
+      "color": "green"
+    },
+    {
+      "seed": [
+        849,
+        1447
+      ],
+      "expected_area": 56,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        863,
+        1451
+      ],
+      "expected_area": 155,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1073,
+        1465
+      ],
+      "expected_area": 114,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1085,
+        1466
+      ],
+      "expected_area": 136,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        867,
+        1470
+      ],
+      "expected_area": 179,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1084,
+        1484
+      ],
+      "expected_area": 689,
+      "color": "green"
+    },
+    {
+      "seed": [
+        877,
+        1483
+      ],
+      "expected_area": 332,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        852,
+        1482
+      ],
+      "expected_area": 66,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1066,
+        1489
+      ],
+      "expected_area": 169,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1508,
+        1517
+      ],
+      "expected_area": 4336,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        681,
+        1537
+      ],
+      "expected_area": 5188,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        856,
+        1492
+      ],
+      "expected_area": 9,
+      "color": "green"
+    },
+    {
+      "seed": [
+        612,
+        1538
+      ],
+      "expected_area": 5189,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        870,
+        1518
+      ],
+      "expected_area": 206,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1067,
+        1503
+      ],
+      "expected_area": 9,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1404,
+        1544
+      ],
+      "expected_area": 6981,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        1069,
+        1520
+      ],
+      "expected_area": 881,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        890,
+        1521
+      ],
+      "expected_area": 301,
+      "color": "green"
+    },
+    {
+      "seed": [
+        885,
+        1554
+      ],
+      "expected_area": 670,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1031,
+        1553
+      ],
+      "expected_area": 124,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1044,
+        1562
+      ],
+      "expected_area": 768,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1490,
+        1590
+      ],
+      "expected_area": 5009,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        931,
+        1566
+      ],
+      "expected_area": 102,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        605,
+        1602
+      ],
+      "expected_area": 4309,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        937,
+        1575
+      ],
+      "expected_area": 128,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        986,
+        1576
+      ],
+      "expected_area": 263,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        995,
+        1595
+      ],
+      "expected_area": 1196,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1019,
+        1576
+      ],
+      "expected_area": 111,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        912,
+        1578
+      ],
+      "expected_area": 53,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        930,
+        1599
+      ],
+      "expected_area": 559,
+      "color": "green"
+    },
+    {
+      "seed": [
+        669,
+        1618
+      ],
+      "expected_area": 4098,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        962,
+        1595
+      ],
+      "expected_area": 210,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1402,
+        1626
+      ],
+      "expected_area": 6386,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        1484,
+        1660
+      ],
+      "expected_area": 5373,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        603,
+        1664
+      ],
+      "expected_area": 2203,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        664,
+        1691
+      ],
+      "expected_area": 6920,
+      "color": "green"
+    },
+    {
+      "seed": [
+        1385,
+        1700
+      ],
+      "expected_area": 7156,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        626,
+        1725
+      ],
+      "expected_area": 2196,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        1477,
+        1725
+      ],
+      "expected_area": 4775,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        1352,
+        1771
+      ],
+      "expected_area": 6336,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        645,
+        1777
+      ],
+      "expected_area": 1485,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        1475,
+        1783
+      ],
+      "expected_area": 1412,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        1432,
+        1797
+      ],
+      "expected_area": 3689,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        731,
+        1781
+      ],
+      "expected_area": 56,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1299,
+        1830
+      ],
+      "expected_area": 5748,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        1519,
+        1804
+      ],
+      "expected_area": 3023,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        1368,
+        2218
+      ],
+      "expected_area": 234665,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        1212,
+        1851
+      ],
+      "expected_area": 5369,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1596,
+        1857
+      ],
+      "expected_area": 4880,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        1214,
+        1909
+      ],
+      "expected_area": 5829,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1138,
+        1897
+      ],
+      "expected_area": 5633,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1664,
+        1910
+      ],
+      "expected_area": 6712,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        1075,
+        1931
+      ],
+      "expected_area": 3376,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1048,
+        1969
+      ],
+      "expected_area": 3347,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        700,
+        1926
+      ],
+      "expected_area": 159,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        1146,
+        1949
+      ],
+      "expected_area": 1549,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1713,
+        1970
+      ],
+      "expected_area": 7447,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        944,
+        2222
+      ],
+      "expected_area": 210330,
+      "color": "cream"
+    },
+    {
+      "seed": [
+        1645,
+        1993
+      ],
+      "expected_area": 5871,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        489,
+        2012
+      ],
+      "expected_area": 2578,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        443,
+        2034
+      ],
+      "expected_area": 1809,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        1691,
+        2070
+      ],
+      "expected_area": 5310,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        1617,
+        2074
+      ],
+      "expected_area": 5137,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        491,
+        2066
+      ],
+      "expected_area": 2951,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        401,
+        2069
+      ],
+      "expected_area": 2570,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        435,
+        2106
+      ],
+      "expected_area": 2926,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        1740,
+        2120
+      ],
+      "expected_area": 6956,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        378,
+        2132
+      ],
+      "expected_area": 3210,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        1666,
+        2154
+      ],
+      "expected_area": 6061,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        482,
+        2134
+      ],
+      "expected_area": 2995,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        1588,
+        2148
+      ],
+      "expected_area": 4926,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        425,
+        2172
+      ],
+      "expected_area": 3870,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        479,
+        2201
+      ],
+      "expected_area": 2717,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        1559,
+        2221
+      ],
+      "expected_area": 5184,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        1629,
+        2232
+      ],
+      "expected_area": 4533,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        1689,
+        2232
+      ],
+      "expected_area": 3644,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        1621,
+        2401
+      ],
+      "expected_area": 58722,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        1528,
+        2294
+      ],
+      "expected_area": 5378,
+      "color": "teal"
+    },
+    {
+      "seed": [
+        1596,
+        2300
+      ],
+      "expected_area": 4419,
+      "color": "purple"
+    },
+    {
+      "seed": [
+        1482,
+        2345
+      ],
+      "expected_area": 4602,
+      "color": "blue"
+    },
+    {
+      "seed": [
+        1220,
+        2319
+      ],
+      "expected_area": 128,
+      "color": "cream"
+    }
+  ],
+  "intentional_white": [
+    {
+      "seed": [
+        0,
+        2969
+      ],
+      "expected_area": 4283935,
+      "reason": "Open sky and distant mountain scenery deliberately remain line-only."
+    },
+    {
+      "seed": [
+        364,
+        1897
+      ],
+      "expected_area": 224,
+      "reason": "Distant mountain interior deliberately remains line-only."
+    }
+  ],
+  "guide_layout": {
+    "art_band": [
+      150,
+      2630
+    ],
+    "heading_y": 80,
+    "note_y": 2674,
+    "palette_y": 2735
+  },
+  "notes": "Reviewed V1: central winged monkey, tree, sun, magical flame mane and every feather/gem region assigned flat colors. Only exterior sky and mountain scenery are intentionally line-only."
+}

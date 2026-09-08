@@ -45,7 +45,7 @@ export default function Home() {
             </span>
             <figure>
               <Artwork name={hero.title} src={hero.finishedImage} colored />
-              <figcaption>Finished artwork</figcaption>
+              <figcaption>Poster artwork</figcaption>
             </figure>
             <p>{hero.title}</p>
           </div>

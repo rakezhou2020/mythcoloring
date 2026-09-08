@@ -1,0 +1,6 @@
+Pillow>=10.4,<13
+numpy>=1.26,<3
+reportlab>=4.2,<5
+pypdf>=5,<7
+pypdfium2>=4.30,<6
+opencv-python-headless>=4.10,<6

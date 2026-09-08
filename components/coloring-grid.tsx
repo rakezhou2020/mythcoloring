@@ -11,8 +11,8 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
   const [expanded, setExpanded] = useState(false);
   const viewLabels = {
     lineArtImage: "Line Art",
-    colorGuideImage: "Color Guide",
-    finishedImage: "Finished",
+    colorGuideImage: "Color",
+    finishedImage: "Poster",
   } as const;
   function open(item: ColoringPage, printing = false) {
     setSelected(item);
@@ -35,9 +35,9 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
                 <Artwork name={item.title} src={item.lineArtImage} />
               </div>
               <div className="art-layer color-layer" aria-hidden="true">
-                <Artwork name={item.title} src={item.finishedImage} colored />
+                <Artwork name={item.title} src={item.colorGuideImage ?? item.finishedImage} colored />
               </div>
-              <span className="preview-hint" aria-hidden="true">View color guide</span>
+              <span className="preview-hint" aria-hidden="true">View color artwork</span>
             </button>
             <div className="card-body">
               <p className="eyebrow">{item.type}</p>
@@ -99,7 +99,7 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
             </div>
             {selected.colorGuideImage && selected.finishedImage && (
               <div className="artwork-views screen-only" aria-label="Artwork views">
-                {([["lineArtImage", "Line Art"], ["colorGuideImage", "Color Guide"], ["finishedImage", "Finished"]] as const).map(([key, label]) =>
+                {([["lineArtImage", "Line Art"], ["colorGuideImage", "Color"], ["finishedImage", "Poster"]] as const).map(([key, label]) =>
                   <button key={key} aria-pressed={view === key} onClick={() => setView(key)}>{label}</button>)}
               </div>
             )}

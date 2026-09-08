@@ -1,0 +1,13 @@
+{
+  "themeSlug": "shan-hai-jing",
+  "lineart_size": [
+    2100,
+    2970
+  ],
+  "minimum_lineart_long_edge": 1200,
+  "binary_threshold": 200,
+  "max_midgray_fraction": 0.015,
+  "minimum_white_fraction": 0.8,
+  "maximum_ink_fraction": 0.2,
+  "max_dense_patch_fraction": 0.015
+}
