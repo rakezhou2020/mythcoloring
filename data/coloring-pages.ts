@@ -1,6 +1,7 @@
 import type { ColoringPage } from "./types";
 import { publishedThemes } from "./themes";
 import deerProduct from "../mythcoloring-workflow/output/nine-colored-deer/product.json";
+import wingedMonkeyProduct from "../mythcoloring-workflow/output/winged-monkey/product.json";
 
 const nineColoredDeer: ColoringPage = {
   ...deerProduct,
@@ -8,6 +9,17 @@ const nineColoredDeer: ColoringPage = {
   creatureSlug: deerProduct.slug,
   type: "Coloring Page",
   difficulty: "Easy",
+  colorCount: 9,
+  featured: true,
+  status: "published",
+};
+
+const wingedMonkey: ColoringPage = {
+  ...wingedMonkeyProduct,
+  id: wingedMonkeyProduct.slug,
+  creatureSlug: wingedMonkeyProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Medium",
   colorCount: 9,
   featured: true,
   status: "published",
@@ -39,7 +51,11 @@ const sampleColoringPages: ColoringPage[] = [
   })),
 );
 
-export const coloringPages: ColoringPage[] = [nineColoredDeer, ...sampleColoringPages];
+export const coloringPages: ColoringPage[] = [
+  nineColoredDeer,
+  wingedMonkey,
+  ...sampleColoringPages,
+];
 export const publishedColoringPages = coloringPages.filter(
   (p) =>
     p.status === "published" &&
