@@ -58,6 +58,24 @@ export const creatures: Creature[] = [
     featured: true,
     status: "published",
   },
+  {
+    slug: "xuan-gui",
+    name: "Xuan Gui",
+    localName: "旋龟",
+    themeSlug: "shan-hai-jing",
+    origin: "Myth-inspired coloring artwork.",
+    shortDescription:
+      "A long-legged turtle-bird strides through curling clouds and moonlit waves.",
+    appearance:
+      "A bright golden scaled tail, red crest, blue beak, dark patterned shell, and flowing ribbons create its distinctive silhouette.",
+    legend:
+      "Its poster places the creature in a sweeping sea-and-mountain landscape beneath a crescent moon.",
+    symbolism:
+      "The artwork brings together ocean movement, night sky, and a calm watchful traveler.",
+    heroImage: "/products/xuan-gui/finished.jpg",
+    featured: true,
+    status: "published",
+  },
   ...[
     ["taotie", "Taotie", "饕餮"],
     ["qilin", "Qilin", "麒麟"],

@@ -3,6 +3,7 @@ import { publishedThemes } from "./themes";
 import deerProduct from "../mythcoloring-workflow/output/nine-colored-deer/product.json";
 import wingedMonkeyProduct from "../mythcoloring-workflow/output/winged-monkey/product.json";
 import armadilloProduct from "../mythcoloring-workflow/output/armadillo/product.json";
+import xuanGuiProduct from "../mythcoloring-workflow/output/xuan-gui/product.json";
 
 const nineColoredDeer: ColoringPage = {
   ...deerProduct,
@@ -39,6 +40,17 @@ const armadillo: ColoringPage = {
   status: "published",
 };
 
+const xuanGui: ColoringPage = {
+  ...xuanGuiProduct,
+  id: xuanGuiProduct.slug,
+  creatureSlug: xuanGuiProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: 7,
+  featured: true,
+  status: "published",
+};
+
 // Product cards always use the same four resource fields. A null field makes
 // the corresponding preview or action unavailable rather than inventing a URL.
 const sampleColoringPages: ColoringPage[] = [
@@ -69,6 +81,7 @@ export const coloringPages: ColoringPage[] = [
   nineColoredDeer,
   wingedMonkey,
   armadillo,
+  xuanGui,
   ...sampleColoringPages,
 ];
 export const publishedColoringPages = coloringPages.filter(
