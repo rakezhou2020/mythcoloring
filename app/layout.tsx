@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: { default: "Myth Coloring", template: "%s | Myth Coloring" },
   description:
     "Free mythical creature coloring pages and the stories behind them.",
+  icons: {
+    icon: [{ url: "/brand-mark.png", type: "image/png" }],
+    apple: [{ url: "/brand-mark.png", type: "image/png" }],
+  },
 };
 export default function RootLayout({
   children,
@@ -18,7 +22,8 @@ export default function RootLayout({
         </a>
         <header className="site-header wrap">
           <Link className="brand" href="/" aria-label="Myth Coloring home">
-            <span className="brand-mark">MC</span>Myth Coloring
+            <img className="brand-mark" src="/brand-mark.png" alt="" />
+            Myth Coloring
           </Link>
           <nav aria-label="Primary navigation">
             <Link href="/coloring-pages/">Coloring Pages</Link>

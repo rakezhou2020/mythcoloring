@@ -108,15 +108,11 @@ p {
   white-space: nowrap;
 }
 .brand-mark {
-  border: 1px solid var(--ink);
   border-radius: 50%;
   width: 36px;
   height: 36px;
-  display: grid;
-  place-items: center;
-  font:
-    11px Georgia,
-    serif;
+  flex: 0 0 36px;
+  object-fit: contain;
 }
 .site-header nav {
   display: flex;
