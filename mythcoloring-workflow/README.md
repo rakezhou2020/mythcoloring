@@ -7,13 +7,13 @@
 从网站项目根目录看，每个产品只在 public/products/[slug]/ 保存四个公开产物：
 
 - lineart.png：干净黑白线稿，首页主图和打印来源。
-- color-guide.png：推荐配色，底部色卡，仅网页展示。
-- finished.png：纯完成效果，无色卡，用于 hover 和详情查看。
+- color-guide.jpg：网页 Color 图，不含色卡。
+- finished.jpg：网页 Poster 图，用于详情查看。
 - print.pdf：单页，只有产品标题、黑白 lineart、品牌页脚。
 
-三个图片均为 A4 比例 2100×2970，不拉伸。PDF 默认 A4，可用 --paper letter 切换纸型，仍只生成一个 PDF。
+lineart.png 为 2100×2970 的 A4 高分辨率 PNG。Color 和 Poster 是不拉伸的渐进式 JPG，最长边最多 1440px、质量 80，供网站快速展示。PDF 默认 A4，可用 --paper letter 切换纸型，仍只生成一个 PDF。
 本地元数据保留于本工作流 output/[slug]/product.json；这里不再保存图片或 PDF。
-所有元数据路径使用 /products/[slug]/lineart.png、color-guide.png、finished.png、print.pdf。
+所有元数据路径使用 /products/[slug]/lineart.png、color-guide.jpg、finished.jpg、print.pdf。
 网站产品数据读取这份 JSON，保留 draft，不自动发布。现有路由和页面结构未变。
 
 ## 运行
@@ -64,8 +64,8 @@ python make_product.py --slug new-creature --title "New Creature Coloring Page" 
 
 ## 网页预览
 
-沿用原卡片和弹窗，增加 Line Art / Color Guide / Finished Preview 三视图。
-点击图片可进入占满屏幕的预览，支持双指缩放、拖动、缩放按钮和重置。桌面 hover 仍显示 finished；移动端不依赖 hover。
+沿用原卡片和弹窗，增加 Line Art / Color / Poster 三视图。
+点击图片可进入占满屏幕的预览，支持双指缩放、拖动、缩放按钮和重置。桌面 hover 显示 Color；Poster 仅在 Poster 视图中展示，移动端不依赖 hover。
 Print 仍走原打印弹窗，任何视图下实际打印都只使用黑白线稿；Download 指向固定 print.pdf。
 未发布的九色鹿可在本地显式启用预览：网站根目录 PowerShell 执行：
 

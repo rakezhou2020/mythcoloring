@@ -11,3 +11,10 @@ Apply these rules to every new Myth Coloring product before writing its reviewed
 ## Color Scope Standard
 
 For every product, assign color scope deliberately before building the reviewed region plan: color the creature and only objects visually tied to its pose or silhouette. Keep environmental ground, distant plants, small grass, and atmosphere consistently black-and-white unless the product brief explicitly includes them. Do not mix colored and uncolored background elements at random.
+
+## Website Asset Delivery
+
+- Keep `lineart.png` as a high-resolution PNG for crisp printable outlines and PDF production.
+- Deliver website-only Color and Poster artwork as progressive JPEG files: `color-guide.jpg` and `finished.jpg`.
+- Resize those JPEGs without stretching so the longest edge is at most 1440 px; export at quality 80 with optimization enabled. This is the default delivery target for future products.
+- Update `colorGuideImage` and `finishedImage` in the product JSON to the `.jpg` paths. Do not merely rename a PNG file extension.
