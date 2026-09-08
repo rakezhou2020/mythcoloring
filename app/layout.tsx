@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { JsonLd } from "../components/json-ld";
 import { siteName, siteUrl } from "../lib/seo";
 import "./globals.css";
@@ -19,6 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SXX19XB9FJ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-SXX19XB9FJ');`}
+        </Script>
         <JsonLd
           data={{
             "@context": "https://schema.org",
