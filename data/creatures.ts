@@ -6,15 +6,16 @@ export const creatures: Creature[] = [
     name: "Nine-Colored Deer",
     localName: "九色鹿",
     themeSlug: "shan-hai-jing",
-    origin: "A beloved deer figure in Chinese Buddhist storytelling.",
+    origin:
+      "The Nine-Colored Deer is best known from the Deer King Jataka mural in Cave 257 of the Mogao Caves at Dunhuang, painted during the Northern Wei period. The tale comes from the Buddhist Jataka tradition, in which the future Buddha appears in an earlier life as a miraculous deer king.",
     shortDescription:
-      "A graceful, many-hued deer created here as the first finished coloring product.",
+      "A radiant deer saves a drowning stranger, asks only that its hidden home remain secret, and is later betrayed for a royal reward—one of Dunhuang's most enduring tales of compassion, greed, and a broken promise.",
     appearance:
-      "A luminous deer with an elegant silhouette, long legs, branching antlers, and a richly patterned coat.",
+      "In the Dunhuang tradition, the deer is an otherworldly creature of many colors, graceful and luminous, with pale antlers and a noble bearing. Its beauty is not merely decorative: it is exactly what draws human desire toward a creature that wishes only to live in peace.",
     legend:
-      "A fuller editorial account will be added with the next round of creature research.",
+      "Long ago, beside the Ganges River, the Nine-Colored Deer heard a man crying for help and pulled him from the water. The rescued man offered a reward, but the deer asked for only one thing: never reveal where it lived. Later, a queen dreamed of the extraordinary deer and longed to possess its beautiful hide. The king announced a rich reward for anyone who could lead him to it, and the man who owed the deer his life surrendered its secret. When the hunting party surrounded the deer, it did not flee in terror. Instead, it stood before the king and told him how the informer had once been saved from drowning. Moved by the deer's courage and compassion—and ashamed by the betrayal—the king abandoned the hunt and ordered that the deer be protected. In the famous Dunhuang mural, the story unfolds like an ancient picture scroll, beginning from both ends and drawing the viewer toward this final confrontation.",
     symbolism:
-      "Its visual design is associated with kindness, courage, and the meeting of the natural and the wondrous.",
+      "The Nine-Colored Deer endures because its legend is more than a story about a magical animal. It is a tale about kindness offered without price, the danger of greed, the weight of a promise, and the power of truth when violence seems inevitable. The deer answers betrayal not with revenge, but with dignity—and that is what makes the story feel legendary even after more than a thousand years.",
     heroImage: "/products/nine-colored-deer/finished.png",
     featured: true,
     status: "published",
