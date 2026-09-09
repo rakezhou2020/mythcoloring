@@ -507,8 +507,54 @@ p {
 .creature-printable {
   border-top: 1px solid var(--line);
 }
-.creature-art-section .detail-art {
-  width: min(100%, 560px);
+.creature-printable .coloring-grid {
+  grid-template-columns: minmax(0, 300px);
+}
+.creature-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
+  gap: clamp(32px, 6vw, 76px);
+  align-items: start;
+  padding-top: 0;
+}
+.finished-artwork h2,
+.color-preview h2 {
+  margin-bottom: 16px;
+  font-size: 30px;
+}
+.finished-artwork img,
+.color-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.poster-cta {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.poster-cta p {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.coloring-ideas-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1fr);
+  gap: clamp(32px, 6vw, 76px);
+  align-items: start;
+}
+.printing-tips-section {
+  margin-top: 38px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+.related-coloring-pages .coloring-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .printing-tips {
   padding-left: 20px;
@@ -700,6 +746,17 @@ p {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+  .creature-overview,
+  .coloring-ideas-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .creature-printable .coloring-grid {
+    grid-template-columns: minmax(0, 320px);
+  }
+  .related-coloring-pages .coloring-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .detail-art {
     max-width: 380px;
     width: 100%;
@@ -733,6 +790,9 @@ p {
   }
   .hero-actions .button {
     width: 100%;
+  }
+  .related-coloring-pages .coloring-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @page {

@@ -38,8 +38,9 @@ export default async function Page({ params }: Props) {
   );
   const relatedPages = publishedColoringPages
     .filter((p) => p.creatureSlug !== slug)
-    .slice(0, 6);
+    .slice(0, 4);
   const primaryPage = printablePages[0];
+  const finishedArtwork = primaryPage?.finishedImage ?? c.heroImage;
   const pageUrl = siteUrl + "/creatures/" + slug + "/";
   const description = creatureMetaDescription(c.name, c.shortDescription);
   const schema = {
@@ -84,6 +85,43 @@ export default async function Page({ params }: Props) {
         <h1>{c.name} Coloring Page</h1>
         <p>{c.shortDescription}</p>
       </header>
+      <section className="creature-overview section" aria-labelledby="about-creature">
+        <div className="prose">
+          <h2 id="about-creature">About {c.name}</h2>
+          {(["origin", "appearance", "legend", "symbolism"] as const).map(
+            (key) => (
+              <section key={key}>
+                <h3>{key.charAt(0).toUpperCase() + key.slice(1)}</h3>
+                <p>{c[key]}</p>
+              </section>
+            ),
+          )}
+          {primaryPage?.amazonPosterUrl && (
+            <aside className="poster-cta">
+              <p>Available on Amazon</p>
+              <a
+                className="button"
+                href={primaryPage.amazonPosterUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Get This Artwork as a Poster
+              </a>
+            </aside>
+          )}
+        </div>
+        {finishedArtwork && (
+          <div className="finished-artwork">
+            <h2 id="finished-artwork">Finished Artwork</h2>
+            <Artwork
+              name={c.name}
+              src={finishedArtwork}
+              colored
+              alt={"Finished " + c.name + " mythical creature artwork"}
+            />
+          </div>
+        )}
+      </section>
       {primaryPage && (
         <section className="creature-printable section" aria-labelledby="printable-page">
           <div className="section-heading">
@@ -97,80 +135,36 @@ export default async function Page({ params }: Props) {
           <ColoringGrid items={[primaryPage]} />
         </section>
       )}
-      {primaryPage?.colorGuideImage && (
-        <section className="creature-art-section section" aria-labelledby="coloring-inspiration">
-          <div className="section-heading">
-            <div>
-              <h2 id="coloring-inspiration">Coloring Inspiration</h2>
-              <p className="section-intro">Use this flat-color guide as inspiration while you make the page your own.</p>
+      <section className="coloring-ideas section" aria-labelledby="coloring-ideas">
+        <div className="coloring-ideas-layout">
+          <div className="prose">
+            <h2 id="coloring-ideas">Coloring Ideas</h2>
+            <p>
+              The color reference is only a starting point. Try a palette that feels right to you: soft pencils for a quiet, storybook look, bold markers for stronger contrast, or colors inspired by a favorite landscape. You do not need to match the finished artwork exactly—this {c.name} coloring page is yours to explore.
+            </p>
+          </div>
+          {primaryPage?.colorGuideImage && (
+            <div className="color-preview">
+              <h2>Color Preview</h2>
+              <Artwork
+                name={c.name}
+                src={primaryPage.colorGuideImage}
+                colored
+                alt={c.name + " coloring inspiration with flat colors"}
+              />
             </div>
-          </div>
-          <div className="detail-art">
-            <Artwork
-              name={c.name}
-              src={primaryPage.colorGuideImage}
-              colored
-              alt={c.name + " coloring inspiration with flat colors"}
-            />
-          </div>
-        </section>
-      )}
-      {primaryPage?.finishedImage && (
-        <section className="creature-art-section section" aria-labelledby="finished-artwork">
-          <div className="section-heading">
-            <div>
-              <h2 id="finished-artwork">Finished Artwork</h2>
-              <p className="section-intro">A finished version of the design, shown as a color reference rather than a rule.</p>
-            </div>
-          </div>
-          <div className="detail-art">
-            <Artwork
-              name={c.name}
-              src={primaryPage.finishedImage}
-              colored
-              alt={"Finished " + c.name + " mythical creature artwork"}
-            />
-          </div>
-        </section>
-      )}
-      <section className="creature-detail section" aria-labelledby="about-creature">
-        <div className="prose">
-          <h2 id="about-creature">About {c.name}</h2>
-          {(["origin", "appearance", "legend", "symbolism"] as const).map(
-            (key) => (
-              <section key={key}>
-                <h3>{key.charAt(0).toUpperCase() + key.slice(1)}</h3>
-                <p>{c[key]}</p>
-              </section>
-            ),
           )}
         </div>
-        {c.heroImage && (
-          <div className="detail-art">
-            <Artwork
-              name={c.name}
-              src={c.heroImage}
-              colored
-              alt={"Finished " + c.name + " mythical creature artwork"}
-            />
-          </div>
-        )}
+        <div className="printing-tips-section prose" aria-labelledby="printing-tips">
+          <h2 id="printing-tips">Printing Tips</h2>
+          <ul className="printing-tips">
+            <li>Print the black-and-white PDF at A4 size or choose “Fit to page.”</li>
+            <li>Use crayons, colored pencils, or markers on a paper weight that suits your tools.</li>
+            <li>Keep the color guide on screen or beside you for inspiration while coloring.</li>
+          </ul>
+        </div>
       </section>
-      <section className="prose section" aria-labelledby="coloring-ideas">
-        <h2 id="coloring-ideas">Coloring Ideas</h2>
-        <p>
-          The color reference is only a starting point. Try a palette that feels right to you: soft pencils for a quiet, storybook look, bold markers for stronger contrast, or colors inspired by a favorite landscape. You do not need to match the finished artwork exactly—this {c.name} coloring page is yours to explore.
-        </p>
-      </section>
-      <section className="prose section" aria-labelledby="printing-tips">
-        <h2 id="printing-tips">Printing Tips</h2>
-        <ul className="printing-tips">
-          <li>Print the black-and-white PDF at A4 size or choose “Fit to page.”</li>
-          <li>Use crayons, colored pencils, or markers on a paper weight that suits your tools.</li>
-          <li>Keep the color guide on screen or beside you for inspiration while coloring.</li>
-        </ul>
-      </section>
-      <section className="section" aria-labelledby="related-coloring-pages">
+      <section className="section related-coloring-pages" aria-labelledby="related-coloring-pages">
         <div className="section-heading">
           <div>
             <h2 id="related-coloring-pages">Related Coloring Pages</h2>
