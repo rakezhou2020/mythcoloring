@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Artwork } from "../components/artwork";
+import { ColoringGrid } from "../components/coloring-grid";
 import { ThemeCards } from "../components/theme-cards";
-import { homeHeroProduct } from "../data/coloring-pages";
+import { homeHeroProduct, publishedColoringPages } from "../data/coloring-pages";
 import { pageMetadata } from "../lib/seo";
 export const metadata = pageMetadata(
   "Free Printable Coloring Pages",
@@ -62,14 +63,18 @@ export default function Home() {
             <p className="eyebrow">Make a little room for creativity</p>
             <h2>Free Coloring Pages</h2>
           </div>
+          <Link className="text-link" href="/coloring-pages/">
+            View all coloring pages →
+          </Link>
         </div>
         <p className="catalog-note">
-          Browse the full collection of printable mythical creature coloring
-          pages, color guides, and finished artwork.
+          Explore eight featured printables, then browse the full collection
+          for more mythical creature coloring pages, color guides, and
+          finished artwork.
         </p>
-        <Link className="button primary" href="/coloring-pages/">
-          Browse All Coloring Pages
-        </Link>
+        <ColoringGrid
+          items={publishedColoringPages.filter((p) => p.featured).slice(0, 8)}
+        />
       </section>
       <section className="section wrap">
         <div className="section-heading">
