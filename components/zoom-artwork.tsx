@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState, type PointerEvent } from "react";
+import { displayImageSrc } from "../lib/display-image";
 
 type Point = { x: number; y: number };
 export function ZoomArtwork({ src, alt, expanded, onExpand }: {
@@ -40,8 +41,9 @@ export function ZoomArtwork({ src, alt, expanded, onExpand }: {
         y: Math.max(-limitY, Math.min(limitY, anchor.y + (t.y - anchor.y) * r + next.y - prev.y)) };
     });
   }
+  const displaySrc = displayImageSrc(src);
   if (!expanded) return <button className="enlarge-artwork" onClick={onExpand} aria-label="Enlarge artwork">
-    <img src={src} alt={alt} width={2100} height={2970} />
+    <img src={displaySrc} alt={alt} width={2100} height={2970} />
     <span>Tap to enlarge</span>
   </button>;
   return <div className="zoom-artwork">
@@ -61,7 +63,7 @@ export function ZoomArtwork({ src, alt, expanded, onExpand }: {
       onPointerUp={(event) => pointers.current.delete(event.pointerId)}
       onPointerCancel={(event) => pointers.current.delete(event.pointerId)}
       onLostPointerCapture={(event) => pointers.current.delete(event.pointerId)}>
-      <img src={src} alt={alt} draggable={false} width={2100} height={2970}
+      <img src={displaySrc} alt={alt} draggable={false} width={2100} height={2970}
         style={{ transform: `translate(${transform.x}px, ${transform.y}px) scale(${transform.scale})` }} />
     </div>
   </div>;

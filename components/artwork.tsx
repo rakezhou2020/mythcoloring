@@ -14,7 +14,7 @@ export function Artwork({
   if (src)
     return (
       <img
-        src={src}
+        src={displayImageSrc(src)}
         alt={alt ?? name + (colored ? " coloring inspiration" : " free printable coloring page")}
         width={600}
         height={750}
@@ -51,3 +51,4 @@ export function Artwork({
     </div>
   );
 }
+import { displayImageSrc } from "../lib/display-image";
