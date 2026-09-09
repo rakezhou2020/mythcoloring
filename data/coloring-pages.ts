@@ -4,6 +4,11 @@ import deerProduct from "../mythcoloring-workflow/output/nine-colored-deer/produ
 import wingedMonkeyProduct from "../mythcoloring-workflow/output/winged-monkey/product.json";
 import armadilloProduct from "../mythcoloring-workflow/output/armadillo/product.json";
 import xuanGuiProduct from "../mythcoloring-workflow/output/xuan-gui/product.json";
+import chiRuProduct from "../mythcoloring-workflow/output/chi-ru/product.json";
+import quRuProduct from "../mythcoloring-workflow/output/qu-ru/product.json";
+import luProduct from "../mythcoloring-workflow/output/lu/product.json";
+import tianGouProduct from "../mythcoloring-workflow/output/tian-gou/product.json";
+import renMaProduct from "../mythcoloring-workflow/output/ren-ma/product.json";
 
 const nineColoredDeer: ColoringPage = {
   ...deerProduct,
@@ -51,6 +56,61 @@ const xuanGui: ColoringPage = {
   status: "published",
 };
 
+const chiRu: ColoringPage = {
+  ...chiRuProduct,
+  id: chiRuProduct.slug,
+  creatureSlug: chiRuProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
+const quRu: ColoringPage = {
+  ...quRuProduct,
+  id: quRuProduct.slug,
+  creatureSlug: quRuProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
+const lu: ColoringPage = {
+  ...luProduct,
+  id: luProduct.slug,
+  creatureSlug: luProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
+const tianGou: ColoringPage = {
+  ...tianGouProduct,
+  id: tianGouProduct.slug,
+  creatureSlug: tianGouProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Medium",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
+const renMa: ColoringPage = {
+  ...renMaProduct,
+  id: renMaProduct.slug,
+  creatureSlug: renMaProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Medium",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
 // Product cards always use the same four resource fields. A null field makes
 // the corresponding preview or action unavailable rather than inventing a URL.
 const sampleColoringPages: ColoringPage[] = [
@@ -82,6 +142,11 @@ export const coloringPages: ColoringPage[] = [
   wingedMonkey,
   armadillo,
   xuanGui,
+  chiRu,
+  quRu,
+  lu,
+  tianGou,
+  renMa,
   ...sampleColoringPages,
 ];
 export const publishedColoringPages = coloringPages.filter(

@@ -72,7 +72,7 @@ export default function Home() {
           collection.
         </p>
         <ColoringGrid
-          items={publishedColoringPages.filter((p) => p.featured).slice(0, 8)}
+          items={publishedColoringPages.filter((p) => p.featured).slice(0, 12)}
         />
       </section>
       <section className="section wrap">

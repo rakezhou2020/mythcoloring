@@ -1,0 +1,29 @@
+{
+  "slug": "chi-ru",
+  "title": "Chi Ru Coloring Page",
+  "themeSlug": "shan-hai-jing",
+  "lineArtImage": "/products/chi-ru/lineart.png",
+  "colorGuideImage": "/products/chi-ru/color-guide.jpg",
+  "finishedImage": "/products/chi-ru/finished.jpg",
+  "printPdf": "/products/chi-ru/print.pdf",
+  "status": "draft",
+  "workflowVersion": 4,
+  "display": {
+    "card": "lineArtImage",
+    "hover": "colorGuideImage",
+    "detail": "colorGuideImage"
+  },
+  "quality": {
+    "status": "user-supplied",
+    "lineart": "creator-supplied black and white line art",
+    "colorArtwork": "creator-supplied color artwork",
+    "poster": "creator-supplied poster artwork",
+    "pdf": "one-page A4 line art with logo"
+  },
+  "artworkSource": "user-supplied",
+  "assetLabels": {
+    "lineArtImage": "Line Art",
+    "colorGuideImage": "Color",
+    "finishedImage": "Poster"
+  }
+}

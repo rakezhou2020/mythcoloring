@@ -76,6 +76,96 @@ export const creatures: Creature[] = [
     featured: true,
     status: "published",
   },
+  {
+    slug: "chi-ru",
+    name: "Chi Ru",
+    localName: "赤鱬",
+    themeSlug: "shan-hai-jing",
+    origin: "Myth-inspired coloring artwork of Chi Ru (赤鱬).",
+    shortDescription:
+      "A scarlet aquatic creature curls above the waves, with soaring fins and a tranquil human-like face.",
+    appearance:
+      "This artwork depicts Chi Ru with red-orange scales, wing-like fins, a long curling tail, pale horns, and a blue jewel above its face.",
+    legend:
+      "The illustrated scene places Chi Ru among moonlit waves and misty mountains, with distant pavilions glowing beneath a full moon.",
+    symbolism:
+      "The warm scarlet creature and cool ocean landscape create a vivid coloring study of movement, texture, and stillness.",
+    heroImage: "/products/chi-ru/finished.jpg",
+    featured: true,
+    status: "published",
+  },
+  {
+    slug: "qu-ru",
+    name: "Qu Ru",
+    localName: "瞿如",
+    themeSlug: "shan-hai-jing",
+    origin: "Myth-inspired coloring artwork of Qu Ru (瞿如).",
+    shortDescription:
+      "A human-faced bird spreads emerald wings above a sea of clouds, its flowing tail sweeping across the mountain sky.",
+    appearance:
+      "This artwork depicts Qu Ru with long black hair, three bird legs, turquoise and green feathers, golden wing details, and two delicate head plumes.",
+    legend:
+      "The illustrated scene places Qu Ru on a pine-covered cliff among misty peaks, waterfalls, and distant pavilions beneath a full moon.",
+    symbolism:
+      "Layered feathers, curling clouds, and ribbon-like tail plumes invite a detailed coloring study of rhythm, texture, and cool mountain colors.",
+    heroImage: "/products/qu-ru/finished.jpg",
+    featured: true,
+    status: "published",
+  },
+  {
+    slug: "lu",
+    name: "Lu",
+    localName: "鯥",
+    themeSlug: "shan-hai-jing",
+    origin: "Myth-inspired coloring artwork of Lu (鯥).",
+    shortDescription:
+      "A golden-brown winged creature with a fish-like face and a long scaled tail floats among mountain clouds.",
+    appearance:
+      "This artwork depicts Lu with branching orange antlers, delicate whiskers, four slender legs, layered feathered wings, and a curling serpentine tail.",
+    legend:
+      "The finished illustration places Lu above cascading mountain waters and rocky peaks in warm sunlight, while the line art frames it with clouds and pine trees.",
+    symbolism:
+      "Golden feathers, copper scales, and flowing clouds offer a detailed coloring study of warm colors and contrasting textures.",
+    heroImage: "/products/lu/finished.jpg",
+    featured: true,
+    status: "published",
+  },
+  {
+    slug: "tian-gou",
+    name: "Tian Gou",
+    localName: "天狗",
+    themeSlug: "shan-hai-jing",
+    origin: "Myth-inspired coloring artwork of Tian Gou (天狗).",
+    shortDescription:
+      "A celestial dog dives through curling clouds beneath a crescent moon, its long flowing silhouette winding across the sky.",
+    appearance:
+      "This artwork depicts Tian Gou with a dark brown body, a pale face and paws, and sweeping fur surrounded by stars and cloud scrolls.",
+    legend:
+      "The finished illustration shows Tian Gou biting into a glowing moon above misty mountains and distant pavilions, while the coloring page pairs its diving pose with a large crescent.",
+    symbolism:
+      "The dark coat, pale fur, and golden moon offer a coloring study of contrast, with broad shapes and swirling clouds to explore.",
+    heroImage: "/products/tian-gou/finished.jpg",
+    featured: true,
+    status: "published",
+  },
+  {
+    slug: "ren-ma",
+    name: "Ren Ma",
+    localName: "人马",
+    themeSlug: "shan-hai-jing",
+    origin: "Creator-named fantasy coloring artwork of Ren Ma (人马).",
+    shortDescription:
+      "A turquoise aquatic creature sweeps through waves with golden fins, long whiskers, and outstretched claws.",
+    appearance:
+      "This artwork depicts Ren Ma with a broad smiling face, a curling fish-like body, a golden mane and tail fin, and two scaled forelimbs.",
+    legend:
+      "The finished illustration places the creature inside an ornate underwater palace among glowing pearls, treasure, and swirling currents. The line art surrounds it with clouds and waves.",
+    symbolism:
+      "Turquoise and gold create a bright coloring palette, while the curved body, flowing whiskers, and waves offer room to explore movement and texture.",
+    heroImage: "/products/ren-ma/finished.jpg",
+    featured: true,
+    status: "published",
+  },
   ...[
     ["taotie", "Taotie", "饕餮"],
     ["qilin", "Qilin", "麒麟"],

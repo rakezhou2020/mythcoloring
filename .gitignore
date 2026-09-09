@@ -12,4 +12,5 @@ output/playwright
 test-results
 tsconfig.tsbuildinfo
 tmp-*.png
+tmp/
 mythcoloring-workflow/config/review-*
