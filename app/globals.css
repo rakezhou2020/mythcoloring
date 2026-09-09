@@ -871,7 +871,7 @@ p {
 .enlarge-artwork img { width: 100%; height: auto; }
 .enlarge-artwork span { display: block; font-size: 12px; margin: 12px; }
 .poster-link { width: 100%; margin-top: 14px; }
-.artwork-fullscreen { width: 100vw; height: 100dvh; max-width: none; max-height: none; inset: 0; margin: 0; border: 0; border-radius: 0; padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom)); }
+.artwork-fullscreen { position: fixed; inset: 0; width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; transform: none; border: 0; border-radius: 0; padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom)); }
 .artwork-fullscreen .screen-sheet { max-width: none; margin: 0; }
 .artwork-fullscreen .screen-sheet h2, .artwork-fullscreen .dialog-actions { display: none; }
 .zoom-viewport { height: calc(100dvh - 225px); min-height: 180px; width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; touch-action: none; cursor: grab; background: #eee; }
