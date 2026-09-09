@@ -1,3 +1,5 @@
+import { displayImageSrc } from "../lib/display-image";
+
 export function Artwork({
   name,
   src,
@@ -51,4 +53,3 @@ export function Artwork({
     </div>
   );
 }
-import { displayImageSrc } from "../lib/display-image";
