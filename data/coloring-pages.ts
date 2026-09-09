@@ -9,6 +9,10 @@ import quRuProduct from "../mythcoloring-workflow/output/qu-ru/product.json";
 import luProduct from "../mythcoloring-workflow/output/lu/product.json";
 import tianGouProduct from "../mythcoloring-workflow/output/tian-gou/product.json";
 import renMaProduct from "../mythcoloring-workflow/output/ren-ma/product.json";
+import renSheProduct from "../mythcoloring-workflow/output/ren-she/product.json";
+import nineEaredHoundProduct from "../mythcoloring-workflow/output/nine-eared-hound/product.json";
+import nineTailedSnakeProduct from "../mythcoloring-workflow/output/nine-tailed-snake/product.json";
+import threeHornedBeastProduct from "../mythcoloring-workflow/output/three-horned-beast/product.json";
 
 const nineColoredDeer: ColoringPage = {
   ...deerProduct,
@@ -111,6 +115,50 @@ const renMa: ColoringPage = {
   status: "published",
 };
 
+const renShe: ColoringPage = {
+  ...renSheProduct,
+  id: renSheProduct.slug,
+  creatureSlug: renSheProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Medium",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
+const nineEaredHound: ColoringPage = {
+  ...nineEaredHoundProduct,
+  id: nineEaredHoundProduct.slug,
+  creatureSlug: nineEaredHoundProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
+const nineTailedSnake: ColoringPage = {
+  ...nineTailedSnakeProduct,
+  id: nineTailedSnakeProduct.slug,
+  creatureSlug: nineTailedSnakeProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
+const threeHornedBeast: ColoringPage = {
+  ...threeHornedBeastProduct,
+  id: threeHornedBeastProduct.slug,
+  creatureSlug: threeHornedBeastProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
 // Product cards always use the same four resource fields. A null field makes
 // the corresponding preview or action unavailable rather than inventing a URL.
 const sampleColoringPages: ColoringPage[] = [
@@ -147,6 +195,10 @@ export const coloringPages: ColoringPage[] = [
   lu,
   tianGou,
   renMa,
+  renShe,
+  nineEaredHound,
+  nineTailedSnake,
+  threeHornedBeast,
   ...sampleColoringPages,
 ];
 export const publishedColoringPages = coloringPages.filter(
