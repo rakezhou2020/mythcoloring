@@ -1,0 +1,29 @@
+{
+  "slug": "white-tiger",
+  "title": "White Tiger Coloring Page",
+  "themeSlug": "shan-hai-jing",
+  "lineArtImage": "/products/white-tiger/lineart.webp",
+  "colorGuideImage": "/products/white-tiger/color-guide.webp",
+  "finishedImage": "/products/white-tiger/finished.webp",
+  "printPdf": "/products/white-tiger/print.pdf",
+  "status": "draft",
+  "workflowVersion": 4,
+  "display": {
+    "card": "lineArtImage",
+    "hover": "colorGuideImage",
+    "detail": "colorGuideImage"
+  },
+  "quality": {
+    "status": "user-supplied",
+    "lineart": "creator-supplied black and white line art",
+    "colorArtwork": "creator-supplied color artwork",
+    "poster": "creator-supplied poster artwork",
+    "pdf": "One-page A4 PDF with original-resolution grayscale line art, lossless embedding, and logo"
+  },
+  "artworkSource": "user-supplied",
+  "assetLabels": {
+    "lineArtImage": "Line Art",
+    "colorGuideImage": "Color",
+    "finishedImage": "Poster"
+  }
+}

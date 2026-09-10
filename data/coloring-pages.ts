@@ -13,6 +13,11 @@ import renSheProduct from "../mythcoloring-workflow/output/ren-she/product.json"
 import nineEaredHoundProduct from "../mythcoloring-workflow/output/nine-eared-hound/product.json";
 import nineTailedSnakeProduct from "../mythcoloring-workflow/output/nine-tailed-snake/product.json";
 import threeHornedBeastProduct from "../mythcoloring-workflow/output/three-horned-beast/product.json";
+import qinglongProduct from "../mythcoloring-workflow/output/qinglong/product.json";
+import whiteTigerProduct from "../mythcoloring-workflow/output/white-tiger/product.json";
+import xuanwuProduct from "../mythcoloring-workflow/output/xuanwu/product.json";
+import zhuqueProduct from "../mythcoloring-workflow/output/zhuque/product.json";
+import hundunProduct from "../mythcoloring-workflow/output/hundun/product.json";
 
 const nineColoredDeer: ColoringPage = {
   ...deerProduct,
@@ -159,6 +164,61 @@ const threeHornedBeast: ColoringPage = {
   status: "published",
 };
 
+const qinglong: ColoringPage = {
+  ...qinglongProduct,
+  id: qinglongProduct.slug,
+  creatureSlug: qinglongProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
+const whiteTiger: ColoringPage = {
+  ...whiteTigerProduct,
+  id: whiteTigerProduct.slug,
+  creatureSlug: whiteTigerProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
+const xuanwu: ColoringPage = {
+  ...xuanwuProduct,
+  id: xuanwuProduct.slug,
+  creatureSlug: xuanwuProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
+const zhuque: ColoringPage = {
+  ...zhuqueProduct,
+  id: zhuqueProduct.slug,
+  creatureSlug: zhuqueProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
+const hundun: ColoringPage = {
+  ...hundunProduct,
+  id: hundunProduct.slug,
+  creatureSlug: hundunProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Medium",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
 // Product cards always use the same four resource fields. A null field makes
 // the corresponding preview or action unavailable rather than inventing a URL.
 const sampleColoringPages: ColoringPage[] = [
@@ -199,6 +259,11 @@ export const coloringPages: ColoringPage[] = [
   nineEaredHound,
   nineTailedSnake,
   threeHornedBeast,
+  qinglong,
+  whiteTiger,
+  xuanwu,
+  zhuque,
+  hundun,
   ...sampleColoringPages,
 ];
 export const publishedColoringPages = coloringPages.filter(
