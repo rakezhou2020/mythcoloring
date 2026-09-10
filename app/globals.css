@@ -277,6 +277,35 @@ p {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 22px;
 }
+.divine-beast-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+.divine-beast-card {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--white);
+}
+.divine-beast-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  background: var(--white);
+}
+.divine-beast-card span {
+  display: block;
+  padding: 12px 14px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+}
+.divine-beast-card:hover span {
+  color: var(--rust);
+}
 .coloring-card {
   display: flex;
   flex-direction: column;
@@ -712,6 +741,9 @@ p {
   .coloring-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .divine-beast-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .site-header nav {
     gap: 20px;
   }
@@ -799,6 +831,7 @@ p {
 }
 @media (max-width: 400px) {
   .coloring-grid,
+  .divine-beast-grid,
   .creature-grid {
     grid-template-columns: 1fr;
   }

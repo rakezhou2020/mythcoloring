@@ -11,6 +11,12 @@ export const metadata = pageMetadata(
 );
 export default function Home() {
   const hero = homeHeroProduct;
+  const fourDivineBeasts = ["qinglong", "white-tiger", "zhuque", "xuanwu"].flatMap(
+    (slug) => {
+      const page = publishedColoringPages.find((item) => item.slug === slug);
+      return page ? [page] : [];
+    },
+  );
   return (
     <>
       <section className="hero wrap">
@@ -75,6 +81,27 @@ export default function Home() {
         <ColoringGrid
           items={publishedColoringPages.filter((p) => p.featured).slice(0, 8)}
         />
+      </section>
+      <section className="section wrap">
+        <div className="section-heading">
+          <h2>四大神兽</h2>
+        </div>
+        <div className="divine-beast-grid">
+          {fourDivineBeasts.map((beast) => (
+            <Link
+              className="divine-beast-card"
+              href={`/creatures/${beast.creatureSlug}/`}
+              key={beast.id}
+            >
+              <Artwork
+                colored
+                name={beast.title}
+                src={beast.finishedImage ?? beast.colorGuideImage}
+              />
+              <span>{beast.title.replace(" Coloring Page", "")}</span>
+            </Link>
+          ))}
+        </div>
       </section>
       <section className="section wrap">
         <div className="section-heading">
