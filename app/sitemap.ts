@@ -10,6 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/themes/",
     "/creatures/",
     "/about/",
+    "/privacy-policy/",
+    "/terms/",
+    "/contact/",
     ...publishedThemes.map((t) => "/themes/" + t.slug + "/"),
     ...publishedCreatures.map((c) => "/creatures/" + c.slug + "/"),
   ].map((path) => ({ url: siteUrl + path }));

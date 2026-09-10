@@ -447,6 +447,14 @@ p {
   color: var(--ink);
   font-size: 15px;
 }
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-links a:hover {
+  color: var(--rust);
+}
 .page-content {
   padding-block: 62px 80px;
   min-height: 65vh;

@@ -60,7 +60,6 @@ gtag('config', 'G-SXX19XB9FJ');`}
             <Link href="/coloring-pages/">Coloring Pages</Link>
             <Link href="/themes/">Themes</Link>
             <Link href="/creatures/">Creatures</Link>
-            <Link href="/about/">About</Link>
           </nav>
         </header>
         <main id="main">{children}</main>
@@ -69,6 +68,12 @@ gtag('config', 'G-SXX19XB9FJ');`}
             Myth Coloring
           </Link>
           <p>Myths to discover. Creatures to color.</p>
+          <nav className="footer-links" aria-label="Footer navigation">
+            <Link href="/about/">About</Link>
+            <Link href="/privacy-policy/">Privacy</Link>
+            <Link href="/terms/">Terms</Link>
+            <Link href="/contact/">Contact</Link>
+          </nav>
           <span>© 2026 Myth Coloring</span>
         </footer>
       </body>
