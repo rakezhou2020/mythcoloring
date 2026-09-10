@@ -36,6 +36,26 @@ const archiveMetadata: Record<string, { title: string; description: string }> = 
     description:
       "Discover Lu, a winged, serpent-tailed creature from the Shan Hai Jing. Learn its ancient legend and explore a Chinese mythology coloring page.",
   },
+  "ren-ma": {
+    title: "Ren Ma Coloring Page | MythColoring Creature Archive",
+    description:
+      "Explore Ren Ma, an original MythColoring aquatic creature design, with a printable coloring page, color guide, and finished artwork.",
+  },
+  "ren-she": {
+    title: "Ren She Coloring Page | MythColoring Creature Archive",
+    description:
+      "Explore Ren She, an original MythColoring serpent creature design, with a printable coloring page, color guide, and finished artwork.",
+  },
+  "nine-eared-hound": {
+    title: "Nine-Eared Hound Coloring Page | MythColoring Creature Archive",
+    description:
+      "Explore the Nine-Eared Hound, an original MythColoring creature design, with a printable coloring page, color guide, and finished artwork.",
+  },
+  "nine-tailed-snake": {
+    title: "Nine-Tailed Snake Coloring Page | MythColoring Creature Archive",
+    description:
+      "Explore the Nine-Tailed Snake, an original MythColoring creature design, with a printable coloring page, color guide, and finished artwork.",
+  },
 };
 
 function creatureMetaDescription(name: string, shortDescription: string) {

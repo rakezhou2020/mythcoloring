@@ -158,15 +158,16 @@ export const creatures: Creature[] = [
     name: "Ren Ma",
     localName: "人马",
     themeSlug: "shan-hai-jing",
-    origin: "Creator-named fantasy coloring artwork of Ren Ma (人马).",
+    origin:
+      "Limited historical records available. Ren Ma is the name used for an original MythColoring creature design. We have not identified a reliable ancient Chinese text that matches both this name and this artwork, so it should be understood as a contemporary fantasy creature inspired by the visual language of mythic water worlds rather than as a documented Shan Hai Jing entry.",
     shortDescription:
-      "A turquoise aquatic creature sweeps through waves with golden fins, long whiskers, and outstretched claws.",
+      "Ren Ma is an original MythColoring aquatic creature design, created for a printable coloring page, color guide, and finished artwork.",
     appearance:
-      "This artwork depicts Ren Ma with a broad smiling face, a curling fish-like body, a golden mane and tail fin, and two scaled forelimbs.",
+      "Ren Ma has a broad, smiling face, a curling fish-like body, a golden mane and tail fin, and two scaled forelimbs. These features belong to MythColoring's artistic interpretation and are designed to make the creature feel lively, friendly, and at home among waves and underwater architecture.",
     legend:
-      "The finished illustration places the creature inside an ornate underwater palace among glowing pearls, treasure, and swirling currents. The line art surrounds it with clouds and waves.",
+      "No verified ancient legend currently supports this exact creature name and form. Rather than invent a historical adventure, the Ren Ma archive presents the artwork as an open invitation to imagine a gentle guardian of an underwater palace, surrounded by pearls, currents, and places still waiting to be explored.",
     symbolism:
-      "Turquoise and gold create a bright coloring palette, while the curved body, flowing whiskers, and waves offer room to explore movement and texture.",
+      "Ren Ma represents curiosity, movement, and the pleasure of making a new creature story through art. Its turquoise and gold palette, curved body, and flowing whiskers leave room for individual choices. Through MythColoring, this original design becomes a coloring page where every version can have its own legend.",
     heroImage: "/products/ren-ma/finished.jpg",
     featured: true,
     status: "published",
@@ -176,11 +177,16 @@ export const creatures: Creature[] = [
     name: "Ren She",
     localName: "人蛇",
     themeSlug: "shan-hai-jing",
-    origin: "Creator-named fantasy coloring artwork of Ren She (人蛇).",
-    shortDescription: "A coiled serpent with human-like limbs rests among mountain clouds and flowing water.",
-    appearance: "This artwork depicts Ren She with dark coils, a tan face and limbs, orange fins, and a watchful expression.",
-    legend: "The finished illustration places the creature beside a moonlit mountain stream, surrounded by mist, waterfalls, and lantern-lit pavilions.",
-    symbolism: "Dark gray, warm tan, and bright orange offer a contrasting palette, with broad coils and fine mountain details to color.",
+    origin:
+      "Limited historical records available. Ren She is the name used for an original MythColoring creature design. We have not identified a reliable ancient source for this exact name and illustrated form. While human-and-serpent forms appear across many myth traditions, this page does not claim a specific historical entry for Ren She.",
+    shortDescription:
+      "Ren She is an original MythColoring serpent creature design, created for a printable coloring page, color guide, and finished artwork.",
+    appearance:
+      "Ren She has dark coils, a warm tan face and limbs, orange fins, and a watchful expression. The combination of serpent form, human-like features, clouds, and mountain water is MythColoring's artistic interpretation, designed to create a calm, mysterious scene without assigning an unverified ancient description.",
+    legend:
+      "No verified ancient legend currently supports this exact creature name and form. The finished artwork imagines Ren She beside a moonlit mountain stream, with mist, waterfalls, and lantern-lit pavilions. It is a contemporary story setting that leaves room for each colorist to decide whether Ren She is a traveler, guardian, or quiet neighbor of the water.",
+    symbolism:
+      "Ren She represents transformation, patience, and the meeting of water and mountain landscapes. Its dark gray, warm tan, and orange palette offers both broad shapes and fine scenery to color. Through MythColoring, this original creature becomes a space for personal storytelling rather than a claim about a fixed ancient legend.",
     heroImage: "/products/ren-she/finished.webp",
     featured: true,
     status: "published",
@@ -190,11 +196,16 @@ export const creatures: Creature[] = [
     name: "Nine-Eared Hound",
     localName: "九耳犬",
     themeSlug: "shan-hai-jing",
-    origin: "Creator-named fantasy coloring artwork of the Nine-Eared Hound (九耳犬).",
-    shortDescription: "A watchful hound with colorful ears and an ornate flowing tail sits above a misty mountain landscape.",
-    appearance: "This artwork depicts the hound with cream fur, a dark brown mane, spiral markings, rainbow-colored ears, and a long patterned tail.",
-    legend: "The finished illustration places the hound on a rocky ledge among lantern-lit mountain gateways beneath a full moon. The line art surrounds it with pine trees, clouds, and distant peaks.",
-    symbolism: "Warm cream and brown tones contrast with bright ears, while flowing fur and intricate tail patterns provide a detailed coloring study.",
+    origin:
+      "Limited historical records available. The Nine-Eared Hound is an original MythColoring creature design. We have not identified a reliable ancient Chinese text that documents this exact name and form, so this page presents the hound as a contemporary fantasy character rather than attributing it to the Shan Hai Jing or another historical source.",
+    shortDescription:
+      "The Nine-Eared Hound is an original MythColoring creature design, a watchful mountain hound created for a printable coloring page and finished artwork.",
+    appearance:
+      "The Nine-Eared Hound has cream fur, a dark brown mane, spiral markings, colorful ears, and a long patterned tail. These visual details are MythColoring's original interpretation. They give the hound a bright, collectible feel while the rocky ledge, pines, clouds, and peaks create a storybook mountain setting.",
+    legend:
+      "No verified ancient legend currently supports this exact creature name and form. The finished artwork imagines the hound watching from a mountain ledge beneath a full moon, near lantern-lit gateways and distant peaks. That setting is a MythColoring story prompt, leaving the creature's journey open for families and colorists to imagine.",
+    symbolism:
+      "The Nine-Eared Hound represents attentiveness, companionship, and the fun of noticing small details. Warm cream and brown tones meet vivid ear colors and intricate tail patterns, offering many ways to personalize the page. Through MythColoring, this original hound becomes a coloring page for building a new legend one color at a time.",
     heroImage: "/products/nine-eared-hound/finished.webp",
     featured: true,
     status: "published",
@@ -204,11 +215,16 @@ export const creatures: Creature[] = [
     name: "Nine-Tailed Snake",
     localName: "九尾蛇",
     themeSlug: "shan-hai-jing",
-    origin: "Creator-named fantasy coloring artwork of the Nine-Tailed Snake (九尾蛇).",
-    shortDescription: "A hooded serpent rises beside a fan of colorful curling tails amid mountain clouds.",
-    appearance: "This artwork depicts the snake with a pale golden hood, patterned scales, and sweeping tails in gold, green, red, blue, purple, and muted earth tones.",
-    legend: "The finished illustration places the serpent on an ancient stone terrace beneath a full moon, with glowing tails, waterfalls, and distant mountain pavilions.",
-    symbolism: "Broad curling tails invite color exploration, while the scales, rocks, and pine trees add fine detail to the coloring page.",
+    origin:
+      "Limited historical records available. The Nine-Tailed Snake is an original MythColoring creature design. Although nine-tailed animals appear in several East Asian traditions, we have not identified a reliable ancient text for this exact snake name and illustrated form. This page therefore presents it as a contemporary fantasy creation rather than a documented Shan Hai Jing creature.",
+    shortDescription:
+      "The Nine-Tailed Snake is an original MythColoring creature design, a hooded serpent with colorful curling tails created for a printable coloring page and finished artwork.",
+    appearance:
+      "The Nine-Tailed Snake has a pale golden hood, patterned scales, and sweeping tails in gold, green, red, blue, purple, and earthy shades. This palette and its fan of tails are MythColoring's original interpretation, arranged to make the creature's silhouette clear and satisfying to color.",
+    legend:
+      "No verified ancient legend currently supports this exact creature name and form. The finished artwork imagines the serpent on an old stone terrace beneath a full moon, with glowing tails, waterfalls, and distant mountain pavilions. It is a contemporary fantasy setting, made to spark a colorist's own ideas rather than replace an ancient source.",
+    symbolism:
+      "The Nine-Tailed Snake represents transformation, imagination, and the many directions a story can take. Its broad curling tails invite bold color choices, while scales, rocks, and pines add quieter detail. Through MythColoring, this original creature becomes a coloring page where a new legend can begin with a single color.",
     heroImage: "/products/nine-tailed-snake/finished.webp",
     featured: true,
     status: "published",
