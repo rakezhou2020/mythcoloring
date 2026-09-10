@@ -452,6 +452,15 @@ p {
   flex-wrap: wrap;
   gap: 12px;
 }
+.footer-links > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-links span {
+  color: var(--ink);
+  font-weight: 700;
+}
 .footer-links a:hover {
   color: var(--rust);
 }

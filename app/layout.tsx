@@ -69,10 +69,17 @@ gtag('config', 'G-SXX19XB9FJ');`}
           </Link>
           <p>Myths to discover. Creatures to color.</p>
           <nav className="footer-links" aria-label="Footer navigation">
-            <Link href="/about/">About</Link>
-            <Link href="/privacy-policy/">Privacy</Link>
-            <Link href="/terms/">Terms</Link>
-            <Link href="/contact/">Contact</Link>
+            <div>
+              <span>About</span>
+              <Link href="/about/">About MythColoring</Link>
+              <Link href="/contact/">Contact</Link>
+              <Link href="/licensing/">Licensing</Link>
+            </div>
+            <div>
+              <span>Legal</span>
+              <Link href="/privacy-policy/">Privacy Policy</Link>
+              <Link href="/terms/">Terms of Use</Link>
+            </div>
           </nav>
           <span>© 2026 Myth Coloring</span>
         </footer>

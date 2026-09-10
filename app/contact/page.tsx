@@ -21,11 +21,11 @@ export default function Page() {
           coloring pages. We welcome thoughtful feedback about the site,
           artwork, and future creatures to explore.
         </p>
-        <h2>Before you write</h2>
+        <h2>Email</h2>
         <p>
-          Please visit the Coloring Pages and Creatures sections first: many
-          common questions about printing, downloads, and color guides are
-          answered there. Contact details will be added here as the site grows.
+          For questions, feedback, licensing enquiries, or collaboration ideas,
+          email us at{" "}
+          <a href="mailto:rakezhou2020@gmail.com">rakezhou2020@gmail.com</a>.
         </p>
       </div>
     </div>
