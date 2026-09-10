@@ -63,15 +63,16 @@ export const creatures: Creature[] = [
     name: "Xuan Gui",
     localName: "旋龟",
     themeSlug: "shan-hai-jing",
-    origin: "Myth-inspired coloring artwork.",
+    origin:
+      "The Xuan Gui (旋龟) is a mysterious creature recorded in the Shan Hai Jing (Classic of Mountains and Seas), one of China's oldest collections of mythical geography and legendary beings. According to the ancient text, the Xuan Gui lived in the waters near Mount Niuyang, a mountain region filled with unusual creatures and natural treasures. The Shan Hai Jing describes it as a creature resembling a turtle, but with the head of a bird and the tail of a snake. Like many beings in the ancient text, the Xuan Gui represents a world where animals, nature, and mysterious forces existed together beyond the boundaries of ordinary life.",
     shortDescription:
-      "A long-legged turtle-bird strides through curling clouds and moonlit waves.",
+      "The Xuan Gui is an ancient Chinese mythical creature from the Shan Hai Jing, with the body of a turtle, a bird-like head, and a snake-like tail. This mysterious creature represents the strange and wonderful beings hidden within China's legendary mountains.",
     appearance:
-      "A bright golden scaled tail, red crest, blue beak, dark patterned shell, and flowing ribbons create its distinctive silhouette.",
+      "The Xuan Gui combines three different creatures into one extraordinary form. Its turtle body represents stability, endurance, and ancient wisdom. Its bird-like head connects it with the sky and mystery, while its snake-like tail adds a sense of transformation and hidden power. Unlike ordinary animals, creatures from the Shan Hai Jing often exist between different worlds. The Xuan Gui is neither completely a land creature nor a water creature, making it a perfect symbol of the mysterious imagination found in ancient Chinese mythology.",
     legend:
-      "Its poster places the creature in a sweeping sea-and-mountain landscape beneath a crescent moon.",
+      "In the ancient mountains described in the Shan Hai Jing, travelers believed that countless mysterious beings lived beyond familiar lands. Among these creatures was the Xuan Gui, a rare and unusual turtle-like spirit whose appearance challenged the natural order. Ancient people did not see creatures like the Xuan Gui simply as animals. They represented the unknown forces of nature and the hidden secrets of mountains, rivers, and oceans. The ancient text also records that the Xuan Gui was connected with protection and healing. It was believed that carrying it could help prevent hearing problems. Although the Shan Hai Jing gives only a brief description, the mystery surrounding the Xuan Gui allowed later generations to imagine it as an ancient guardian quietly living in forgotten waters, watching over a world humans could barely understand.",
     symbolism:
-      "The artwork brings together ocean movement, night sky, and a calm watchful traveler.",
+      "The Xuan Gui represents mystery, balance, and the connection between different forms of life. By combining the turtle, bird, and snake, this creature reflects an ancient Chinese idea that the natural world was full of hidden relationships and transformations. The Xuan Gui reminds us that legends are not only about powerful monsters. Some creatures exist simply to inspire curiosity and wonder. Through MythColoring, we bring this ancient legend back into imagination, allowing everyone to create their own version of this mysterious creature.",
     heroImage: "/products/xuan-gui/finished.jpg",
     featured: true,
     status: "published",

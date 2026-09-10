@@ -23,6 +23,13 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const c = publishedCreatures.find((c) => c.slug === slug);
   if (!c) notFound();
+  if (slug === "xuan-gui") {
+    return pageMetadata(
+      "Xuan Gui Coloring Page | Chinese Mythical Creature from Shan Hai Jing",
+      "Discover the Xuan Gui, a mysterious turtle-like creature from the Shan Hai Jing. Learn its legend and explore a unique Chinese mythology coloring page.",
+      "/creatures/xuan-gui/",
+    );
+  }
   return pageMetadata(
     c.name + " Coloring Page – Free Printable",
     creatureMetaDescription(c.name, c.shortDescription),
