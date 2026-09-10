@@ -18,6 +18,9 @@ import whiteTigerProduct from "../mythcoloring-workflow/output/white-tiger/produ
 import xuanwuProduct from "../mythcoloring-workflow/output/xuanwu/product.json";
 import zhuqueProduct from "../mythcoloring-workflow/output/zhuque/product.json";
 import hundunProduct from "../mythcoloring-workflow/output/hundun/product.json";
+import taowuProduct from "../mythcoloring-workflow/output/taowu/product.json";
+import qiongqiProduct from "../mythcoloring-workflow/output/qiongqi/product.json";
+import taotieProduct from "../mythcoloring-workflow/output/taotie/product.json";
 
 const nineColoredDeer: ColoringPage = {
   ...deerProduct,
@@ -219,6 +222,39 @@ const hundun: ColoringPage = {
   status: "published",
 };
 
+const taowu: ColoringPage = {
+  ...taowuProduct,
+  id: taowuProduct.slug,
+  creatureSlug: taowuProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
+const qiongqi: ColoringPage = {
+  ...qiongqiProduct,
+  id: qiongqiProduct.slug,
+  creatureSlug: qiongqiProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
+const taotie: ColoringPage = {
+  ...taotieProduct,
+  id: taotieProduct.slug,
+  creatureSlug: taotieProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Medium",
+  colorCount: null,
+  featured: true,
+  status: "published",
+};
+
 // Product cards always use the same four resource fields. A null field makes
 // the corresponding preview or action unavailable rather than inventing a URL.
 const sampleColoringPages: ColoringPage[] = [
@@ -264,6 +300,9 @@ export const coloringPages: ColoringPage[] = [
   xuanwu,
   zhuque,
   hundun,
+  taowu,
+  qiongqi,
+  taotie,
   ...sampleColoringPages,
 ];
 export const publishedColoringPages = coloringPages.filter(
