@@ -84,7 +84,7 @@ export default function Home() {
       </section>
       <section className="section wrap">
         <div className="section-heading">
-          <h2>四大神兽</h2>
+          <h2>The Four Divine Beasts</h2>
         </div>
         <div className="divine-beast-grid">
           {fourDivineBeasts.map((beast) => (
