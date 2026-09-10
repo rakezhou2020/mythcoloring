@@ -17,6 +17,12 @@ export default function Home() {
       return page ? [page] : [];
     },
   );
+  const fourFierceBeasts = ["hundun", "taowu", "qiongqi", "taotie"].flatMap(
+    (slug) => {
+      const page = publishedColoringPages.find((item) => item.slug === slug);
+      return page ? [page] : [];
+    },
+  );
   return (
     <>
       <section className="hero wrap">
@@ -88,6 +94,27 @@ export default function Home() {
         </div>
         <div className="divine-beast-grid">
           {fourDivineBeasts.map((beast) => (
+            <Link
+              className="divine-beast-card"
+              href={`/creatures/${beast.creatureSlug}/`}
+              key={beast.id}
+            >
+              <Artwork
+                colored
+                name={beast.title}
+                src={beast.finishedImage ?? beast.colorGuideImage}
+              />
+              <span>{beast.title.replace(" Coloring Page", "")}</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+      <section className="section wrap">
+        <div className="section-heading">
+          <h2>The Four Fierce Beasts</h2>
+        </div>
+        <div className="divine-beast-grid">
+          {fourFierceBeasts.map((beast) => (
             <Link
               className="divine-beast-card"
               href={`/creatures/${beast.creatureSlug}/`}
