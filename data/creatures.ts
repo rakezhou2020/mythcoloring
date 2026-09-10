@@ -82,15 +82,16 @@ export const creatures: Creature[] = [
     name: "Chi Ru",
     localName: "赤鱬",
     themeSlug: "shan-hai-jing",
-    origin: "Myth-inspired coloring artwork of Chi Ru (赤鱬).",
+    origin:
+      "The Chi Ru (赤鱬) is recorded in the Shan Hai Jing (Classic of Mountains and Seas). The ancient text places it in the Ying River, which flows south from Mount Qingqiu toward the Jiyi Marsh. It describes a legendary creature with the form of a fish and a human face, whose call sounds like mandarin ducks. The text also says that eating it prevented scabies, a traditional claim that belongs to the ancient record rather than modern health guidance.",
     shortDescription:
-      "A scarlet aquatic creature curls above the waves, with soaring fins and a tranquil human-like face.",
+      "Chi Ru is an ancient Chinese mythical creature from the Shan Hai Jing, described as a fish with a human face and a call like mandarin ducks.",
     appearance:
-      "This artwork depicts Chi Ru with red-orange scales, wing-like fins, a long curling tail, pale horns, and a blue jewel above its face.",
+      "The original text gives Chi Ru a fish-like body and a human face, joining an aquatic form with a recognizably human presence. It does not describe the elaborate colors or ornaments used in our finished artwork. Those scarlet scales, fins, and moonlit details are MythColoring's visual interpretation, created to give the coloring page a sense of movement and water.",
     legend:
-      "The illustrated scene places Chi Ru among moonlit waves and misty mountains, with distant pavilions glowing beneath a full moon.",
+      "The Shan Hai Jing does not tell a long adventure about Chi Ru. Instead, it preserves a brief, memorable encounter from an imagined landscape of mountains, rivers, and unusual beings. Its human face, birdlike call, and place in the Ying River make Chi Ru feel like a creature at the boundary of familiar life and ancient wonder.",
     symbolism:
-      "The warm scarlet creature and cool ocean landscape create a vivid coloring study of movement, texture, and stillness.",
+      "Chi Ru invites us to think about the mystery of rivers and the way ancient legends connected nature with imagination. Its mixed features make it feel rare rather than frightening. Through MythColoring, this Shan Hai Jing creature becomes a coloring page that lets families explore an ancient legend through their own colors.",
     heroImage: "/products/chi-ru/finished.jpg",
     featured: true,
     status: "published",
@@ -100,15 +101,16 @@ export const creatures: Creature[] = [
     name: "Qu Ru",
     localName: "瞿如",
     themeSlug: "shan-hai-jing",
-    origin: "Myth-inspired coloring artwork of Qu Ru (瞿如).",
+    origin:
+      "The Qu Ru (瞿如) appears in the Shan Hai Jing (Classic of Mountains and Seas) at Mount Daoguo, a place the text describes as rich in gold, jade, rhinoceroses, elephants, and a river flowing south to the sea. The ancient passage calls Qu Ru a legendary bird with a white head, three legs, and a human face. Its cry is said to sound like its own name.",
     shortDescription:
-      "A human-faced bird spreads emerald wings above a sea of clouds, its flowing tail sweeping across the mountain sky.",
+      "Qu Ru is an ancient Chinese mythical bird from the Shan Hai Jing, known for its white head, human face, and three legs.",
     appearance:
-      "This artwork depicts Qu Ru with long black hair, three bird legs, turquoise and green feathers, golden wing details, and two delicate head plumes.",
+      "The original text combines a bird's body with a human face and three legs, creating one of the Shan Hai Jing's distinctive hybrid creatures. It does not specify feather colors, hair, or a mountain costume. The green wings, flowing hair, and detailed plumes in MythColoring's artwork are a creative interpretation that keeps the ancient three-legged, human-faced image at its center.",
     legend:
-      "The illustrated scene places Qu Ru on a pine-covered cliff among misty peaks, waterfalls, and distant pavilions beneath a full moon.",
+      "Qu Ru comes to us through a short description rather than a complete story. In the Shan Hai Jing, creatures often appear as part of a larger map of remarkable mountains and waterways. Qu Ru's self-naming call and unusual form make it feel like a rare presence in that landscape, leaving space for readers to imagine the world around it without adding an unrecorded adventure.",
     symbolism:
-      "Layered feathers, curling clouds, and ribbon-like tail plumes invite a detailed coloring study of rhythm, texture, and cool mountain colors.",
+      "With bird, human, and three-legged features in one form, Qu Ru reflects the imaginative transformations found throughout ancient Chinese mythology. It encourages curiosity about how early texts mapped unfamiliar nature and legendary creatures together. Through MythColoring, this ancient bird becomes a coloring page for exploring pattern, flight, and wonder.",
     heroImage: "/products/qu-ru/finished.jpg",
     featured: true,
     status: "published",
@@ -118,15 +120,16 @@ export const creatures: Creature[] = [
     name: "Lu",
     localName: "鯥",
     themeSlug: "shan-hai-jing",
-    origin: "Myth-inspired coloring artwork of Lu (鯥).",
+    origin:
+      "The Lu (鯥) is recorded in the Shan Hai Jing (Classic of Mountains and Seas) near Mount Di. The ancient text describes it as a legendary fish shaped like an ox that lived on land, with a snake's tail and wings. Its feathers were said to grow below its gills, and its call was compared to liuniu. The text adds that it died in winter and returned in summer, and records a traditional claim about eating it that should be understood as part of the ancient text, not modern medical advice.",
     shortDescription:
-      "A golden-brown winged creature with a fish-like face and a long scaled tail floats among mountain clouds.",
+      "Lu is an ancient Chinese mythical creature from the Shan Hai Jing, an ox-shaped fish with wings and a snake-like tail that lived on land.",
     appearance:
-      "This artwork depicts Lu with branching orange antlers, delicate whiskers, four slender legs, layered feathered wings, and a curling serpentine tail.",
+      "Lu brings together fish, ox, snake, and birdlike features in one remarkable form. The Shan Hai Jing specifically notes its ox-like shape, land-dwelling life, snake tail, and wings. Our artwork adds antlers, whiskers, layered feathers, and a mountain setting as MythColoring's interpretation, while preserving the creature's hybrid character.",
     legend:
-      "The finished illustration places Lu above cascading mountain waters and rocky peaks in warm sunlight, while the line art frames it with clouds and pine trees.",
+      "The Lu has no extended hero story in the surviving Shan Hai Jing passage. Its importance lies in the way the text records an impossible but carefully observed creature: a fish that lives on land, changes with the seasons, and carries several animal forms at once. That brief description is enough to make Lu a lasting part of the ancient Chinese mythology archive.",
     symbolism:
-      "Golden feathers, copper scales, and flowing clouds offer a detailed coloring study of warm colors and contrasting textures.",
+      "Lu suggests transformation, seasonal change, and the surprising connections imagined within the natural world. Its mixed form reminds us that ancient legends did not always separate land, water, and sky as sharply as modern categories do. Through MythColoring, Lu becomes a coloring page that invites a fresh look at one of the Shan Hai Jing's most unusual creatures.",
     heroImage: "/products/lu/finished.jpg",
     featured: true,
     status: "published",
@@ -136,15 +139,16 @@ export const creatures: Creature[] = [
     name: "Tian Gou",
     localName: "天狗",
     themeSlug: "shan-hai-jing",
-    origin: "Myth-inspired coloring artwork of Tian Gou (天狗).",
+    origin:
+      "The Tian Gou (天狗) appears in the Western Mountains section of the Shan Hai Jing (Classic of Mountains and Seas). The ancient text places it on Mount Yin and describes a legendary creature resembling a li, an animal translated in different ways as catlike or raccoon-like, with a white head. Its cry sounded like liuliu, and the text says it could ward off misfortune.",
     shortDescription:
-      "A celestial dog dives through curling clouds beneath a crescent moon, its long flowing silhouette winding across the sky.",
+      "Tian Gou is an ancient Chinese mythical creature from the Shan Hai Jing, described as a white-headed, catlike animal whose call could ward off misfortune.",
     appearance:
-      "This artwork depicts Tian Gou with a dark brown body, a pale face and paws, and sweeping fur surrounded by stars and cloud scrolls.",
+      "The Shan Hai Jing gives Tian Gou a compact description: a li-like body and a white head. It does not describe the long, cloud-diving dog in MythColoring's finished artwork. That celestial silhouette, flowing fur, and moonlit setting are our artistic interpretation, inspired by later uses of the name Tian Gou in Chinese folklore.",
     legend:
-      "The finished illustration shows Tian Gou biting into a glowing moon above misty mountains and distant pavilions, while the coloring page pairs its diving pose with a large crescent.",
+      "The original Shan Hai Jing entry presents Tian Gou as a protective creature, not as an eclipse story. In later Chinese folklore, the name Tian Gou became associated with a heavenly dog that could swallow the sun or moon during an eclipse. These are later traditions, separate from the ancient Mount Yin description, and they help explain the moon imagery in MythColoring's artwork.",
     symbolism:
-      "The dark coat, pale fur, and golden moon offer a coloring study of contrast, with broad shapes and swirling clouds to explore.",
+      "Tian Gou brings together protection, mystery, and the human desire to explain unusual events in the sky. Its changing meanings across ancient text and later folklore show how legends can grow over time. Through MythColoring, Tian Gou becomes a coloring page that connects a Shan Hai Jing creature with a sense of cosmic wonder.",
     heroImage: "/products/tian-gou/finished.jpg",
     featured: true,
     status: "published",

@@ -10,6 +10,34 @@ import { pageMetadata, siteUrl } from "../../../lib/seo";
 type Props = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;
 
+const archiveMetadata: Record<string, { title: string; description: string }> = {
+  "xuan-gui": {
+    title: "Xuan Gui Coloring Page | Chinese Mythical Creature from Shan Hai Jing",
+    description:
+      "Discover the Xuan Gui, a mysterious turtle-like creature from the Shan Hai Jing. Learn its legend and explore a unique Chinese mythology coloring page.",
+  },
+  "tian-gou": {
+    title: "Tian Gou Coloring Page | Chinese Mythical Creature from Shan Hai Jing",
+    description:
+      "Discover Tian Gou, a white-headed creature from the Shan Hai Jing. Learn its ancient legend and explore a Chinese mythology coloring page.",
+  },
+  "chi-ru": {
+    title: "Chi Ru Coloring Page | Chinese Mythical Creature from Shan Hai Jing",
+    description:
+      "Discover Chi Ru, a fish-bodied creature with a human face from the Shan Hai Jing. Learn its ancient legend and explore a Chinese mythology coloring page.",
+  },
+  "qu-ru": {
+    title: "Qu Ru Coloring Page | Chinese Mythical Creature from Shan Hai Jing",
+    description:
+      "Discover Qu Ru, a three-legged, human-faced bird from the Shan Hai Jing. Learn its ancient legend and explore a Chinese mythology coloring page.",
+  },
+  lu: {
+    title: "Lu Coloring Page | Chinese Mythical Creature from Shan Hai Jing",
+    description:
+      "Discover Lu, a winged, serpent-tailed creature from the Shan Hai Jing. Learn its ancient legend and explore a Chinese mythology coloring page.",
+  },
+};
+
 function creatureMetaDescription(name: string, shortDescription: string) {
   const text = "Download a free printable " + name + " coloring page. " + shortDescription;
   if (text.length <= 160) return text;
@@ -23,11 +51,12 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const c = publishedCreatures.find((c) => c.slug === slug);
   if (!c) notFound();
-  if (slug === "xuan-gui") {
+  const tailoredMetadata = archiveMetadata[slug];
+  if (tailoredMetadata) {
     return pageMetadata(
-      "Xuan Gui Coloring Page | Chinese Mythical Creature from Shan Hai Jing",
-      "Discover the Xuan Gui, a mysterious turtle-like creature from the Shan Hai Jing. Learn its legend and explore a unique Chinese mythology coloring page.",
-      "/creatures/xuan-gui/",
+      tailoredMetadata.title,
+      tailoredMetadata.description,
+      "/creatures/" + slug + "/",
     );
   }
   return pageMetadata(
