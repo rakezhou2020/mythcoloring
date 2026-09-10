@@ -37,24 +37,24 @@ const archiveMetadata: Record<string, { title: string; description: string }> = 
       "Discover Lu, a winged, serpent-tailed creature from the Shan Hai Jing. Learn its ancient legend and explore a Chinese mythology coloring page.",
   },
   "ren-ma": {
-    title: "Ren Ma Coloring Page | MythColoring Creature Archive",
+    title: "Ren Ma Coloring Page | Chinese Water Creature from Gujin Zhu",
     description:
-      "Explore Ren Ma, an original MythColoring aquatic creature design, with a printable coloring page, color guide, and finished artwork.",
+      "Discover Ren Ma, a scaled water creature described in the Gujin Zhu. Explore its Chinese folklore context and a printable coloring page.",
   },
   "ren-she": {
-    title: "Ren She Coloring Page | MythColoring Creature Archive",
+    title: "Ren She Coloring Page | Chinese Folklore Creature from She Pu",
     description:
-      "Explore Ren She, an original MythColoring serpent creature design, with a printable coloring page, color guide, and finished artwork.",
+      "Discover Ren She, a snake-bodied creature from later Chinese folklore. Explore its legend and a printable coloring page.",
   },
   "nine-eared-hound": {
-    title: "Nine-Eared Hound Coloring Page | MythColoring Creature Archive",
+    title: "Nine-Eared Hound Coloring Page | Chinese Folklore Legend",
     description:
-      "Explore the Nine-Eared Hound, an original MythColoring creature design, with a printable coloring page, color guide, and finished artwork.",
+      "Discover the Nine-Eared Hound, a legendary Chinese hunting dog whose nine ears foretold success. Explore its folklore and coloring page.",
   },
   "nine-tailed-snake": {
-    title: "Nine-Tailed Snake Coloring Page | MythColoring Creature Archive",
+    title: "Nine-Tailed Snake Coloring Page | Chinese Supernatural Legend",
     description:
-      "Explore the Nine-Tailed Snake, an original MythColoring creature design, with a printable coloring page, color guide, and finished artwork.",
+      "Discover the Nine-Tailed Snake, an armored serpent from a Chinese supernatural tale. Explore its legend and a printable coloring page.",
   },
 };
 
