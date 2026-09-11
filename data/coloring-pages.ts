@@ -21,6 +21,8 @@ import hundunProduct from "../mythcoloring-workflow/output/hundun/product.json";
 import taowuProduct from "../mythcoloring-workflow/output/taowu/product.json";
 import qiongqiProduct from "../mythcoloring-workflow/output/qiongqi/product.json";
 import taotieProduct from "../mythcoloring-workflow/output/taotie/product.json";
+import danYuProduct from "../mythcoloring-workflow/output/dan-yu/product.json";
+import lushuProduct from "../mythcoloring-workflow/output/lushu/product.json";
 
 const nineColoredDeer: ColoringPage = {
   ...deerProduct,
@@ -255,13 +257,34 @@ const taotie: ColoringPage = {
   status: "published",
 };
 
+const danYu: ColoringPage = {
+  ...danYuProduct,
+  id: danYuProduct.slug,
+  creatureSlug: danYuProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: 4,
+  featured: true,
+  status: "published",
+};
+
+const lushu: ColoringPage = {
+  ...lushuProduct,
+  id: lushuProduct.slug,
+  creatureSlug: lushuProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: 5,
+  featured: true,
+  status: "published",
+};
+
 // Product cards always use the same four resource fields. A null field makes
 // the corresponding preview or action unavailable rather than inventing a URL.
 const sampleColoringPages: ColoringPage[] = [
   ["nine-tailed-fox", "Nine-Tailed Fox"],
   ["qiongqi", "Qiongqi"],
   ["bifang", "Bifang"],
-  ["lushu", "Lushu"],
 ].flatMap(([creatureSlug, title]) =>
   (["Coloring Page", "Color by Number"] as const).map((type, index) => ({
     id: creatureSlug + "-" + index,
@@ -303,6 +326,8 @@ export const coloringPages: ColoringPage[] = [
   taowu,
   qiongqi,
   taotie,
+  danYu,
+  lushu,
   ...sampleColoringPages,
 ];
 export const publishedColoringPages = coloringPages.filter(

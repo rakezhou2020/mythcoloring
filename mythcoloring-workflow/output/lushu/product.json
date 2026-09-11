@@ -1,0 +1,29 @@
+{
+  "slug": "lushu",
+  "title": "Lushu Coloring Page",
+  "themeSlug": "shan-hai-jing",
+  "lineArtImage": "/products/lushu/lineart.webp",
+  "colorGuideImage": "/products/lushu/color-guide.webp",
+  "finishedImage": "/products/lushu/finished.webp",
+  "printPdf": "/products/lushu/print.pdf",
+  "status": "draft",
+  "workflowVersion": 4,
+  "display": {
+    "card": "lineArtImage",
+    "hover": "colorGuideImage",
+    "detail": "colorGuideImage"
+  },
+  "quality": {
+    "status": "user-supplied",
+    "lineart": "creator-supplied black-and-white line art",
+    "colorArtwork": "creator-supplied color reference",
+    "poster": "creator-supplied finished artwork",
+    "pdf": "one-page A4 line art with title and brand footer"
+  },
+  "artworkSource": "user-supplied",
+  "assetLabels": {
+    "lineArtImage": "Line Art",
+    "colorGuideImage": "Color",
+    "finishedImage": "Poster"
+  }
+}

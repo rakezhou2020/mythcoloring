@@ -56,6 +56,16 @@ const archiveMetadata: Record<string, { title: string; description: string }> = 
     description:
       "Discover the Nine-Tailed Snake, an armored serpent from a Chinese supernatural tale. Explore its legend and a printable coloring page.",
   },
+  "dan-yu": {
+    title: "Dan Yu Coloring Page | Radiant Fish from Chinese Legend",
+    description:
+      "Discover Dan Yu, a radiant divine fish recorded in the Shui Jing Zhu. Learn its water-walking legend and download a free printable coloring page.",
+  },
+  lushu: {
+    title: "Lushu Coloring Page | Auspicious Creature from Shan Hai Jing",
+    description:
+      "Discover Lushu, a white-headed, tiger-striped horse from the Shan Hai Jing. Learn its auspicious legend and download a free printable coloring page.",
+  },
 };
 
 function creatureMetaDescription(name: string, shortDescription: string) {
