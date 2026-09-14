@@ -81,6 +81,26 @@ const archiveMetadata: Record<string, { title: string; description: string }> = 
     description:
       "Discover Guan Guan, a dove-like bird from the Shan Hai Jing. Learn its clarity-giving legend and download a free printable coloring page.",
   },
+  "gu-diao": {
+    title: "Gu Diao Coloring Page | Horned Beast from Shan Hai Jing",
+    description:
+      "Discover Gu Diao, a horned, eagle-like water beast from the Shan Hai Jing. Learn its ancient legend and download a free printable coloring page.",
+  },
+  xi: {
+    title: "Xi Coloring Page | Ancient Rhinoceros from Shan Hai Jing",
+    description:
+      "Discover Xi, the ancient rhinoceros named in the Shan Hai Jing and later described with three horns. Download a free printable coloring page.",
+  },
+  "li-li": {
+    title: "Li Li Coloring Page | Earthwork Omen from Shan Hai Jing",
+    description:
+      "Discover Li Li, a pig-like, dog-barking creature from the Shan Hai Jing whose appearance foretells earthwork. Download a free printable coloring page.",
+  },
+  si: {
+    title: "Si Coloring Page | One-Horned Beast from Shan Hai Jing",
+    description:
+      "Discover Si, a dark, one-horned, ox-like creature from the Shan Hai Jing. Learn its ancient description and download a free printable coloring page.",
+  },
 };
 
 function creatureMetaDescription(name: string, shortDescription: string) {

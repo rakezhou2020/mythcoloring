@@ -1,0 +1,29 @@
+{
+  "slug": "li-li",
+  "title": "Li Li Coloring Page",
+  "themeSlug": "shan-hai-jing",
+  "lineArtImage": "/products/li-li/lineart.webp",
+  "colorGuideImage": "/products/li-li/color-guide.webp",
+  "finishedImage": "/products/li-li/finished.webp",
+  "printPdf": "/products/li-li/print.pdf",
+  "status": "draft",
+  "workflowVersion": 4,
+  "display": {
+    "card": "lineArtImage",
+    "hover": "colorGuideImage",
+    "detail": "colorGuideImage"
+  },
+  "quality": {
+    "status": "user-supplied",
+    "lineart": "creator-supplied black-and-white line art",
+    "colorArtwork": "creator-supplied color reference",
+    "poster": "creator-supplied finished artwork",
+    "pdf": "one-page A4 line art with title and brand footer"
+  },
+  "artworkSource": "user-supplied",
+  "assetLabels": {
+    "lineArtImage": "Line Art",
+    "colorGuideImage": "Color",
+    "finishedImage": "Poster"
+  }
+}

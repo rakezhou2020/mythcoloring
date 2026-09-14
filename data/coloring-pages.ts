@@ -26,6 +26,10 @@ import lushuProduct from "../mythcoloring-workflow/output/lushu/product.json";
 import leiProduct from "../mythcoloring-workflow/output/lei/product.json";
 import boYiProduct from "../mythcoloring-workflow/output/bo-yi/product.json";
 import guanGuanProduct from "../mythcoloring-workflow/output/guan-guan/product.json";
+import guDiaoProduct from "../mythcoloring-workflow/output/gu-diao/product.json";
+import xiProduct from "../mythcoloring-workflow/output/xi/product.json";
+import liLiProduct from "../mythcoloring-workflow/output/li-li/product.json";
+import siProduct from "../mythcoloring-workflow/output/si/product.json";
 
 const nineColoredDeer: ColoringPage = {
   ...deerProduct,
@@ -315,6 +319,50 @@ const guanGuan: ColoringPage = {
   status: "published",
 };
 
+const guDiao: ColoringPage = {
+  ...guDiaoProduct,
+  id: guDiaoProduct.slug,
+  creatureSlug: guDiaoProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: 4,
+  featured: true,
+  status: "published",
+};
+
+const xi: ColoringPage = {
+  ...xiProduct,
+  id: xiProduct.slug,
+  creatureSlug: xiProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: 6,
+  featured: true,
+  status: "published",
+};
+
+const liLi: ColoringPage = {
+  ...liLiProduct,
+  id: liLiProduct.slug,
+  creatureSlug: liLiProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: 5,
+  featured: true,
+  status: "published",
+};
+
+const si: ColoringPage = {
+  ...siProduct,
+  id: siProduct.slug,
+  creatureSlug: siProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: 6,
+  featured: true,
+  status: "published",
+};
+
 // Product cards always use the same four resource fields. A null field makes
 // the corresponding preview or action unavailable rather than inventing a URL.
 const sampleColoringPages: ColoringPage[] = [
@@ -367,6 +415,10 @@ export const coloringPages: ColoringPage[] = [
   lei,
   boYi,
   guanGuan,
+  guDiao,
+  xi,
+  liLi,
+  si,
   ...sampleColoringPages,
 ];
 export const publishedColoringPages = coloringPages.filter(
