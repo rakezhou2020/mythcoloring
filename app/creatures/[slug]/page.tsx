@@ -117,9 +117,9 @@ export default async function Page({ params }: Props) {
   const printablePages = publishedColoringPages.filter(
     (p) => p.creatureSlug === slug,
   );
-  const relatedPages = publishedColoringPages
-    .filter((p) => p.creatureSlug !== slug)
-    .slice(0, 4);
+  const relatedPages = publishedColoringPages.filter(
+    (p) => p.creatureSlug !== slug,
+  );
   const primaryPage = printablePages[0];
   const finishedArtwork = primaryPage?.finishedImage ?? c.heroImage;
   const pageUrl = siteUrl + "/creatures/" + slug + "/";
@@ -255,7 +255,7 @@ export default async function Page({ params }: Props) {
             Browse all coloring pages →
           </Link>
         </div>
-        {relatedPages.length > 0 ? <ColoringGrid items={relatedPages} /> : <p className="catalog-note">More coloring pages are being prepared.</p>}
+        {relatedPages.length > 0 ? <ColoringGrid items={relatedPages} randomize limit={4} /> : <p className="catalog-note">More coloring pages are being prepared.</p>}
         <p className="hub-link">
           Looking for stories too? Explore our <Link href="/creatures/">mythical creature coloring pages</Link> and creature notes.
         </p>

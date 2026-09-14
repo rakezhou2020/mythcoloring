@@ -1,9 +1,36 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { ColoringPage } from "../data/types";
 import { Artwork } from "./artwork";
 import { ZoomArtwork } from "./zoom-artwork";
-export function ColoringGrid({ items }: { items: ColoringPage[] }) {
+type ColoringGridProps = {
+  items: ColoringPage[];
+  randomize?: boolean;
+  limit?: number;
+};
+
+function shuffledItems(items: ColoringPage[], limit?: number) {
+  const shuffled = [...items];
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[randomIndex]] = [
+      shuffled[randomIndex],
+      shuffled[index],
+    ];
+  }
+  return typeof limit === "number" ? shuffled.slice(0, limit) : shuffled;
+}
+
+export function ColoringGrid({ items, randomize = false, limit }: ColoringGridProps) {
+  const [displayedItems, setDisplayedItems] = useState(() =>
+    typeof limit === "number" ? items.slice(0, limit) : items,
+  );
+
+  useEffect(() => {
+    setDisplayedItems(
+      randomize ? shuffledItems(items, limit) : typeof limit === "number" ? items.slice(0, limit) : items,
+    );
+  }, [items, limit, randomize]);
   const dialog = useRef<HTMLDialogElement>(null);
   const [selected, setSelected] = useState<ColoringPage | null>(null);
   const [view, setView] = useState<"lineArtImage" | "colorGuideImage" | "finishedImage">("lineArtImage");
@@ -22,7 +49,7 @@ export function ColoringGrid({ items }: { items: ColoringPage[] }) {
   return (
     <>
       <div className="coloring-grid">
-        {items.map((item) => (
+        {displayedItems.map((item) => (
           <article className="coloring-card" id={item.slug} key={item.id}>
             <button
               className="preview-button"
