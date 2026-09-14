@@ -66,6 +66,21 @@ const archiveMetadata: Record<string, { title: string; description: string }> = 
     description:
       "Discover Lushu, a white-headed, tiger-striped horse from the Shan Hai Jing. Learn its auspicious legend and download a free printable coloring page.",
   },
+  lei: {
+    title: "Lei Coloring Page | Feline Creature from Shan Hai Jing",
+    description:
+      "Discover Lei, a mane-bearing feline creature from the Shan Hai Jing. Learn its ancient legend and download a free printable coloring page.",
+  },
+  "bo-yi": {
+    title: "Bo Yi Coloring Page | Fearless Beast from Shan Hai Jing",
+    description:
+      "Discover Bo Yi, a many-tailed, four-eared creature from the Shan Hai Jing. Learn its protective legend and download a free printable coloring page.",
+  },
+  "guan-guan": {
+    title: "Guan Guan Coloring Page | Bird from Shan Hai Jing",
+    description:
+      "Discover Guan Guan, a dove-like bird from the Shan Hai Jing. Learn its clarity-giving legend and download a free printable coloring page.",
+  },
 };
 
 function creatureMetaDescription(name: string, shortDescription: string) {
