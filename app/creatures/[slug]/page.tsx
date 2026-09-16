@@ -101,6 +101,21 @@ const archiveMetadata: Record<string, { title: string; description: string }> = 
     description:
       "Discover Si, a dark, one-horned, ox-like creature from the Shan Hai Jing. Learn its ancient description and download a free printable coloring page.",
   },
+  "hu-jiao": {
+    title: "Hu Jiao Coloring Page | Water Creature from Shan Hai Jing",
+    description:
+      "Discover Hu Jiao, a fish-bodied, snake-tailed water creature from the Shan Hai Jing. Learn its ancient legend and download a free printable coloring page.",
+  },
+  fenghuang: {
+    title: "Fenghuang Coloring Page | Auspicious Bird from Shan Hai Jing",
+    description:
+      "Discover Fenghuang, the five-colored bird from the Shan Hai Jing. Learn its virtues and download a free printable coloring page.",
+  },
+  "zhuan-yu": {
+    title: "Zhuan Yu Coloring Page | Omen Fish from Shan Hai Jing",
+    description:
+      "Discover Zhuan Yu, a pig-haired fish from the Shan Hai Jing whose appearance foretells drought. Download a free printable coloring page.",
+  },
 };
 
 function creatureMetaDescription(name: string, shortDescription: string) {

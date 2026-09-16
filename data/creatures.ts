@@ -481,9 +481,58 @@ export const creatures: Creature[] = [
     featured: true,
     status: "published",
   },
+  {
+    slug: "hu-jiao",
+    name: "Hu Jiao",
+    localName: "虎蛟 · hǔ jiāo",
+    themeSlug: "shan-hai-jing",
+    origin: "Hu Jiao is recorded in the Southern Mountains section of the Shan Hai Jing, in the Yin River flowing south from Mount Daoguo into the sea. The entry appears among the waterways and unusual animals of Mount Daoguo, whose slopes are said to contain metals, jade, rhinoceroses, si, and elephants.",
+    shortDescription: "Hu Jiao is a water creature from the Shan Hai Jing with a fish's body, a snake's tail, and a call like mandarin ducks.",
+    appearance: "The ancient text gives Hu Jiao a fish-like body and a snake-like tail, and says that its voice resembles the call of mandarin ducks. It does not describe a tiger's head, claws, horns, colors, or fins. This artwork interprets the name and its water setting through a fierce tiger-faced, scaled creature with curling horns, golden limbs, a turquoise body, broad fins, clouds, mountains, and waves. These visible details are a modern artistic interpretation rather than a literal reconstruction of the source.",
+    legend: "In the Yin River at Mount Daoguo, Hu Jiao is described as an animal that crosses familiar categories: fish in its body, snake in its tail, and a birdlike call. The Shan Hai Jing adds an old dietary claim that eating it would prevent swelling and cure hemorrhoids. This is an ancient mythic and medical belief, not modern health guidance or a reason to consume any animal.",
+    symbolism: "Hu Jiao can be read as a figure of flowing change and the hidden variety of rivers. Its mixed form joins water, reptile, and birdlike sound into one unusual presence, while the artwork's tiger face gives that mystery a bold guardian-like expression. As a coloring page, the scales, fins, waves, clouds, mountain contours, horns, and claws invite turquoise and gold, deep blues and silvers, or an entirely personal palette.",
+    heroImage: "/products/hu-jiao/finished.webp",
+    featured: true,
+    status: "published",
+  },
+  {
+    slug: "fenghuang",
+    name: "Fenghuang",
+    localName: "凤皇 · fèng huáng",
+    themeSlug: "shan-hai-jing",
+    origin: "Shan Hai Jing · Nanshan Jing",
+    shortDescription:
+      "A five-colored, chicken-shaped bird whose appearance was said to bring peace to the realm.",
+    appearance:
+      "The Shan Hai Jing describes Fenghuang as chicken-shaped and patterned in five colors. This coloring design interprets those source motifs with a graceful crest, layered wings, long ornamental tail feathers, and a modern cloud-and-mountain setting.",
+    legend:
+      "In the Nanshan Jing, Fenghuang lives on Mount Danxue, where gold and jade are abundant and the Dan River flows south toward the Bohai Sea. The text says it feeds naturally, sings and dances by itself, and appears when all under heaven is at peace.",
+    symbolism:
+      "The text places the virtues de, yi, li, ren, and xin across Fenghuang's body: on its head, wings, back, breast, and belly. It can be read as a figure of harmony, ethical order, and auspicious peace. As a coloring page, its layered plumage, cloud forms, branches, and long tail invite gold, vermilion, orange, cream, and brown—or an entirely personal palette.",
+    heroImage: "/products/fenghuang/finished.webp",
+    featured: true,
+    status: "published",
+  },
+  {
+    slug: "zhuan-yu",
+    name: "Zhuan Yu",
+    localName: "鱄鱼 · zhuān yú",
+    themeSlug: "shan-hai-jing",
+    origin: "Shan Hai Jing · Zhongshan Jing",
+    shortDescription:
+      "A fish resembling a crucian carp, with pig-like hair and the sound of a pig; its appearance was said to foretell great drought.",
+    appearance:
+      "The Shan Hai Jing describes Zhuan Yu as resembling a fu, commonly understood as a crucian-carp-like fish, with pig-like hair. This coloring design turns that brief image into a graceful long-finned fish with layered, mane-like fins, scales, bubbles, water currents, rocks, and aquatic plants. The gold palette and flowing underwater scene are modern artistic interpretation rather than fixed details from the source.",
+    legend:
+      "The text places Zhuan Yu in the waters of Mount Gufeng and gives it a sound like a pig. It adds an omen: when the fish is seen, the realm will suffer a great drought. This is ancient mythic omen lore, not a scientific prediction or a description of a real animal.",
+    symbolism:
+      "Zhuan Yu links an underwater creature to the absence of water, turning a fish into a paradoxical sign of drought. Its mixed fish-and-pig traits make it feel uncanny even before the omen is revealed. As a coloring page, its scales, feather-like fins, water plants, bubbles, currents, and rocks invite gold, cream, brown, blue, or an entirely personal palette.",
+    heroImage: "/products/zhuan-yu/finished.webp",
+    featured: true,
+    status: "published",
+  },
   ...[
     ["qilin", "Qilin", "麒麟"],
-    ["fenghuang", "Fenghuang", "凤凰"],
     ["bifang", "Bifang", "毕方"],
   ].map(
     ([slug, name, localName]): Creature => ({
