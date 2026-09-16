@@ -531,6 +531,60 @@ export const creatures: Creature[] = [
     featured: true,
     status: "published",
   },
+  {
+    slug: "xian-yang",
+    name: "Xian Yang",
+    localName: "羬羊 · xián yáng",
+    themeSlug: "shan-hai-jing",
+    origin: "Shan Hai Jing · Xishan Jing",
+    shortDescription:
+      "A sheep-like creature with a horse's tail, recorded on Mount Qianlai in the Shan Hai Jing.",
+    appearance:
+      "The Shan Hai Jing describes Xian Yang simply as shaped like a sheep with a horse's tail. This coloring design interprets that image as a powerful, curled-horn ram with a long, flowing tail, a small beard, and a mountain-and-cloud landscape. The cream, gold, brown, and red palette and decorative markings are modern artistic additions rather than fixed details from the source.",
+    legend:
+      "Xian Yang is placed on Mount Qianlai, at the beginning of the Huashan range in the Xishan Jing. The source says that its fat could relieve la, an old term associated with chapped or cracked skin. This is an ancient mythic and medical claim, not modern health guidance or a reason to use any animal product.",
+    symbolism:
+      "Xian Yang combines the calm, familiar silhouette of a sheep with the energy of a horse's tail. It can be read as a mountain creature of resilience and sure-footed movement. As a coloring page, its spiral horns, mane, beard, tail, clouds, mountains, waterfall, pines, and rocks invite cream, gold, brown, vermilion, or an entirely personal palette.",
+    heroImage: "/products/xian-yang/finished.webp",
+    featured: true,
+    status: "published",
+  },
+  {
+    slug: "yong",
+    name: "Yong",
+    localName: "颙 · yóng",
+    themeSlug: "shan-hai-jing",
+    origin: "Shan Hai Jing · Nanshan Jing",
+    shortDescription:
+      "An owl-like bird with a human face, four eyes, and ears whose appearance was said to foretell great drought.",
+    appearance:
+      "The Shan Hai Jing describes Yong as an owl-like bird with a human face, four eyes, and ears. This coloring design interprets the compact description as a round, four-eyed feathered creature with broad wings, talons, and a high perch amid clouds and stylized flames. Its golden, cream, brown, and orange palette is a modern artistic interpretation rather than a fixed ancient image.",
+    legend:
+      "The text places Yong in Zhonggu, a valley south of Mount Lingqiu, and says that its call is its own name. It also records an ominous sign: when the bird appears, the realm will suffer a great drought. This is ancient mythic omen lore, not a scientific prediction or a description of a real animal.",
+    symbolism:
+      "Yong combines watchfulness and unease: its four eyes and ears imply heightened perception, while its appearance signals a drought. The modern illustration's flame-like forms emphasize that ominous association without presenting them as details from the ancient text. As a coloring page, the feathers, branch, clouds, flames, and multiple eyes invite gold, cream, brown, orange, or an entirely personal palette.",
+    heroImage: "/products/yong/finished.webp",
+    featured: true,
+    status: "published",
+  },
+  {
+    slug: "bian-qu",
+    name: "Bian Qu",
+    localName: "蝙渠 · biān qú",
+    themeSlug: "shan-hai-jing",
+    origin: "Creator-supplied mythology-inspired character",
+    shortDescription:
+      "A long-legged mythic bird with a curved crest, sweeping dark plumage, and a watchful, elegant presence.",
+    appearance:
+      "Bian Qu is presented in this collection as a slender, crane-like bird with a long pointed beak, a curled crest, red legs, dark layered feathers, and pale accents. The design places it among clouds, mountain waterfalls, drifting leaves, and a full moon. These visual details come from the supplied artwork.",
+    legend:
+      "This entry is a creator-supplied mythology-inspired character. The collection presents Bian Qu as a high-perching bird whose poised silhouette and long plumage suggest patience, alertness, and an affinity with mountain air.",
+    symbolism:
+      "Bian Qu can be read as a figure of calm attention and balance. Its tall stance and sweeping tail create a contrast between stillness and motion, while the moon, clouds, branches, and waterfalls form a setting for imaginative coloring. Try charcoal, cream, rust, and gold, or create a completely original palette.",
+    heroImage: "/products/bian-qu/finished.webp",
+    featured: true,
+    status: "published",
+  },
   ...[
     ["qilin", "Qilin", "麒麟"],
     ["bifang", "Bifang", "毕方"],

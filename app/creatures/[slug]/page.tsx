@@ -116,6 +116,21 @@ const archiveMetadata: Record<string, { title: string; description: string }> = 
     description:
       "Discover Zhuan Yu, a pig-haired fish from the Shan Hai Jing whose appearance foretells drought. Download a free printable coloring page.",
   },
+  "xian-yang": {
+    title: "Xian Yang Coloring Page | Horse-Tailed Ram from Shan Hai Jing",
+    description:
+      "Discover Xian Yang, a sheep-like creature with a horse's tail from the Shan Hai Jing. Download a free printable coloring page.",
+  },
+  yong: {
+    title: "Yong Coloring Page | Four-Eyed Bird from Shan Hai Jing",
+    description:
+      "Discover Yong, a four-eyed, human-faced owl-like bird from the Shan Hai Jing. Download a free printable coloring page.",
+  },
+  "bian-qu": {
+    title: "Bian Qu Coloring Page | Mythic Long-Legged Bird",
+    description:
+      "Discover Bian Qu, a long-legged mythic bird with sweeping plumage. Download a free printable coloring page.",
+  },
 };
 
 function creatureMetaDescription(name: string, shortDescription: string) {

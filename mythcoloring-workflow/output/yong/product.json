@@ -1,0 +1,29 @@
+{
+  "slug": "yong",
+  "title": "Yong Coloring Page",
+  "themeSlug": "shan-hai-jing",
+  "lineArtImage": "/products/yong/lineart.webp",
+  "colorGuideImage": "/products/yong/color-guide.webp",
+  "finishedImage": "/products/yong/finished.webp",
+  "printPdf": "/products/yong/print.pdf",
+  "status": "draft",
+  "workflowVersion": 4,
+  "display": {
+    "card": "lineArtImage",
+    "hover": "colorGuideImage",
+    "detail": "colorGuideImage"
+  },
+  "quality": {
+    "status": "user-supplied",
+    "lineart": "creator-supplied black-and-white line art",
+    "colorArtwork": "creator-supplied color reference",
+    "poster": "creator-supplied finished artwork",
+    "pdf": "one-page A4 line art with title and brand footer"
+  },
+  "artworkSource": "user-supplied",
+  "assetLabels": {
+    "lineArtImage": "Line Art",
+    "colorGuideImage": "Color",
+    "finishedImage": "Poster"
+  }
+}
