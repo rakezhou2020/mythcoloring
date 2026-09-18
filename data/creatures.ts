@@ -585,6 +585,96 @@ export const creatures: Creature[] = [
     featured: true,
     status: "published",
   },
+  {
+    slug: "fei-yi-snake",
+    name: "Fei Yi Snake",
+    localName: "肥遗（蛇）· féi yí",
+    themeSlug: "shan-hai-jing",
+    origin: "Shan Hai Jing · Xishan Jing",
+    shortDescription:
+      "A six-legged, four-winged serpent from Mount Taihua whose appearance was said to foretell great drought.",
+    appearance:
+      "The Shan Hai Jing gives Fei Yi three defining traits: it is a snake, it has six legs, and it has four wings. This coloring design interprets those traits as a pale, scaled serpent with clawed limbs, broad feathered wings, and stylized flames among tree branches. The cream, tan, gold, and vermilion palette is a modern artistic interpretation rather than a fixed ancient image.",
+    legend:
+      "Fei Yi is placed on Mount Taihua, a steep, square-sided mountain where birds and beasts do not dwell. The text says that when this six-legged, four-winged snake appears, the realm will suffer a great drought. This is ancient mythic omen lore, not a scientific prediction or a description of a real animal.",
+    symbolism:
+      "Fei Yi combines a serpent's winding movement with wings and many limbs, creating an image of an unsettling creature that crosses sky and earth. The illustration's flame forms emphasize its drought omen without presenting fire as a detail from the ancient text. As a coloring page, the scales, feathers, claws, flames, clouds, and twisted branch invite cream, gold, tan, vermilion, or an entirely personal palette.",
+    heroImage: "/products/fei-yi-snake/finished.webp",
+    featured: true,
+    status: "published",
+  },
+  {
+    slug: "cong-long",
+    name: "Conglong",
+    localName: "葱聋 · cōng lóng",
+    themeSlug: "shan-hai-jing",
+    origin: "Shan Hai Jing · Xishan Jing",
+    shortDescription:
+      "A sheep-like creature with a red mane, recorded on Mount Fuyu in the Shan Hai Jing.",
+    appearance:
+      "The Shan Hai Jing describes Conglong only as sheep-like with a red mane. This coloring design interprets that brief image as a tall, horned creature with a cream chest, a flowing scarlet mane, a small beard, and fruit-laden tail ornaments. The golden horns, hoof shape, berries, water, and mountain setting are modern artistic additions rather than fixed details from the source.",
+    legend:
+      "Conglong appears among the creatures of Mount Fuyu, a place described as rich in copper on its sunny side and iron on its shaded side. The text does not attach a separate omen, adventure, or magical power to the animal, preserving it instead as a concise wonder of the mountain landscape.",
+    symbolism:
+      "Conglong can be read as a figure of vitality and quiet strength: the familiar form of a sheep is transformed by its striking red mane. As a coloring page, its horns, mane, beard, tail, berries, leaves, ripples, bamboo, mountains, and clouds invite brown, cream, scarlet, gold, or an entirely personal palette.",
+    heroImage: "/products/cong-long/finished.webp",
+    featured: true,
+    status: "published",
+  },
+  {
+    slug: "fei-yi-bird",
+    name: "Fei Yi Bird",
+    localName: "肥遗（鸟）· féi yí",
+    themeSlug: "shan-hai-jing",
+    origin: "Shan Hai Jing · Xishan Jing",
+    shortDescription:
+      "A quail-like bird with a yellow body and red beak, recorded on Mount Ying in the Shan Hai Jing.",
+    appearance:
+      "The Shan Hai Jing describes the bird Fei Yi as quail-like, yellow-bodied, and red-beaked. This coloring design interprets the source with a curled crest, layered golden feathers, teal and vermilion accents, an ornate tail, and cloud-filled branches. The exact plumage patterns, crest, and scenery are modern artistic additions rather than fixed details from the source.",
+    legend:
+      "Fei Yi is recorded among the birds of Mount Ying, where the source also notes local plants, minerals, and waterways. The text says that eating the bird would cure li, an old term connected with skin disease, and kill insects. This is ancient mythic and medical lore, not modern health guidance or a reason to consume any animal.",
+    symbolism:
+      "Fei Yi can be read as a small mountain bird transformed into a sign of protection from illness and pests. Its warm yellow body and red beak give it a vivid, memorable contrast. As a coloring page, the crest, feathers, tail ornament, clouds, branches, and leaves invite gold, vermilion, teal, and cream, or an entirely personal palette.",
+    heroImage: "/products/fei-yi-bird/finished.webp",
+    featured: true,
+    status: "published",
+  },
+  {
+    slug: "min",
+    name: "Min",
+    localName: "鴖 · mín",
+    themeSlug: "shan-hai-jing",
+    origin: "Shan Hai Jing · Xishan Jing",
+    shortDescription:
+      "A kingfisher-like bird with a red beak, recorded on Mount Fuyu in the Shan Hai Jing.",
+    appearance:
+      "The Shan Hai Jing describes Min as resembling a cui, a kingfisher-like bird, with a red beak. This coloring design interprets that compact image through a vivid blue body, pale breast, small scarlet crest, a long beak, and berries among mountain branches. The exact plumage pattern, crest, scale, and surrounding landscape are modern artistic additions rather than fixed details from the source.",
+    legend:
+      "Min appears among the birds of Mount Fuyu, a mountain whose sunny side is rich in copper and shaded side in iron. The text attributes to Min the power to ward off fire. This is an ancient mythic belief, not modern fire-safety guidance.",
+    symbolism:
+      "Min can be read as a small mountain guardian associated with bright color, alert vision, and protection from fire. As a coloring page, its feathers, crest, beak, berries, branches, mountains, clouds, and water invite blue, cream, scarlet, brown, or an entirely personal palette.",
+    heroImage: "/products/min/finished.webp",
+    featured: true,
+    status: "published",
+  },
+  {
+    slug: "lei-bird",
+    name: "Lei Bird",
+    localName: "鸓 · lěi",
+    themeSlug: "shan-hai-jing",
+    origin: "Shan Hai Jing · Xishan Jing",
+    shortDescription:
+      "A red-and-black, two-headed, four-footed bird resembling a magpie, recorded on Mount Cui in the Shan Hai Jing.",
+    appearance:
+      "The Shan Hai Jing describes Lei as resembling a magpie, red and black, with two heads and four feet. This coloring design interprets that compact image through twin heads, a sweeping wing, layered blue-and-cream feathers, dark talons, and stylized clouds. The blue-and-gold palette, exact feather arrangement, two-legged flight pose, and surrounding scenery are modern artistic additions rather than fixed details from the source.",
+    legend:
+      "Lei is recorded among the birds of Mount Cui, whose slopes the text describes through trees, bamboo, metals, and mountain animals. The text attributes to Lei the power to ward off fire. This is an ancient mythic belief, not modern fire-safety guidance.",
+    symbolism:
+      "Lei can be read as a watchful, doubled guardian: its paired heads suggest alertness, while its fire-warding attribution gives the creature a protective role. As a coloring page, the feather layers, twin faces, beaks, talons, clouds, and wind curls invite black, vermilion, blue, cream, or an entirely personal palette.",
+    heroImage: "/products/lei-bird/finished.webp",
+    featured: true,
+    status: "published",
+  },
   ...[
     ["qilin", "Qilin", "麒麟"],
     ["bifang", "Bifang", "毕方"],

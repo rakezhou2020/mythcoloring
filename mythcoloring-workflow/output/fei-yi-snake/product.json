@@ -1,0 +1,29 @@
+{
+  "slug": "fei-yi-snake",
+  "title": "Fei Yi Snake Coloring Page",
+  "themeSlug": "shan-hai-jing",
+  "lineArtImage": "/products/fei-yi-snake/lineart.webp",
+  "colorGuideImage": "/products/fei-yi-snake/color-guide.webp",
+  "finishedImage": "/products/fei-yi-snake/finished.webp",
+  "printPdf": "/products/fei-yi-snake/print.pdf",
+  "status": "draft",
+  "workflowVersion": 4,
+  "display": {
+    "card": "lineArtImage",
+    "hover": "colorGuideImage",
+    "detail": "colorGuideImage"
+  },
+  "quality": {
+    "status": "user-supplied",
+    "lineart": "creator-supplied black-and-white line art",
+    "colorArtwork": "creator-supplied color reference",
+    "poster": "creator-supplied finished artwork",
+    "pdf": "one-page A4 line art with title and brand footer"
+  },
+  "artworkSource": "user-supplied",
+  "assetLabels": {
+    "lineArtImage": "Line Art",
+    "colorGuideImage": "Color",
+    "finishedImage": "Poster"
+  }
+}

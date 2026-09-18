@@ -131,6 +131,31 @@ const archiveMetadata: Record<string, { title: string; description: string }> = 
     description:
       "Discover Bian Qu, a long-legged mythic bird with sweeping plumage. Download a free printable coloring page.",
   },
+  "fei-yi-snake": {
+    title: "Fei Yi Snake Coloring Page | Six-Legged Winged Serpent",
+    description:
+      "Discover Fei Yi, the six-legged, four-winged serpent from the Shan Hai Jing. Download a free printable coloring page.",
+  },
+  "cong-long": {
+    title: "Conglong Coloring Page | Red-Maned Sheep from Shan Hai Jing",
+    description:
+      "Discover Conglong, a red-maned sheep-like creature from the Shan Hai Jing. Download a free printable coloring page.",
+  },
+  "fei-yi-bird": {
+    title: "Fei Yi Bird Coloring Page | Quail-Like Bird from Shan Hai Jing",
+    description:
+      "Discover Fei Yi, a yellow, red-beaked quail-like bird from the Shan Hai Jing. Download a free printable coloring page.",
+  },
+  min: {
+    title: "Min Coloring Page | Fire-Warding Bird from Shan Hai Jing",
+    description:
+      "Discover Min, a kingfisher-like bird with a red beak from the Shan Hai Jing. Download a free printable coloring page.",
+  },
+  "lei-bird": {
+    title: "Lei Bird Coloring Page | Two-Headed Bird from Shan Hai Jing",
+    description:
+      "Discover Lei, the red-and-black, two-headed bird from the Shan Hai Jing. Download a free printable coloring page.",
+  },
 };
 
 function creatureMetaDescription(name: string, shortDescription: string) {

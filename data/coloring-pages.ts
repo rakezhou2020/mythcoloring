@@ -36,6 +36,11 @@ import zhuanYuProduct from "../mythcoloring-workflow/output/zhuan-yu/product.jso
 import xianYangProduct from "../mythcoloring-workflow/output/xian-yang/product.json";
 import yongProduct from "../mythcoloring-workflow/output/yong/product.json";
 import bianQuProduct from "../mythcoloring-workflow/output/bian-qu/product.json";
+import feiYiSnakeProduct from "../mythcoloring-workflow/output/fei-yi-snake/product.json";
+import congLongProduct from "../mythcoloring-workflow/output/cong-long/product.json";
+import feiYiBirdProduct from "../mythcoloring-workflow/output/fei-yi-bird/product.json";
+import minProduct from "../mythcoloring-workflow/output/min/product.json";
+import leiBirdProduct from "../mythcoloring-workflow/output/lei-bird/product.json";
 
 const nineColoredDeer: ColoringPage = {
   ...deerProduct,
@@ -435,6 +440,61 @@ const bianQu: ColoringPage = {
   status: "published",
 };
 
+const feiYiSnake: ColoringPage = {
+  ...feiYiSnakeProduct,
+  id: feiYiSnakeProduct.slug,
+  creatureSlug: feiYiSnakeProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: 4,
+  featured: true,
+  status: "published",
+};
+
+const congLong: ColoringPage = {
+  ...congLongProduct,
+  id: congLongProduct.slug,
+  creatureSlug: congLongProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: 4,
+  featured: true,
+  status: "published",
+};
+
+const feiYiBird: ColoringPage = {
+  ...feiYiBirdProduct,
+  id: feiYiBirdProduct.slug,
+  creatureSlug: feiYiBirdProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: 4,
+  featured: true,
+  status: "published",
+};
+
+const min: ColoringPage = {
+  ...minProduct,
+  id: minProduct.slug,
+  creatureSlug: minProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: 4,
+  featured: true,
+  status: "published",
+};
+
+const leiBird: ColoringPage = {
+  ...leiBirdProduct,
+  id: leiBirdProduct.slug,
+  creatureSlug: leiBirdProduct.slug,
+  type: "Coloring Page",
+  difficulty: "Detailed",
+  colorCount: 4,
+  featured: true,
+  status: "published",
+};
+
 // Product cards always use the same four resource fields. A null field makes
 // the corresponding preview or action unavailable rather than inventing a URL.
 const sampleColoringPages: ColoringPage[] = [
@@ -497,6 +557,11 @@ export const coloringPages: ColoringPage[] = [
   xianYang,
   yong,
   bianQu,
+  feiYiSnake,
+  congLong,
+  feiYiBird,
+  min,
+  leiBird,
   ...sampleColoringPages,
 ];
 export const publishedColoringPages = coloringPages.filter(
