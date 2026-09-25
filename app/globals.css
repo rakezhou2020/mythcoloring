@@ -321,7 +321,10 @@ p {
 .standard-page-grid a { padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); font-family: Georgia, serif; font-size: 20px; }
 .standard-page-grid a:hover { border-color: var(--jade); color: var(--rust); }
 .standard-page-card { padding: 0 !important; overflow: hidden; }
-.standard-page-card img { width: 100%; aspect-ratio: 4 / 5; object-fit: contain; background: var(--white); }
+.standard-card-art { position: relative; aspect-ratio: 4 / 5; background: var(--white); }
+.standard-card-art img { width: 100%; height: 100%; object-fit: contain; background: var(--white); }
+.standard-card-color { position: absolute; inset: 0; opacity: 0; transition: opacity 250ms ease; }
+.standard-page-card:hover .standard-card-color { opacity: 1; }
 .standard-page-card span { display: block; padding: 16px 18px 18px; }
 .divine-beast-grid {
   display: grid;

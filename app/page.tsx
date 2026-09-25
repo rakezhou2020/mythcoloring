@@ -85,7 +85,9 @@ export default function Home() {
           finished artwork.
         </p>
         <ColoringGrid
-          items={publishedColoringPages.filter((p) => p.featured).slice(0, 8)}
+          items={publishedColoringPages.filter((p) => p.featured)}
+          randomize
+          limit={8}
         />
       </section>
       <section className="section wrap">

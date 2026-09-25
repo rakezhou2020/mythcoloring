@@ -38,7 +38,11 @@ export default async function CategoryPage({ params }: Props) {
       {pages.length ? (
         <div className="standard-page-grid">{pages.map((page) => (
           <Link className="standard-page-card" key={page.slug} href={`/coloring-pages/${slug}/${page.slug}/`}>
-            <img src={page.lineArtImage} alt={page.imageAlt} width={600} height={750} />
+            <div className="standard-card-art">
+              <img src={page.lineArtImage} alt={page.imageAlt} width={600} height={750} />
+              <img className="standard-card-color" src={page.colorImage} alt="" width={600} height={750} aria-hidden="true" />
+              <span className="preview-hint" aria-hidden="true">View color artwork</span>
+            </div>
             <span>{page.title}</span>
           </Link>
         ))}</div>
