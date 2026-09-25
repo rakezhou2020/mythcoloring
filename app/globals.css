@@ -277,6 +277,52 @@ p {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 22px;
 }
+.category-grid,
+.home-collection-grid,
+.theme-worlds {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.category-card,
+.home-collection-card,
+.theme-world-card,
+.empty-state {
+  display: block;
+  padding: clamp(26px, 4vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: var(--white);
+}
+.category-card { min-height: 235px; }
+.category-card-coming { opacity: 0.78; background: #f7f4ed; }
+.category-card h2,
+.theme-world-card h2 { font-size: clamp(28px, 3vw, 38px); }
+.category-card p:not(.eyebrow),
+.home-collection-card p:not(.eyebrow),
+.theme-world-card p:not(.eyebrow),
+.empty-state p { color: var(--muted); }
+.category-card:hover,
+.home-collection-card:hover,
+.theme-world-card:hover { border-color: var(--jade); }
+.home-collection-card { min-height: 225px; background: #e8e9df; }
+.home-collection-card.is-myth { background: #f1e5d3; }
+.home-collection-card h3 { font-size: 34px; }
+.theme-world-card { min-height: 240px; background: #e8e9df; }
+.theme-world-card:nth-child(even) { background: #f1e5d3; }
+.theme-existing { padding-bottom: 0; }
+.empty-state { max-width: 720px; background: #e8e9df; }
+.standard-page-art { max-width: 780px; margin: 0 auto; }
+.standard-artwork { width: 100%; border: 1px solid var(--line); border-radius: 14px; background: var(--white); }
+.standard-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.standard-content { max-width: 780px; margin: 48px auto 0; }
+.standard-content h2 { font-size: 31px; }
+.standard-page-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.standard-page-grid a { padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); font-family: Georgia, serif; font-size: 20px; }
+.standard-page-grid a:hover { border-color: var(--jade); color: var(--rust); }
+.standard-page-card { padding: 0 !important; overflow: hidden; }
+.standard-page-card img { width: 100%; aspect-ratio: 4 / 5; object-fit: contain; background: var(--white); }
+.standard-page-card span { display: block; padding: 16px 18px 18px; }
 .divine-beast-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -841,6 +887,10 @@ p {
   .hero-actions .button {
     width: 100%;
   }
+  .category-grid,
+  .home-collection-grid,
+  .theme-worlds,
+  .standard-page-grid { grid-template-columns: 1fr; }
   .related-coloring-pages .coloring-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

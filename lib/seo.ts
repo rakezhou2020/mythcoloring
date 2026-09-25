@@ -5,6 +5,7 @@ export function pageMetadata(
   title: string,
   description: string,
   path: string,
+  image?: { url: string; alt: string },
 ): Metadata {
   return {
     title: { absolute: title + " | " + siteName },
@@ -16,6 +17,7 @@ export function pageMetadata(
       url: siteUrl + path,
       siteName,
       type: "website",
+      ...(image ? { images: [image] } : {}),
     },
   };
 }

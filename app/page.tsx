@@ -90,6 +90,31 @@ export default function Home() {
       </section>
       <section className="section wrap">
         <div className="section-heading">
+          <div>
+            <p className="eyebrow">A growing printable library</p>
+            <h2>Coloring Pages</h2>
+          </div>
+          <Link className="text-link" href="/coloring-pages/">
+            Browse categories →
+          </Link>
+        </div>
+        <div className="home-collection-grid">
+          <Link className="home-collection-card" href="/coloring-pages/flowers-plants/">
+            <p className="eyebrow">Ordinary coloring pages</p>
+            <h3>Flowers &amp; Plants</h3>
+            <p>Color orchids, calla lilies, and lily of the valley with free printable line art and color inspiration.</p>
+            <span className="text-link">Explore Flowers &amp; Plants →</span>
+          </Link>
+          <Link className="home-collection-card is-myth" href="/creatures/">
+            <p className="eyebrow">Stories to discover</p>
+            <h3>Creatures</h3>
+            <p>Explore mythical creatures, their stories, printable line art, color guides, and posters.</p>
+            <span className="text-link">Explore Creatures →</span>
+          </Link>
+        </div>
+      </section>
+      <section className="section wrap">
+        <div className="section-heading">
           <h2>The Four Divine Beasts</h2>
         </div>
         <div className="divine-beast-grid">

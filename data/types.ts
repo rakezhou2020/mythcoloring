@@ -39,3 +39,42 @@ export type ColoringPage = {
   featured: boolean;
   status: Status;
 };
+
+/** A reusable taxonomy entry for non-mythology printable coloring pages. */
+export type StandardColoringCategory = {
+  slug: string;
+  name: string;
+  description: string;
+  status: Status;
+};
+
+/**
+ * Deliberately separate from ColoringPage: standard pages never inherit the
+ * creature story, color-guide, PDF, or poster fields used by the legacy
+ * mythology product system.
+ */
+export type StandardColoringPage = {
+  slug: string;
+  categorySlug: string;
+  title: string;
+  shortIntroduction: string;
+  coloringTips: string[];
+  lineArtImage: string;
+  colorImage: string;
+  imageAlt: string;
+  seo: {
+    title: string;
+    description: string;
+  };
+  relatedSlugs?: string[];
+  featured: boolean;
+  status: Status;
+};
+
+export type ContentTheme = {
+  slug: string;
+  name: string;
+  description: string;
+  categorySlugs: string[];
+  status: Status;
+};

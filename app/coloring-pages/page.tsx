@@ -1,25 +1,40 @@
-import { ColoringGrid } from "../../components/coloring-grid";
-import { publishedColoringPages } from "../../data/coloring-pages";
+import Link from "next/link";
+import { standardColoringCategories } from "../../data/standard-coloring-pages";
 import { pageMetadata } from "../../lib/seo";
 export const metadata = pageMetadata(
-  "Free Printable Mythical Creature Coloring Pages",
-  "Browse mythical creature coloring pages and color-by-number designs from the Shan Hai Jing.",
+  "Printable Coloring Page Categories",
+  "Browse free printable coloring pages by category, including flowers, plants, animals, buildings, food, vehicles, and nature.",
   "/coloring-pages/",
 );
 export default function Page() {
   return (
     <div className="wrap page-content">
       <header className="page-heading">
-        <p className="eyebrow">The coloring collection</p>
-        <h1>Free Mythical Creature Coloring Pages</h1>
+        <p className="eyebrow">The printable collection</p>
+        <h1>Free Printable Coloring Pages</h1>
         <p>
-          Find a creature, choose a page, and make it your own. Explore line art
-          and color-by-number designs.
+          Browse ordinary coloring pages by category. Mythical creatures and
+          their stories continue in the dedicated Creatures collection.
         </p>
       </header>
-      <section aria-label="Coloring pages">
-        <p className="catalog-note">All printable pages are free.</p>
-        <ColoringGrid items={publishedColoringPages} />
+      <section aria-label="Coloring page categories">
+        <p className="catalog-note">All printable pages are free. More categories are being prepared.</p>
+        <div className="category-grid">
+          {standardColoringCategories.map((category) => category.status === "published" ? (
+            <Link className="category-card" href={`/coloring-pages/${category.slug}/`} key={category.slug}>
+              <p className="eyebrow">Coloring Pages</p>
+              <h2>{category.name}</h2>
+              <p>{category.description}</p>
+              <span className="text-link">Explore {category.name} →</span>
+            </Link>
+          ) : (
+            <article className="category-card category-card-coming" key={category.slug}>
+              <p className="eyebrow">Coloring Pages · Coming soon</p>
+              <h2>{category.name}</h2>
+              <p>{category.description}</p>
+            </article>
+          ))}
+        </div>
       </section>
     </div>
   );
