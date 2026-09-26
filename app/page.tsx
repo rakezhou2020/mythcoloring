@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { Artwork } from "../components/artwork";
 import { ColoringGrid } from "../components/coloring-grid";
+import { StandardColoringGrid } from "../components/standard-coloring-grid";
 import { ThemeCards } from "../components/theme-cards";
 import { homeHeroProduct, publishedColoringPages } from "../data/coloring-pages";
+import { publishedStandardColoringPages } from "../data/standard-coloring-pages";
 import { pageMetadata } from "../lib/seo";
 export const metadata = pageMetadata(
   "Free Printable Coloring Pages",
@@ -72,20 +74,39 @@ export default function Home() {
       <section className="section wrap">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">Make a little room for creativity</p>
-            <h2>Free Coloring Pages</h2>
+            <p className="eyebrow">Legends to discover</p>
+            <h2>Mythical Creature Coloring Pages</h2>
           </div>
           <Link className="text-link" href="/coloring-pages/">
             View all coloring pages →
           </Link>
         </div>
         <p className="catalog-note">
-          Explore eight featured printables, then browse the full collection
-          for more mythical creature coloring pages, color guides, and
-          finished artwork.
+          Explore four featured mythical creature printables, then browse the
+          full collection for more legends, color guides, and finished artwork.
         </p>
         <ColoringGrid
           items={publishedColoringPages.filter((p) => p.featured)}
+          randomize
+          limit={4}
+        />
+      </section>
+      <section className="section wrap">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">More free printables</p>
+            <h2>More Free Coloring Pages</h2>
+          </div>
+          <Link className="text-link" href="/coloring-pages/">
+            View all coloring pages →
+          </Link>
+        </div>
+        <p className="catalog-note">
+          Discover free flowers, plants, animals, and more creative printables
+          from our growing collection.
+        </p>
+        <StandardColoringGrid
+          items={publishedStandardColoringPages}
           randomize
           limit={8}
         />

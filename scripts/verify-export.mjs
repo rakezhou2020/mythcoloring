@@ -47,7 +47,7 @@ for (const creature of readdirSync(join(root, 'creatures'), { withFileTypes: tru
   assert(creatureHtml.includes('Related Coloring Pages'), `Related pages: ${creature}`);
   assert(creatureHtml.includes('mythical creature coloring pages'), `Hub link: ${creature}`);
 }
-assert.equal((readFileSync(join(root, 'index.html'), 'utf8').match(/class="coloring-card"/g) || []).length, 8, 'Homepage should show exactly eight featured coloring cards');
+assert.equal((readFileSync(join(root, 'index.html'), 'utf8').match(/class="coloring-card"/g) || []).length, 4, 'Homepage should show exactly four featured mythology coloring cards');
 for (const asset of ['lineart.png', 'color-guide.jpg', 'finished.jpg', 'print.pdf']) {
   assert(existsSync(join(root, 'products', 'chi-ru', asset)), `Missing Chi Ru asset: ${asset}`);
   assert(readFileSync(join(root, 'creatures', 'chi-ru', 'index.html'), 'utf8').includes(`/products/chi-ru/${asset}`), `Chi Ru page missing asset: ${asset}`);
@@ -56,6 +56,9 @@ assert(readFileSync(join(root, 'creatures', 'chi-ru', 'index.html'), 'utf8').inc
 const deerAssets = ['lineart.png', 'color-guide.jpg', 'finished.jpg', 'print.pdf'];
 for (const asset of deerAssets) assert(existsSync(join(root, 'products', 'nine-colored-deer', asset)), `Missing published deer asset: ${asset}`);
 const home = readFileSync(join(root, 'index.html'), 'utf8');
+assert(home.includes('Mythical Creature Coloring Pages'), 'Homepage must feature mythology coloring pages');
+assert(home.includes('More Free Coloring Pages'), 'Homepage must feature more free coloring pages');
+assert.equal((home.match(/class="standard-related-card"/g) || []).length, 8, 'Homepage should show exactly eight other free coloring cards');
 assert(home.includes('View all coloring pages'), 'Homepage must link visitors to the coloring pages catalog');
 assert(home.includes('href="/coloring-pages/"'), 'Homepage catalog link is missing');
 assert(home.includes('/products/nine-colored-deer/lineart.png'), 'Homepage hero must contain deer line art');
@@ -63,4 +66,4 @@ assert(home.includes('/products/nine-colored-deer/color-guide.jpg'), 'Homepage h
 assert(readFileSync(join(root, 'creatures', 'nine-colored-deer', 'index.html'), 'utf8').includes('/products/nine-colored-deer/print.pdf'), 'Deer detail must provide its printable PDF');
 for (const draft of ['japanese-yokai', 'korean-folklore', 'greek-mythology', 'norse-mythology']) assert(!existsSync(join(root, 'themes', draft)));
 assert(readFileSync(join(root, '_redirects'), 'utf8').includes('https://www.mythcoloring.com/* https://mythcoloring.com/:splat 301'));
-console.log(`Verified ${titles.size} public pages, ${links} internal links/assets, sitemap, robots, eight homepage cards, Chi Ru and Nine-Colored Deer assets, and redirects.`);
+console.log(`Verified ${titles.size} public pages, ${links} internal links/assets, sitemap, robots, home coloring sections, Chi Ru and Nine-Colored Deer assets, and redirects.`);

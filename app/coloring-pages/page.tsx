@@ -13,13 +13,19 @@ export default function Page() {
         <p className="eyebrow">The printable collection</p>
         <h1>Free Printable Coloring Pages</h1>
         <p>
-          Browse ordinary coloring pages by category. Mythical creatures and
-          their stories continue in the dedicated Creatures collection.
+          Browse free printable coloring pages by category, from mythical
+          creatures and ancient legends to flowers, plants, animals, and more.
         </p>
       </header>
       <section aria-label="Coloring page categories">
         <p className="catalog-note">All printable pages are free. More categories are being prepared.</p>
         <div className="category-grid">
+          <Link className="category-card" href="/creatures/">
+            <p className="eyebrow">Coloring Pages</p>
+            <h2>Mythology</h2>
+            <p>Explore mythical creature coloring pages, color guides, and stories from ancient legends.</p>
+            <span className="text-link">Explore Mythology →</span>
+          </Link>
           {standardColoringCategories.map((category) => category.status === "published" ? (
             <Link className="category-card" href={`/coloring-pages/${category.slug}/`} key={category.slug}>
               <p className="eyebrow">Coloring Pages</p>

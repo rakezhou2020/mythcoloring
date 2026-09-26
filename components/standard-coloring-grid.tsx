@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import type { StandardColoringPage } from "../data/types";
 
 type Props = {
-  categorySlug: string;
   items: StandardColoringPage[];
   limit?: number;
   randomize?: boolean;
@@ -23,7 +22,7 @@ function selectItems(items: StandardColoringPage[], limit?: number, randomize = 
 }
 
 /** Visual cards for ordinary coloring pages. Kept separate from the creature grid. */
-export function StandardColoringGrid({ categorySlug, items, limit, randomize = false }: Props) {
+export function StandardColoringGrid({ items, limit, randomize = false }: Props) {
   const [displayedItems, setDisplayedItems] = useState(() => selectItems(items, limit));
 
   useEffect(() => {
@@ -33,7 +32,7 @@ export function StandardColoringGrid({ categorySlug, items, limit, randomize = f
   return (
     <div className="standard-related-grid">
       {displayedItems.map((item) => (
-        <Link className="standard-related-card" key={item.slug} href={`/coloring-pages/${categorySlug}/${item.slug}/`}>
+        <Link className="standard-related-card" key={item.slug} href={`/coloring-pages/${item.categorySlug}/${item.slug}/`}>
           <div className="standard-card-art">
             <img src={item.lineArtImage} alt={item.imageAlt} width={600} height={750} />
             <img className="standard-card-color" src={item.colorImage} alt="" width={600} height={750} aria-hidden="true" />

@@ -47,7 +47,7 @@ export default async function StandardPage({ params }: Props) {
       <StandardColoringPage page={page} />
       <section className="prose standard-content"><h2>About this coloring page</h2><p>{page.shortIntroduction}</p></section>
       <section className="prose standard-content"><h2>Coloring Tips</h2><ul className="printing-tips">{page.coloringTips.map((tip) => <li key={tip}>{tip}</li>)}</ul></section>
-      <section className="standard-content"><h2>Related Coloring Pages</h2><StandardColoringGrid categorySlug={categorySlug} items={related} randomize limit={4} /></section>
+      <section className="standard-content"><h2>Related Coloring Pages</h2><StandardColoringGrid items={related} randomize limit={4} /></section>
     </div>
   );
 }
