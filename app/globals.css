@@ -969,10 +969,12 @@ p {
   body:has(dialog[open]) main *:not(dialog):not(dialog *):not(:has(dialog[open])) { display: none !important; }
   body:has(dialog[open]) main *:has(dialog[open]) { display: block; margin: 0; padding: 0; min-height: 0; }
 }
-/* Existing product preview: three views and a touch-friendly full-screen image. */
+/* Existing product preview: its artwork links directly to print or poster details. */
 .print-only { display: none; }
 .print-preload { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 .screen-sheet { max-width: min(720px, 100%); margin: 18px auto; }
+.artwork-action { display: block; }
+.artwork-action img { display: block; width: 100%; height: auto; }
 .artwork-views, .zoom-controls { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
 .artwork-views button, .zoom-controls button { min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 20px; background: white; }
 .artwork-views button[aria-pressed="true"] { background: var(--ink); color: white; }

@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { ColoringPage } from "../data/types";
 import { Artwork } from "./artwork";
-import { ZoomArtwork } from "./zoom-artwork";
 type ColoringGridProps = {
   items: ColoringPage[];
   randomize?: boolean;
@@ -34,7 +33,6 @@ export function ColoringGrid({ items, randomize = false, limit }: ColoringGridPr
   const dialog = useRef<HTMLDialogElement>(null);
   const [selected, setSelected] = useState<ColoringPage | null>(null);
   const [view, setView] = useState<"lineArtImage" | "colorGuideImage" | "finishedImage">("lineArtImage");
-  const [expanded, setExpanded] = useState(false);
   const viewLabels = {
     lineArtImage: "Line Art",
     colorGuideImage: "Color",
@@ -43,7 +41,6 @@ export function ColoringGrid({ items, randomize = false, limit }: ColoringGridPr
   function open(item: ColoringPage) {
     setSelected(item);
     setView(item.colorGuideImage ? "colorGuideImage" : "lineArtImage");
-    setExpanded(false);
     dialog.current?.showModal();
   }
   return (
@@ -105,7 +102,7 @@ export function ColoringGrid({ items, randomize = false, limit }: ColoringGridPr
       </div>
       <dialog
         ref={dialog}
-        className={"print-dialog" + (expanded ? " artwork-fullscreen" : "")}
+        className="print-dialog"
         aria-label="Coloring page preview"
         onClick={(e) => {
           if (e.target === e.currentTarget) dialog.current?.close();
@@ -115,7 +112,6 @@ export function ColoringGrid({ items, randomize = false, limit }: ColoringGridPr
           <>
             <div className="dialog-toolbar">
               <span>{viewLabels[view]}</span>
-              {expanded && <button onClick={() => setExpanded(false)}>Exit full screen</button>}
               <button autoFocus onClick={() => dialog.current?.close()} aria-label="Close preview">
                 ×
               </button>
@@ -127,14 +123,25 @@ export function ColoringGrid({ items, randomize = false, limit }: ColoringGridPr
               </div>
             )}
             <div className="screen-sheet screen-only">
-              {selected[view] ? <ZoomArtwork key={view + String(expanded)} src={selected[view]!}
-                alt={selected.title + " " + view.replace("Image", "")} expanded={expanded}
-                onExpand={() => setExpanded(true)} /> : <Artwork name={selected.title} src={selected.lineArtImage} />}
-              {view === "finishedImage" && selected.amazonPosterUrl && (
-                <a className="button poster-link" href={selected.amazonPosterUrl} target="_blank" rel="noreferrer">
-                  Get This Artwork as a Poster
-                </a>
-              )}
+              {selected[view] ? (
+                view === "finishedImage" ? (
+                  <a
+                    className="artwork-action"
+                    href={selected.amazonPosterUrl ?? `/creatures/${selected.creatureSlug}/#finished-artwork`}
+                    target={selected.amazonPosterUrl ? "_blank" : undefined}
+                    rel={selected.amazonPosterUrl ? "noreferrer" : undefined}
+                    aria-label={`View ${selected.title} poster details`}
+                  >
+                    <Artwork name={selected.title} src={selected.finishedImage} colored alt={`${selected.title} poster artwork`} />
+                  </a>
+                ) : selected.printPdf ? (
+                  <a className="artwork-action" href={selected.printPdf} target="_blank" rel="noreferrer" aria-label={`Print ${selected.title}`}>
+                    <Artwork name={selected.title} src={selected[view]} colored={view === "colorGuideImage"} alt={`${selected.title} ${viewLabels[view]}`} />
+                  </a>
+                ) : (
+                  <Artwork name={selected.title} src={selected[view]} colored={view === "colorGuideImage"} alt={`${selected.title} ${viewLabels[view]}`} />
+                )
+              ) : <Artwork name={selected.title} src={selected.lineArtImage} />}
             </div>
             <div className="print-sheet print-only">
               <h2>{selected.title}</h2>
