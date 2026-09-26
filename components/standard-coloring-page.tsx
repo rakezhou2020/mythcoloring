@@ -7,11 +7,38 @@ export function StandardColoringPage({ page }: { page: StandardColoringPage }) {
   const [view, setView] = useState<"line" | "color">("line");
   const image = view === "line" ? page.lineArtImage : page.colorImage;
 
-  function printCurrentImage() {
-    const popup = window.open(image, "_blank");
+  async function printCurrentImage() {
+    // Open synchronously from the click so browsers do not block the window,
+    // then print a local document once the original PNG bytes have loaded.
+    const popup = window.open("", "_blank");
     if (!popup) return;
     popup.opener = null;
-    popup.addEventListener("load", () => popup.print(), { once: true });
+    popup.document.write(`<!doctype html><html><head><title>${page.title}</title><style>
+      @page { margin: 12mm; }
+      body { margin: 0; display: grid; place-items: center; background: #fff; }
+      img { display: block; max-width: 100%; max-height: 260mm; object-fit: contain; }
+    </style></head><body></body></html>`);
+    popup.document.close();
+
+    try {
+      const response = await fetch(image);
+      if (!response.ok) throw new Error("Unable to load the printable image.");
+      const objectUrl = URL.createObjectURL(await response.blob());
+      const printableImage = popup.document.createElement("img");
+      printableImage.alt = page.imageAlt;
+      printableImage.onload = () => {
+        popup.focus();
+        popup.print();
+      };
+      popup.addEventListener("afterprint", () => {
+        URL.revokeObjectURL(objectUrl);
+        popup.close();
+      }, { once: true });
+      printableImage.src = objectUrl;
+      popup.document.body.appendChild(printableImage);
+    } catch {
+      popup.close();
+    }
   }
 
   async function downloadCurrentImage() {
