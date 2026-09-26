@@ -18,10 +18,15 @@ for (const file of files) {
   for (const [, raw] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const url = new URL(raw.replaceAll('&amp;', '&'), origin + path);
     if (url.origin !== origin) continue;
+    if (url.pathname.startsWith('/cdn-cgi/')) continue;
     const target = resolve(url.pathname);
     assert(existsSync(target), `${path}: missing ${url.pathname}`);
     if (url.hash && target.endsWith('.html')) assert(readFileSync(target, 'utf8').includes(`id="${decodeURIComponent(url.hash.slice(1))}"`), `Missing anchor: ${url}`);
     links++;
+  }
+  if (path.startsWith('/rake/')) {
+    assert(html.includes('name="robots" content="noindex'), `Admin page must be noindex: ${path}`);
+    continue;
   }
   if (path.includes('404')) continue;
   const title = html.match(/<title>(.*?)<\/title>/)?.[1];
