@@ -1,13 +1,54 @@
-const json = (value, status = 200) => new Response(JSON.stringify(value), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
+const json = (value, status = 200, headers = {}) => new Response(JSON.stringify(value), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store", ...headers } });
 const id = () => crypto.randomUUID();
 const now = () => new Date().toISOString();
 const statusValues = new Set(["draft", "published", "hidden"]);
 const text = (value, fallback = "") => typeof value === "string" ? value.trim() : fallback;
+const sessionCookie = "__Host-mythcoloring_rake";
+const sessionAgeSeconds = 60 * 60 * 24 * 7;
 
-function admin(context) {
-  const email = context.request.headers.get("Cf-Access-Authenticated-User-Email")?.toLowerCase();
-  const allowed = context.env.ADMIN_EMAIL?.toLowerCase();
-  return email && allowed && email === allowed ? email : null;
+function cookies(request) {
+  return Object.fromEntries((request.headers.get("cookie") || "").split(";").map((part) => {
+    const index = part.indexOf("=");
+    return index < 0 ? ["", ""] : [part.slice(0, index).trim(), decodeURIComponent(part.slice(index + 1).trim())];
+  }));
+}
+function bytes(value) { return new TextEncoder().encode(value); }
+function toBase64Url(bytesValue) {
+  let binary = "";
+  for (const byte of bytesValue) binary += String.fromCharCode(byte);
+  return btoa(binary).replaceAll("+", "-").replaceAll("/", "_").replaceAll("=", "");
+}
+async function signature(value, password) {
+  const key = await crypto.subtle.importKey("raw", bytes(password), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  return toBase64Url(new Uint8Array(await crypto.subtle.sign("HMAC", key, bytes(value))));
+}
+function equal(left, right) {
+  if (left.length !== right.length) return false;
+  let result = 0;
+  for (let index = 0; index < left.length; index += 1) result |= left.charCodeAt(index) ^ right.charCodeAt(index);
+  return result === 0;
+}
+async function session(request, password) {
+  if (!password) return null;
+  const token = cookies(request)[sessionCookie];
+  if (!token) return null;
+  const [expiresAt, nonce, suppliedSignature] = token.split(".");
+  if (!expiresAt || !nonce || !suppliedSignature || Number(expiresAt) < Date.now()) return null;
+  const payload = `${expiresAt}.${nonce}`;
+  const expectedSignature = await signature(payload, password);
+  return equal(expectedSignature, suppliedSignature) ? "rake-admin" : null;
+}
+async function newSession(password) {
+  const expiresAt = Date.now() + sessionAgeSeconds * 1000;
+  const nonce = toBase64Url(crypto.getRandomValues(new Uint8Array(24)));
+  const payload = `${expiresAt}.${nonce}`;
+  return `${payload}.${await signature(payload, password)}`;
+}
+function setSessionCookie(token) {
+  return `${sessionCookie}=${encodeURIComponent(token)}; Path=/; Max-Age=${sessionAgeSeconds}; HttpOnly; Secure; SameSite=Lax`;
+}
+function clearSessionCookie() {
+  return `${sessionCookie}=; Path=/; Max-Age=0; HttpOnly; Secure; SameSite=Lax`;
 }
 async function body(request) { try { return await request.json(); } catch { return {}; } }
 async function audit(db, actor, action, entity, entityId, details = {}) {
@@ -20,22 +61,35 @@ function pageValues(data = {}) {
 async function pageList(db, url) {
   const q = text(url.searchParams.get("q"));
   const status = text(url.searchParams.get("status"));
+  const categoryId = text(url.searchParams.get("categoryId"));
+  const themeId = text(url.searchParams.get("themeId"));
   const featured = url.searchParams.get("featured");
   const clauses = []; const values = [];
   if (q) { clauses.push("(p.title LIKE ? OR p.slug LIKE ?)"); values.push(`%${q}%`, `%${q}%`); }
   if (statusValues.has(status)) { clauses.push("p.status = ?"); values.push(status); }
+  if (categoryId) { clauses.push("EXISTS (SELECT 1 FROM page_categories filter_pc WHERE filter_pc.page_id=p.id AND filter_pc.category_id=?)"); values.push(categoryId); }
+  if (themeId) { clauses.push("EXISTS (SELECT 1 FROM page_themes filter_pt WHERE filter_pt.page_id=p.id AND filter_pt.theme_id=?)"); values.push(themeId); }
   if (featured === "true") clauses.push("p.featured = 1");
   const where = clauses.length ? `WHERE ${clauses.join(" AND ")}` : "";
-  const result = await db.prepare(`SELECT p.*, GROUP_CONCAT(DISTINCT c.name) AS categories, GROUP_CONCAT(DISTINCT t.name) AS themes, COUNT(DISTINCT l.id) AS product_link_count FROM coloring_pages p LEFT JOIN page_categories pc ON pc.page_id=p.id LEFT JOIN categories c ON c.id=pc.category_id LEFT JOIN page_themes pt ON pt.page_id=p.id LEFT JOIN themes t ON t.id=pt.theme_id LEFT JOIN product_links l ON l.page_id=p.id AND l.enabled=1 ${where} GROUP BY p.id ORDER BY p.sort_order, p.title`).bind(...values).all();
+  const result = await db.prepare(`SELECT p.*, GROUP_CONCAT(DISTINCT c.name) AS categories, GROUP_CONCAT(DISTINCT t.name) AS themes, GROUP_CONCAT(DISTINCT t.id) AS theme_ids, COUNT(DISTINCT l.id) AS product_link_count FROM coloring_pages p LEFT JOIN page_categories pc ON pc.page_id=p.id LEFT JOIN categories c ON c.id=pc.category_id LEFT JOIN page_themes pt ON pt.page_id=p.id LEFT JOIN themes t ON t.id=pt.theme_id LEFT JOIN product_links l ON l.page_id=p.id AND l.enabled=1 ${where} GROUP BY p.id ORDER BY p.sort_order, p.title`).bind(...values).all();
   return result.results;
 }
 
 export async function onRequest(context) {
-  const actor = admin(context);
-  if (!actor) return json({ error: "Administrator authorization is required." }, 403);
+  const url = new URL(context.request.url); const path = (context.params.path || []).join("/"); const method = context.request.method;
+  const password = context.env.RAKE_ADMIN_PASSWORD;
+  if (!password) return json({ error: "RAKE_ADMIN_PASSWORD is not configured." }, 503);
+  if (path === "login" && method === "POST") {
+    const data = await body(context.request);
+    if (!equal(text(data.password), password)) return json({ error: "Incorrect password." }, 401);
+    return json({ authenticated: true }, 200, { "set-cookie": setSessionCookie(await newSession(password)) });
+  }
+  if (path === "logout" && method === "POST") return json({ authenticated: false }, 200, { "set-cookie": clearSessionCookie() });
+  const actor = await session(context.request, password);
+  if (path === "session" && method === "GET") return json({ authenticated: Boolean(actor) }, actor ? 200 : 401);
+  if (!actor) return json({ error: "Administrator login is required." }, 401);
   const db = context.env.MYTHCOLORING_DB;
   if (!db) return json({ error: "MYTHCOLORING_DB is not bound." }, 503);
-  const url = new URL(context.request.url); const path = (context.params.path || []).join("/"); const method = context.request.method;
   if (path === "dashboard" && method === "GET") {
     const rows = await db.batch(["SELECT COUNT(*) AS value FROM coloring_pages", "SELECT COUNT(*) AS value FROM coloring_pages WHERE status='published'", "SELECT COUNT(*) AS value FROM coloring_pages WHERE status='draft'", "SELECT COUNT(*) AS value FROM coloring_pages WHERE status='hidden'", "SELECT COUNT(*) AS value FROM themes", "SELECT COUNT(*) AS value FROM media", "SELECT COUNT(DISTINCT page_id) AS value FROM product_links WHERE enabled=1", "SELECT COUNT(*) AS value FROM coloring_pages WHERE id NOT IN (SELECT DISTINCT page_id FROM product_links WHERE enabled=1)"].map((sql) => db.prepare(sql)));
     const recent = await db.prepare("SELECT id, title, slug, status, created_at FROM coloring_pages ORDER BY created_at DESC LIMIT 8").all();

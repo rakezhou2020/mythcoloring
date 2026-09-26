@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { RakeAdmin } from "../../../components/rake-admin";
 
-const sections = ["coloring-pages", "themes", "media", "product-links", "seo", "settings"];
+const sections = ["coloring-pages", "themes", "product-links"];
 
 export function generateStaticParams() {
   return sections.map((section) => ({ section }));
