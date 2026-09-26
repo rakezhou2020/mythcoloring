@@ -1,8 +1,8 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/breadcrumbs";
 import { JsonLd } from "../../../../components/json-ld";
 import { StandardColoringPage } from "../../../../components/standard-coloring-page";
+import { StandardColoringGrid } from "../../../../components/standard-coloring-grid";
 import { publishedStandardColoringCategories, publishedStandardColoringPages } from "../../../../data/standard-coloring-pages";
 import { pageMetadata, siteUrl } from "../../../../lib/seo";
 
@@ -29,7 +29,7 @@ export default async function StandardPage({ params }: Props) {
   const page = publishedStandardColoringPages.find((item) => item.categorySlug === categorySlug && item.slug === slug);
   if (!category || !page) notFound();
   const url = `${siteUrl}/coloring-pages/${categorySlug}/${slug}/`;
-  const related = publishedStandardColoringPages.filter((item) => item.categorySlug === categorySlug && item.slug !== slug).slice(0, 4);
+  const related = publishedStandardColoringPages.filter((item) => item.categorySlug === categorySlug && item.slug !== slug);
   return (
     <div className="wrap page-content">
       <JsonLd data={{ "@context": "https://schema.org", "@graph": [
@@ -47,7 +47,7 @@ export default async function StandardPage({ params }: Props) {
       <StandardColoringPage page={page} />
       <section className="prose standard-content"><h2>About this coloring page</h2><p>{page.shortIntroduction}</p></section>
       <section className="prose standard-content"><h2>Coloring Tips</h2><ul className="printing-tips">{page.coloringTips.map((tip) => <li key={tip}>{tip}</li>)}</ul></section>
-      <section className="standard-content"><h2>Related Coloring Pages</h2><div className="standard-page-grid">{related.map((item) => <Link key={item.slug} href={`/coloring-pages/${categorySlug}/${item.slug}/`}>{item.title}</Link>)}</div></section>
+      <section className="standard-content"><h2>Related Coloring Pages</h2><StandardColoringGrid categorySlug={categorySlug} items={related} randomize limit={4} /></section>
     </div>
   );
 }

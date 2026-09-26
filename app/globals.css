@@ -326,6 +326,11 @@ p {
 .standard-card-color { position: absolute; inset: 0; opacity: 0; transition: opacity 250ms ease; }
 .standard-page-card:hover .standard-card-color { opacity: 1; }
 .standard-page-card span { display: block; padding: 16px 18px 18px; }
+.standard-related-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.standard-related-card { display: block; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: var(--white); }
+.standard-related-card:hover { border-color: var(--jade); color: var(--rust); }
+.standard-related-card:hover .standard-card-color { opacity: 1; }
+.standard-related-card > span { display: block; padding: 10px 12px 12px; font-family: Georgia, serif; font-size: 16px; line-height: 1.2; }
 .divine-beast-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -855,6 +860,7 @@ p {
   .related-coloring-pages .coloring-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .standard-related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .detail-art {
     max-width: 380px;
     width: 100%;
@@ -893,7 +899,8 @@ p {
   .category-grid,
   .home-collection-grid,
   .theme-worlds,
-  .standard-page-grid { grid-template-columns: 1fr; }
+  .standard-page-grid,
+  .standard-related-grid { grid-template-columns: 1fr; }
   .related-coloring-pages .coloring-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
