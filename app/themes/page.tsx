@@ -16,14 +16,13 @@ export default function Page() {
         <p>Themes bring related categories and collections together. They are broader than the Coloring Pages directory.</p>
       </header>
       <section className="theme-worlds" aria-label="Theme collections">
-        {contentThemes.map((theme) => theme.slug === "chinese-mythology" ? (
-          <Link className="theme-world-card" href="/themes/shan-hai-jing/" key={theme.slug}>
-            <p className="eyebrow">Theme</p><h2>{theme.name}</h2><p>{theme.description}</p><span className="text-link">Explore Chinese Mythology →</span>
+        {contentThemes.map((theme) => theme.slug === "chinese-mythology" || theme.slug === "nature" ? (
+          <Link className="theme-world-card" href={theme.slug === "nature" ? "/themes/nature/" : "/themes/shan-hai-jing/"} key={theme.slug}>
+            <p className="eyebrow">Theme</p><h2>{theme.name}</h2><p>{theme.description}</p><span className="text-link">Explore {theme.name} →</span>
           </Link>
         ) : (
           <article className="theme-world-card" key={theme.slug}>
-            <p className="eyebrow">Theme {theme.status === "draft" ? "· Coming soon" : ""}</p><h2>{theme.name}</h2><p>{theme.description}</p>
-            {theme.slug === "nature" && <Link className="text-link" href="/themes/nature/">Explore Nature →</Link>}
+            <p className="eyebrow">Theme · Coming soon</p><h2>{theme.name}</h2><p>{theme.description}</p>
           </article>
         ))}
       </section>
