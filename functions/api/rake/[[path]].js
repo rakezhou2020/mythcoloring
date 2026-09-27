@@ -92,7 +92,7 @@ export async function onRequest(context) {
   if (!db) return json({ error: "MYTHCOLORING_DB is not bound." }, 503);
   if (path === "dashboard" && method === "GET") {
     const rows = await db.batch(["SELECT COUNT(*) AS value FROM coloring_pages", "SELECT COUNT(*) AS value FROM coloring_pages WHERE status='published'", "SELECT COUNT(*) AS value FROM coloring_pages WHERE status='draft'", "SELECT COUNT(*) AS value FROM coloring_pages WHERE status='hidden'", "SELECT COUNT(*) AS value FROM themes", "SELECT COUNT(*) AS value FROM categories", "SELECT COUNT(*) AS value FROM media", "SELECT COUNT(DISTINCT page_id) AS value FROM product_links WHERE enabled=1", "SELECT COUNT(*) AS value FROM coloring_pages WHERE id NOT IN (SELECT DISTINCT page_id FROM product_links WHERE enabled=1)"].map((sql) => db.prepare(sql)));
-    const recent = await db.prepare("SELECT id, title, slug, status, created_at FROM coloring_pages ORDER BY created_at DESC LIMIT 8").all();
+    const recent = await db.prepare("SELECT id, title, slug, status, updated_at FROM coloring_pages ORDER BY created_at DESC LIMIT 8").all();
     return json({ totals: rows.map((entry) => entry.results[0].value), recent: recent.results });
   }
   if (path === "coloring-pages" && method === "GET") return json(await pageList(db, url));
