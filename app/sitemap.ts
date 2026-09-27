@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { publishedThemes } from "../data/themes";
 import { publishedCreatures } from "../data/creatures";
-import { publishedStandardColoringCategories, publishedStandardColoringPages } from "../data/standard-coloring-pages";
+import { contentThemes, publishedStandardColoringCategories, publishedStandardColoringPages } from "../data/standard-coloring-pages";
 import { siteUrl } from "../lib/seo";
 export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/terms/",
     "/contact/",
     ...publishedThemes.map((t) => "/themes/" + t.slug + "/"),
+    ...contentThemes.filter((t) => t.status === "published" && t.slug !== "chinese-mythology").map((t) => "/themes/" + t.slug + "/"),
     ...publishedCreatures.map((c) => "/creatures/" + c.slug + "/"),
     ...publishedStandardColoringCategories.map((category) => "/coloring-pages/" + category.slug + "/"),
     ...publishedStandardColoringPages.map((page) => "/coloring-pages/" + page.categorySlug + "/" + page.slug + "/"),

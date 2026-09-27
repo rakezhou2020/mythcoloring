@@ -23,7 +23,7 @@ export default function Page() {
         ) : (
           <article className="theme-world-card" key={theme.slug}>
             <p className="eyebrow">Theme {theme.status === "draft" ? "· Coming soon" : ""}</p><h2>{theme.name}</h2><p>{theme.description}</p>
-            {theme.slug === "nature" && <Link className="text-link" href="/coloring-pages/flowers-plants/">Explore Flowers &amp; Plants →</Link>}
+            {theme.slug === "nature" && <Link className="text-link" href="/themes/nature/">Explore Nature →</Link>}
           </article>
         ))}
       </section>
