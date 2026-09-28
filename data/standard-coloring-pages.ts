@@ -3,6 +3,7 @@ import type {
   StandardColoringCategory,
   StandardColoringPage,
 } from "./types";
+import { septemberAnimalPages } from "./september-animal-pages";
 
 // This catalog is intentionally independent from data/coloring-pages.ts.
 // Add ordinary printable content here; mythology creatures remain in their
@@ -421,6 +422,7 @@ export const standardColoringPages: StandardColoringPage[] = [
     featured: false,
     status: "published",
   },
+  ...septemberAnimalPages,
 ];
 
 export const publishedStandardColoringCategories = standardColoringCategories.filter(
