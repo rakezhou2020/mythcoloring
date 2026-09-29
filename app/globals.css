@@ -326,6 +326,11 @@ p {
 .standard-card-color { position: absolute; inset: 0; opacity: 0; transition: opacity 250ms ease; }
 .standard-page-card:hover .standard-card-color { opacity: 1; }
 .standard-page-card span { display: block; padding: 16px 18px 18px; }
+.catalog-pagination { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 32px 0 8px; }
+.catalog-pagination button { border: 1px solid var(--jade); border-radius: 999px; padding: 9px 18px; background: var(--white); color: var(--ink); font: inherit; cursor: pointer; }
+.catalog-pagination button:hover:not(:disabled) { background: var(--jade); color: var(--white); }
+.catalog-pagination button:disabled { cursor: not-allowed; opacity: 0.45; }
+.catalog-pagination span { min-width: 104px; text-align: center; font-weight: 700; }
 .standard-related-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .standard-related-card { display: block; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: var(--white); }
 .standard-related-card:hover { border-color: var(--jade); color: var(--rust); }

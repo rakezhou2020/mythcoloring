@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../components/breadcrumbs";
+import { StandardCategoryGrid } from "../../../components/standard-category-grid";
 import { publishedStandardColoringCategories, publishedStandardColoringPages } from "../../../data/standard-coloring-pages";
 import { pageMetadata } from "../../../lib/seo";
 
@@ -36,16 +37,7 @@ export default async function CategoryPage({ params }: Props) {
         <p>{category.description}</p>
       </header>
       {pages.length ? (
-        <div className="standard-page-grid">{pages.map((page) => (
-          <Link className="standard-page-card" key={page.slug} href={`/coloring-pages/${slug}/${page.slug}/`}>
-            <div className="standard-card-art">
-              <img src={page.lineArtImage} alt={page.imageAlt} width={600} height={750} />
-              <img className="standard-card-color" src={page.colorImage} alt="" width={600} height={750} aria-hidden="true" />
-              <span className="preview-hint" aria-hidden="true">View color artwork</span>
-            </div>
-            <span>{page.title}</span>
-          </Link>
-        ))}</div>
+        <StandardCategoryGrid items={pages} />
       ) : (
         <section className="empty-state">
           <h2>New pages are growing here.</h2>
