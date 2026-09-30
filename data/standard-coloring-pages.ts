@@ -6,6 +6,7 @@ import type {
 import { septemberAnimalPages } from "./september-animal-pages";
 import { septemberObjectPages } from "./september-objects-pages";
 import { septemberAnimePages } from "./september-anime-pages";
+import { septemberArchitecturePages } from "./september-architecture-pages";
 
 // This catalog is intentionally independent from data/coloring-pages.ts.
 // Add ordinary printable content here; mythology creatures remain in their
@@ -21,6 +22,7 @@ export const standardColoringCategories: StandardColoringCategory[] = [
   { slug: "bags-travel", name: "Bags & Travel", description: "Handbags, satchels, suitcases, and other everyday travel accessories to color.", status: "published" },
   { slug: "road-safety", name: "Road Safety", description: "Traffic signs, signals, and road-safety objects to color and explore.", status: "published" },
   { slug: "anime-character-art", name: "Anime & Character Art", description: "Anime-style characters, costumes, and expressive portraits ready to color.", status: "published" },
+  { slug: "architecture-landscapes", name: "Architecture & Landscapes", description: "Homes, gardens, city scenes, and beautiful natural places to color.", status: "published" },
   { slug: "buildings", name: "Buildings", description: "Homes, landmarks, and architectural coloring pages.", status: "draft" },
   { slug: "food", name: "Food", description: "Delicious, playful food coloring pages.", status: "draft" },
   { slug: "vehicles", name: "Vehicles", description: "Things that move, ready to color.", status: "draft" },
@@ -430,6 +432,7 @@ export const standardColoringPages: StandardColoringPage[] = [
   ...septemberAnimalPages,
   ...septemberObjectPages,
   ...septemberAnimePages,
+  ...septemberArchitecturePages,
 ];
 
 export const publishedStandardColoringCategories = standardColoringCategories.filter(
@@ -466,6 +469,13 @@ export const contentThemes: ContentTheme[] = [
     name: "Character Art",
     description: "Anime-style characters, costumes, heroic poses, and imaginative scenes to color.",
     categorySlugs: ["anime-character-art"],
+    status: "published",
+  },
+  {
+    slug: "places-and-landscapes",
+    name: "Places & Landscapes",
+    description: "Gardens, buildings, village scenes, and scenic places to color.",
+    categorySlugs: ["architecture-landscapes", "buildings", "nature"],
     status: "published",
   },
   {
