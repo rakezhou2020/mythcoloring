@@ -31,6 +31,8 @@ export function StandardCategoryGrid({ items }: Props) {
           <Link className="standard-page-card" key={page.slug} href={`/coloring-pages/${page.categorySlug}/${page.slug}/`}>
             <div className="standard-card-art">
               <img src={page.lineArtImage} alt={page.imageAlt} width={600} height={750} />
+              <img className="standard-card-color" src={page.colorImage} alt="" width={600} height={750} aria-hidden="true" />
+              <span className="preview-hint" aria-hidden="true">View color artwork</span>
             </div>
             <span>{page.title}</span>
           </Link>

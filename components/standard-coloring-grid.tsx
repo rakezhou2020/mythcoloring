@@ -35,6 +35,8 @@ export function StandardColoringGrid({ items, limit, randomize = false }: Props)
         <Link className="standard-related-card" key={item.slug} href={`/coloring-pages/${item.categorySlug}/${item.slug}/`}>
           <div className="standard-card-art">
             <img src={item.lineArtImage} alt={item.imageAlt} width={600} height={750} />
+            <img className="standard-card-color" src={item.colorImage} alt="" width={600} height={750} aria-hidden="true" />
+            <span className="preview-hint" aria-hidden="true">View color artwork</span>
           </div>
           <span>{item.title}</span>
         </Link>
