@@ -1,0 +1,73 @@
+import type { StandardColoringPage } from "./types";
+
+type Character = { slug: string; name: string };
+
+const coloringTips = [
+  "Choose a small palette for the outfit first, then repeat its colors in accessories and smaller details.",
+  "Use a slightly deeper shade along folds, hair sections, and outlines to give the character more depth.",
+  "Leave a few small areas light or white for bright highlights in the eyes, hair, and fabric.",
+];
+
+const characters: Character[] = [
+  { slug: "blue-uniform-swordsman", name: "Blue Uniform Swordsman" },
+  { slug: "girl-with-parasol", name: "Girl with Parasol" },
+  { slug: "pink-haired-cat-girl", name: "Pink-Haired Cat Girl" },
+  { slug: "pink-bow-girl", name: "Pink Bow Girl" },
+  { slug: "school-blazer-girl", name: "School Blazer Girl" },
+  { slug: "martial-artist", name: "Martial Artist" },
+  { slug: "blue-suit-boy", name: "Blue Suit Boy" },
+  { slug: "garden-archer", name: "Garden Archer" },
+  { slug: "red-dress-girl", name: "Red Dress Girl" },
+  { slug: "resting-girl", name: "Resting Girl" },
+  { slug: "fantasy-warrior", name: "Fantasy Warrior" },
+  { slug: "blue-coat-girl", name: "Blue Coat Girl" },
+  { slug: "standing-girl", name: "Standing Girl" },
+  { slug: "scarf-girl", name: "Scarf Girl" },
+  { slug: "armored-heroine", name: "Armored Heroine" },
+  { slug: "long-haired-girl", name: "Long-Haired Girl" },
+  { slug: "seated-swordsman", name: "Seated Swordsman" },
+  { slug: "kimono-swordsman", name: "Kimono Swordsman" },
+  { slug: "sailor-uniform-girl", name: "Sailor Uniform Girl" },
+  { slug: "bow-tie-girl", name: "Bow Tie Girl" },
+  { slug: "three-friends", name: "Three Friends" },
+  { slug: "kimono-portrait", name: "Kimono Portrait" },
+  { slug: "cloaked-hero", name: "Cloaked Hero" },
+  { slug: "ribbon-dress-girl", name: "Ribbon Dress Girl" },
+  { slug: "samurai-warrior", name: "Samurai Warrior" },
+  { slug: "violin-cat-girl", name: "Violin Cat Girl" },
+  { slug: "winter-scarf-girl", name: "Winter Scarf Girl" },
+  { slug: "long-coat-hero", name: "Long Coat Hero" },
+  { slug: "magic-orb-hero", name: "Magic Orb Hero" },
+  { slug: "tree-guardian", name: "Tree Guardian" },
+  { slug: "book-reading-mage", name: "Book-Reading Mage" },
+  { slug: "violin-player", name: "Violin Player" },
+  { slug: "winter-letter-girl", name: "Winter Letter Girl" },
+  { slug: "pumpkin-guitarist", name: "Pumpkin Guitarist" },
+  { slug: "red-coat-hero", name: "Red Coat Hero" },
+  { slug: "red-hoodie-boy", name: "Red Hoodie Boy" },
+  { slug: "schoolgirl-with-satchel", name: "Schoolgirl with Satchel" },
+  { slug: "caged-fantasy-girl", name: "Caged Fantasy Girl" },
+  { slug: "sports-action-collage", name: "Sports Action Collage" },
+  { slug: "witch-hat-girl", name: "Witch Hat Girl" },
+  { slug: "flower-hair-portrait", name: "Flower Hair Portrait" },
+  { slug: "costumed-girl", name: "Costumed Girl" },
+  { slug: "sailor-uniform-portrait", name: "Sailor Uniform Portrait" },
+  { slug: "winter-sports-boy", name: "Winter Sports Boy" },
+];
+
+export const septemberAnimePages: StandardColoringPage[] = characters.map((character, index) => ({
+  slug: character.slug,
+  categorySlug: "anime-character-art",
+  title: `${character.name} Coloring Page`,
+  shortIntroduction: "Bring this anime-style character illustration to life with your own color choices. Use the color reference for inspiration, or create an entirely new look.",
+  coloringTips,
+  lineArtImage: `/coloring-pages/anime-characters/${character.slug}/line-art.webp`,
+  colorImage: `/coloring-pages/anime-characters/${character.slug}/color.webp`,
+  imageAlt: `${character.name} anime-style printable coloring page with line art and color reference`,
+  seo: {
+    title: `${character.name} Coloring Page – Free Printable`,
+    description: `Download a free printable ${character.name.toLowerCase()} anime-style coloring page with clean line art and a color reference.`,
+  },
+  featured: index < 4,
+  status: "published",
+}));

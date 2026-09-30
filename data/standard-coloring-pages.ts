@@ -5,6 +5,7 @@ import type {
 } from "./types";
 import { septemberAnimalPages } from "./september-animal-pages";
 import { septemberObjectPages } from "./september-objects-pages";
+import { septemberAnimePages } from "./september-anime-pages";
 
 // This catalog is intentionally independent from data/coloring-pages.ts.
 // Add ordinary printable content here; mythology creatures remain in their
@@ -19,6 +20,7 @@ export const standardColoringCategories: StandardColoringCategory[] = [
   { slug: "animals", name: "Animals", description: "Sweet, everyday animal coloring pages for quiet creative time.", status: "published" },
   { slug: "bags-travel", name: "Bags & Travel", description: "Handbags, satchels, suitcases, and other everyday travel accessories to color.", status: "published" },
   { slug: "road-safety", name: "Road Safety", description: "Traffic signs, signals, and road-safety objects to color and explore.", status: "published" },
+  { slug: "anime-character-art", name: "Anime & Character Art", description: "Anime-style characters, costumes, and expressive portraits ready to color.", status: "published" },
   { slug: "buildings", name: "Buildings", description: "Homes, landmarks, and architectural coloring pages.", status: "draft" },
   { slug: "food", name: "Food", description: "Delicious, playful food coloring pages.", status: "draft" },
   { slug: "vehicles", name: "Vehicles", description: "Things that move, ready to color.", status: "draft" },
@@ -427,6 +429,7 @@ export const standardColoringPages: StandardColoringPage[] = [
   },
   ...septemberAnimalPages,
   ...septemberObjectPages,
+  ...septemberAnimePages,
 ];
 
 export const publishedStandardColoringCategories = standardColoringCategories.filter(
@@ -456,6 +459,13 @@ export const contentThemes: ContentTheme[] = [
     name: "Everyday Objects",
     description: "Practical objects, travel accessories, and road-safety symbols for creative play.",
     categorySlugs: ["bags-travel", "road-safety", "vehicles"],
+    status: "published",
+  },
+  {
+    slug: "character-art",
+    name: "Character Art",
+    description: "Anime-style characters, costumes, heroic poses, and imaginative scenes to color.",
+    categorySlugs: ["anime-character-art"],
     status: "published",
   },
   {
