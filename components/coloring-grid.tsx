@@ -40,7 +40,7 @@ export function ColoringGrid({ items, randomize = false, limit }: ColoringGridPr
   } as const;
   function open(item: ColoringPage) {
     setSelected(item);
-    setView(item.colorGuideImage ? "colorGuideImage" : "lineArtImage");
+    setView("lineArtImage");
     dialog.current?.showModal();
   }
   return (
@@ -56,10 +56,6 @@ export function ColoringGrid({ items, randomize = false, limit }: ColoringGridPr
               <div className="art-layer">
                 <Artwork name={item.title} src={item.lineArtImage} />
               </div>
-              <div className="art-layer color-layer" aria-hidden="true">
-                <Artwork name={item.title} src={item.colorGuideImage ?? item.finishedImage} colored />
-              </div>
-              <span className="preview-hint" aria-hidden="true">View color artwork</span>
             </button>
             <div className="card-body">
               <p className="eyebrow">{item.type}</p>
