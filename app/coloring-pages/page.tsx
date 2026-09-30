@@ -20,7 +20,7 @@ export default function Page() {
       <section aria-label="Coloring page categories">
         <p className="catalog-note">All printable pages are free. More categories are being prepared.</p>
         <div className="category-grid">
-          <Link className="category-card" href="/creatures/">
+          <Link className="category-card" href="/themes/shan-hai-jing/">
             <p className="eyebrow">Coloring Pages</p>
             <h2>Mythology</h2>
             <p>Explore mythical creature coloring pages, color guides, and stories from ancient legends.</p>
