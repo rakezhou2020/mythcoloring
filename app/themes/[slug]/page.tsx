@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { publishedThemes } from "../../../data/themes";
 import { publishedColoringPages } from "../../../data/coloring-pages";
 import { contentThemes, publishedStandardColoringPages } from "../../../data/standard-coloring-pages";
 import { ColoringGrid } from "../../../components/coloring-grid";
+import { StandardCategoryGrid } from "../../../components/standard-category-grid";
 import { Breadcrumbs } from "../../../components/breadcrumbs";
 import { pageMetadata } from "../../../lib/seo";
 
@@ -43,16 +43,7 @@ export default async function Page({ params }: Props) {
         </header>
         <section aria-label={`${collectionTheme.name} coloring pages`}>
           <p className="catalog-note">Printable artwork is available below.</p>
-          <div className="standard-page-grid">{pages.map((page) => (
-            <Link className="standard-page-card" key={page.slug} href={`/coloring-pages/${page.categorySlug}/${page.slug}/`}>
-              <div className="standard-card-art">
-                <img src={page.lineArtImage} alt={page.imageAlt} width={600} height={750} />
-                <img className="standard-card-color" src={page.colorImage} alt="" width={600} height={750} aria-hidden="true" />
-                <span className="preview-hint" aria-hidden="true">View color artwork</span>
-              </div>
-              <span>{page.title}</span>
-            </Link>
-          ))}</div>
+          <StandardCategoryGrid items={pages} />
         </section>
       </div>
     );
