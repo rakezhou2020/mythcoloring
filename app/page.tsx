@@ -3,8 +3,9 @@ import { Artwork } from "../components/artwork";
 import { ColoringGrid } from "../components/coloring-grid";
 import { StandardColoringGrid } from "../components/standard-coloring-grid";
 import { ThemeCards } from "../components/theme-cards";
-import { homeHeroProduct, publishedColoringPages } from "../data/coloring-pages";
-import { publishedStandardColoringPages } from "../data/standard-coloring-pages";
+import { HomeHeroReveal, type HeroRevealItem } from "../components/home-hero-reveal";
+import { publishedColoringPages } from "../data/coloring-pages";
+import { publishedStandardColoringCategories, publishedStandardColoringPages } from "../data/standard-coloring-pages";
 import { pageMetadata } from "../lib/seo";
 export const metadata = pageMetadata(
   "Free Printable Coloring Pages",
@@ -12,7 +13,10 @@ export const metadata = pageMetadata(
   "/",
 );
 export default function Home() {
-  const hero = homeHeroProduct;
+  const heroItems: HeroRevealItem[] = [
+    ...publishedStandardColoringPages.filter((page) => page.featured).map((page) => ({ slug: `standard-${page.slug}`, title: page.title, lineArtImage: page.lineArtImage, colorImage: page.colorImage, imageAlt: page.imageAlt })),
+    ...publishedColoringPages.filter((page) => page.featured && page.lineArtImage && (page.colorGuideImage || page.finishedImage)).map((page) => ({ slug: `myth-${page.slug}`, title: page.title, lineArtImage: page.lineArtImage!, colorImage: page.colorGuideImage ?? page.finishedImage!, imageAlt: `${page.title} printable coloring page` })),
+  ];
   const fourDivineBeasts = ["qinglong", "white-tiger", "zhuque", "xuanwu"].flatMap(
     (slug) => {
       const page = publishedColoringPages.find((item) => item.slug === slug);
@@ -29,13 +33,12 @@ export default function Home() {
     <>
       <section className="hero wrap">
         <div>
-          <p className="eyebrow">Myths to discover. Creatures to color.</p>
+          <p className="eyebrow">Discover. Print. Color.</p>
           <h1>Free Printable Coloring Pages</h1>
           <p className="lead">
-            Discover free coloring pages with clean line art, coloring
-            inspiration, and finished artwork from legendary creatures and
-            fantasy designs.
+            Explore free printable coloring pages for kids and adults, from flowers and animals to fantasy creatures, nature, architecture, and more.
           </p>
+          <p className="hero-secondary">Clean line art, color references, and easy one-click printing.</p>
           <div className="hero-actions">
             <Link className="button primary" href="/coloring-pages/">
               Browse Coloring Pages
@@ -46,30 +49,7 @@ export default function Home() {
           </div>
           <p className="hero-note">Always free · No signup</p>
         </div>
-        {hero && (
-          <div
-            className="hero-comparison"
-            aria-label={hero.title + " line art and color comparison"}
-          >
-            <figure>
-              <Artwork name={hero.title} src={hero.lineArtImage} priority />
-              <figcaption>Line art</figcaption>
-            </figure>
-            <span className="comparison-arrow" aria-hidden="true">
-              →
-            </span>
-            <figure>
-              <Artwork
-                name={hero.title}
-                src={hero.colorGuideImage}
-                colored
-                priority
-              />
-              <figcaption>Color artwork</figcaption>
-            </figure>
-            <p>{hero.title}</p>
-          </div>
-        )}
+        <HomeHeroReveal items={heroItems} />
       </section>
       <section className="section wrap">
         <div className="section-heading">
@@ -91,11 +71,18 @@ export default function Home() {
           limit={4}
         />
       </section>
+      <section className="section wrap home-popular-categories">
+        <div className="section-heading"><div><p className="eyebrow">Start exploring</p><h2>Popular Categories</h2></div><Link className="text-link" href="/coloring-pages/">View All Coloring Pages →</Link></div>
+        <div className="home-category-grid">
+          {["flowers-plants", "animals"].flatMap((slug) => publishedStandardColoringCategories.filter((category) => category.slug === slug)).map((category) => <Link className="home-category-card" href={`/coloring-pages/${category.slug}/`} key={category.slug}><h3>{category.name}</h3><p>{category.description}</p><span className="text-link">Explore →</span></Link>)}
+          <Link className="home-category-card" href="/themes/shan-hai-jing/"><h3>Mythical Creatures</h3><p>Legendary creatures from ancient stories, ready to color.</p><span className="text-link">Explore →</span></Link>
+        </div>
+      </section>
       <section className="section wrap">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">More free printables</p>
-            <h2>More Free Coloring Pages</h2>
+            <p className="eyebrow">Fresh picks</p>
+            <h2>New Coloring Pages</h2>
           </div>
           <Link className="text-link" href="/coloring-pages/">
             View all coloring pages →
@@ -109,6 +96,7 @@ export default function Home() {
           items={publishedStandardColoringPages}
           randomize
           limit={16}
+          deferColors
         />
       </section>
       <section className="section wrap">

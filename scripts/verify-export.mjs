@@ -62,7 +62,7 @@ const deerAssets = ['lineart.png', 'color-guide.jpg', 'finished.jpg', 'print.pdf
 for (const asset of deerAssets) assert(existsSync(join(root, 'products', 'nine-colored-deer', asset)), `Missing published deer asset: ${asset}`);
 const home = readFileSync(join(root, 'index.html'), 'utf8');
 assert(home.includes('Mythical Creature Coloring Pages'), 'Homepage must feature mythology coloring pages');
-assert(home.includes('More Free Coloring Pages'), 'Homepage must feature more free coloring pages');
+assert(home.includes('New Coloring Pages'), 'Homepage must feature new coloring pages');
 assert.equal((home.match(/class="standard-related-card"/g) || []).length, 16, 'Homepage should show exactly sixteen other free coloring cards');
 assert(home.includes('View all coloring pages'), 'Homepage must link visitors to the coloring pages catalog');
 assert(home.includes('href="/coloring-pages/"'), 'Homepage catalog link is missing');

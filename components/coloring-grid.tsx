@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { ColoringPage } from "../data/types";
 import { Artwork } from "./artwork";
+import { weeklyStableOrder } from "../lib/stable-order";
 type ColoringGridProps = {
   items: ColoringPage[];
   randomize?: boolean;
@@ -9,15 +10,8 @@ type ColoringGridProps = {
 };
 
 function shuffledItems(items: ColoringPage[], limit?: number) {
-  const shuffled = [...items];
-  for (let index = shuffled.length - 1; index > 0; index -= 1) {
-    const randomIndex = Math.floor(Math.random() * (index + 1));
-    [shuffled[index], shuffled[randomIndex]] = [
-      shuffled[randomIndex],
-      shuffled[index],
-    ];
-  }
-  return typeof limit === "number" ? shuffled.slice(0, limit) : shuffled;
+  const ordered = weeklyStableOrder(items);
+  return typeof limit === "number" ? ordered.slice(0, limit) : ordered;
 }
 
 export function ColoringGrid({ items, randomize = false, limit }: ColoringGridProps) {
