@@ -7,6 +7,7 @@ import { septemberAnimalPages } from "./september-animal-pages";
 import { septemberObjectPages } from "./september-objects-pages";
 import { septemberAnimePages } from "./september-anime-pages";
 import { septemberArchitecturePages } from "./september-architecture-pages";
+import { sciFiActionPages } from "./sci-fi-action-pages";
 
 // This catalog is intentionally independent from data/coloring-pages.ts.
 // Add ordinary printable content here; mythology creatures remain in their
@@ -23,9 +24,12 @@ export const standardColoringCategories: StandardColoringCategory[] = [
   { slug: "road-safety", name: "Road Safety", description: "Traffic signs, signals, and road-safety objects to color and explore.", status: "published" },
   { slug: "anime-character-art", name: "Anime & Character Art", description: "Anime-style characters, costumes, and expressive portraits ready to color.", status: "published" },
   { slug: "architecture-landscapes", name: "Architecture & Landscapes", description: "Homes, gardens, city scenes, and beautiful natural places to color.", status: "published" },
+  { slug: "sci-fi-robots", name: "Sci-Fi & Robots", description: "Robots, cyborgs, mechs, and imaginative space-age machines to color.", status: "published" },
+  { slug: "action-adventure", name: "Action & Adventure", description: "Bold explorers, armored heroes, and action-packed scenes to color.", status: "published" },
+  { slug: "fantasy-warriors", name: "Fantasy Warriors", description: "Armored knights, enchanted fighters, and heroic fantasy scenes to color.", status: "published" },
   { slug: "buildings", name: "Buildings", description: "Homes, landmarks, and architectural coloring pages.", status: "draft" },
   { slug: "food", name: "Food", description: "Delicious, playful food coloring pages.", status: "draft" },
-  { slug: "vehicles", name: "Vehicles", description: "Things that move, ready to color.", status: "draft" },
+  { slug: "vehicles", name: "Vehicles", description: "Things that move, ready to color.", status: "published" },
   { slug: "nature", name: "Nature", description: "Landscapes and the natural world to color.", status: "draft" },
   { slug: "fantasy", name: "Fantasy", description: "Imaginative worlds beyond the creature stories.", status: "draft" },
 ];
@@ -433,6 +437,7 @@ export const standardColoringPages: StandardColoringPage[] = [
   ...septemberObjectPages,
   ...septemberAnimePages,
   ...septemberArchitecturePages,
+  ...sciFiActionPages,
 ];
 
 export const publishedStandardColoringCategories = standardColoringCategories.filter(
