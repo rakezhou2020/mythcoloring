@@ -78,6 +78,17 @@ export default function Home() {
           <Link className="home-category-card" href="/themes/shan-hai-jing/"><h3>Mythical Creatures</h3><p>Legendary creatures from ancient stories, ready to color.</p><span className="text-link">Explore →</span></Link>
         </div>
       </section>
+      <section className="section wrap home-popular-categories" aria-labelledby="explore-coloring-pages">
+        <div className="section-heading"><div><p className="eyebrow">Start here</p><h2 id="explore-coloring-pages">Explore Coloring Pages</h2></div></div>
+        <div className="home-category-grid">
+          <Link className="home-category-card" href="/coloring-pages/flowers-plants/">Flower Coloring Pages</Link>
+          <Link className="home-category-card" href="/coloring-pages/animals/">Animal Coloring Pages</Link>
+          <Link className="home-category-card" href="/creatures/">Mythical Creatures Coloring Pages</Link>
+          <Link className="home-category-card" href="/coloring-pages/flowers-plants/calla-lily/">Calla Lily Coloring Page</Link>
+          <Link className="home-category-card" href="/coloring-pages/flowers-plants/cosmos/">Cosmos Coloring Page</Link>
+          <Link className="home-category-card" href="/creatures/qinglong/">Qinglong</Link>
+        </div>
+      </section>
       <section className="section wrap">
         <div className="section-heading">
           <div>

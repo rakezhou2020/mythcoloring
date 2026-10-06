@@ -11,6 +11,10 @@ type Props = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;
 
 const archiveMetadata: Record<string, { title: string; description: string }> = {
+  qinglong: {
+    title: "Qinglong Dragon Coloring Page | Azure Dragon of Chinese Mythology",
+    description: "Learn about Qinglong, the Azure Dragon of the East in Chinese mythology, and print a free Qinglong dragon coloring page.",
+  },
   "xuan-gui": {
     title: "Xuan Gui Coloring Page | Chinese Mythical Creature from Shan Hai Jing",
     description:
@@ -238,20 +242,15 @@ export default async function Page({ params }: Props) {
       />
       <header className="page-heading">
         <p className="eyebrow">Creature notes · {c.localName}</p>
-        <h1>{c.name} Coloring Page</h1>
+        <h1>{c.name}</h1>
         <p>{c.shortDescription}</p>
       </header>
       <section className="creature-overview section" aria-labelledby="about-creature">
         <div className="prose">
-          <h2 id="about-creature">About {c.name}</h2>
-          {(["origin", "appearance", "legend", "symbolism"] as const).map(
-            (key) => (
-              <section key={key}>
-                <h3>{key.charAt(0).toUpperCase() + key.slice(1)}</h3>
-                <p>{c[key]}</p>
-              </section>
-            ),
-          )}
+          <h2 id="about-creature">What is {c.name}?</h2>
+          <section><h3>Origin and Mythology</h3><p>{c.origin}</p><p>{c.legend}</p></section>
+          <section><h3>Appearance</h3><p>{c.appearance}</p></section>
+          <section><h3>Symbolism</h3><p>{c.symbolism}</p></section>
           {primaryPage?.amazonPosterUrl && (
             <aside className="poster-cta">
               <p>Available on Amazon</p>
@@ -282,7 +281,7 @@ export default async function Page({ params }: Props) {
         <section className="creature-printable section" aria-labelledby="printable-page">
           <div className="section-heading">
             <div>
-              <h2 id="printable-page">Printable Coloring Page</h2>
+              <h2 id="printable-page">{c.name} Coloring Page</h2>
               <p className="section-intro">
                 Print the clean black-and-white line art, or download the A4-friendly PDF for your coloring table.
               </p>
@@ -312,7 +311,7 @@ export default async function Page({ params }: Props) {
           )}
         </div>
         <div className="printing-tips-section prose" aria-labelledby="printing-tips">
-          <h2 id="printing-tips">Printing Tips</h2>
+          <h2 id="printing-tips">Printable Version</h2>
           <ul className="printing-tips">
             <li>Print the black-and-white PDF at A4 size or choose “Fit to page.”</li>
             <li>Use crayons, colored pencils, or markers on a paper weight that suits your tools.</li>

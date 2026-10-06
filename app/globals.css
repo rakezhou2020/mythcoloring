@@ -331,6 +331,7 @@ p {
 .standard-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
 .standard-content { max-width: 780px; margin: 48px auto 0; }
 .standard-content h2 { font-size: 31px; }
+.category-introduction { margin: -14px 0 36px; }
 .standard-page-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .standard-page-grid a { padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); font-family: Georgia, serif; font-size: 20px; }
 .standard-page-grid a:hover { border-color: var(--jade); color: var(--rust); }

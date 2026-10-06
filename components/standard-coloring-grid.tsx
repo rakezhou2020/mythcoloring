@@ -38,8 +38,8 @@ export function StandardColoringGrid({ items, limit, randomize = false, deferCol
       {displayedItems.map((item) => (
         <Link className="standard-related-card" key={item.slug} href={`/coloring-pages/${item.categorySlug}/${item.slug}/`} onPointerEnter={() => deferColors && setColorReady((ready) => new Set(ready).add(item.slug))} onFocus={() => deferColors && setColorReady((ready) => new Set(ready).add(item.slug))}>
           <div className="standard-card-art">
-            <img src={item.lineArtImage} alt={item.imageAlt} width={600} height={750} />
-            {(!deferColors || colorReady.has(item.slug)) && <img className="standard-card-color" src={item.colorImage} alt="" width={600} height={750} aria-hidden="true" />}
+            <img src={item.lineArtImage} alt={item.imageAlt} width={600} height={750} loading="lazy" />
+            {(!deferColors || colorReady.has(item.slug)) && <img className="standard-card-color" src={item.colorImage} alt="" width={600} height={750} loading="lazy" aria-hidden="true" />}
             <span className="preview-hint" aria-hidden="true">View color artwork</span>
           </div>
           <span>{item.title}</span>

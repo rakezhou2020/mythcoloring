@@ -44,7 +44,7 @@ for (const url of urls) assert(existsSync(resolve(new URL(url).pathname)), `Site
 assert(readFileSync(join(root, 'robots.txt'), 'utf8').includes(origin + '/sitemap.xml'));
 assert(readFileSync(join(root, 'index.html'), 'utf8').includes('<h1>Free Printable Coloring Pages</h1>'));
 assert(readFileSync(join(root, 'index.html'), 'utf8').includes('"@type":"WebSite"'));
-assert(readFileSync(join(root, 'creatures', 'index.html'), 'utf8').includes('<h1>Free Mythical Creature Coloring Pages</h1>'));
+assert(readFileSync(join(root, 'creatures', 'index.html'), 'utf8').includes('<h1>Mythical Creatures Coloring Pages</h1>'));
 for (const creature of readdirSync(join(root, 'creatures'), { withFileTypes: true }).filter(entry => entry.isDirectory()).map(entry => entry.name)) {
   const creatureHtml = readFileSync(join(root, 'creatures', creature, 'index.html'), 'utf8');
   assert(creatureHtml.includes('"@type":"BreadcrumbList"'), `Breadcrumb schema: ${creature}`);

@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../components/breadcrumbs";
 import { StandardCategoryGrid } from "../../../components/standard-category-grid";
 import { publishedStandardColoringCategories, publishedStandardColoringPages } from "../../../data/standard-coloring-pages";
-import { pageMetadata } from "../../../lib/seo";
+import { JsonLd } from "../../../components/json-ld";
+import { pageMetadata, siteUrl } from "../../../lib/seo";
 
 type Props = { params: Promise<{ category: string }> };
 export const dynamicParams = false;
@@ -28,14 +29,18 @@ export default async function CategoryPage({ params }: Props) {
   const category = publishedStandardColoringCategories.find((item) => item.slug === slug);
   if (!category) notFound();
   const pages = publishedStandardColoringPages.filter((page) => page.categorySlug === slug);
+  const flowerIntroduction = slug === "flowers-plants" ? "Flower and plant coloring pages are a calm way to explore petals, leaves, stems, and garden scenes. Browse free printable flower coloring sheets for a quick creative break, a classroom activity, or a quiet afternoon at home. Each page includes clean line art to print, a PNG download option, and a color reference for inspiration. Choose delicate tones for a botanical study, make a bright bouquet, or use any colors that suit your style. Start with individual blossoms such as calla lilies and cosmos, then continue through our real collection of roses, sunflowers, orchids, lotuses, peonies, and more." : null;
+  const url = `${siteUrl}/coloring-pages/${slug}/`;
   return (
     <div className="wrap page-content">
+      <JsonLd data={{ "@context": "https://schema.org", "@graph": [{ "@type": "WebPage", name: `${category.name} Coloring Pages`, url }, { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: siteUrl + "/" }, { "@type": "ListItem", position: 2, name: "Coloring Pages", item: siteUrl + "/coloring-pages/" }, { "@type": "ListItem", position: 3, name: category.name, item: url }] }] }} />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Coloring Pages", href: "/coloring-pages/" }, { label: category.name }]} />
       <header className="page-heading">
         <p className="eyebrow">Coloring Pages</p>
         <h1>{category.name} Coloring Pages</h1>
         <p>{category.description}</p>
       </header>
+      {flowerIntroduction && <section className="prose category-introduction"><p>{flowerIntroduction}</p></section>}
       {pages.length ? (
         <StandardCategoryGrid items={pages} />
       ) : (

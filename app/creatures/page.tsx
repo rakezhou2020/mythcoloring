@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { publishedCreatures } from "../../data/creatures";
 import { Artwork } from "../../components/artwork";
-import { pageMetadata } from "../../lib/seo";
+import { JsonLd } from "../../components/json-ld";
+import { pageMetadata, siteUrl } from "../../lib/seo";
 export const metadata = pageMetadata(
   "Mythical Creature Coloring Pages – Free Printables",
   "Explore free printable mythical creature coloring pages, fantasy creature line art, and coloring inspiration from MythColoring.",
@@ -10,14 +11,15 @@ export const metadata = pageMetadata(
 export default function Page() {
   return (
     <div className="wrap page-content">
+      <JsonLd data={{ "@context": "https://schema.org", "@graph": [{ "@type": "WebPage", name: "Mythical Creatures Coloring Pages", url: siteUrl + "/creatures/" }, { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: siteUrl + "/" }, { "@type": "ListItem", position: 2, name: "Mythical Creatures", item: siteUrl + "/creatures/" }] }] }} />
       <header className="page-heading">
         <p className="eyebrow">Stories behind the pages</p>
-        <h1>Free Mythical Creature Coloring Pages</h1>
+        <h1>Mythical Creatures Coloring Pages</h1>
         <p>
-          Explore free printable mythical and fantasy creature coloring pages,
-          then discover the stories and coloring inspiration behind each design.
+          Explore free printable mythical creatures coloring pages, from Chinese celestial guardians and dragons to legendary beasts, mythical birds, and ancient monsters.
         </p>
       </header>
+      <section className="prose category-introduction"><p>These printable mythical creatures bring folklore and ancient imagination to the coloring table. Each real entry in this collection pairs a coloring page with creature notes about its appearance, origins, mythology, and symbolism. Meet legendary creatures from Chinese mythology, including the Azure Dragon Qinglong and the Four Symbols, then print clean line art or use the color reference as a starting point. The collection will grow from genuine artwork and researched stories, rather than empty category pages.</p></section>
       <div className="creature-grid">
         {publishedCreatures.map((c) => (
           <Link
