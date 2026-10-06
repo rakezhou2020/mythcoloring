@@ -30,6 +30,7 @@ export default async function CategoryPage({ params }: Props) {
   if (!category) notFound();
   const pages = publishedStandardColoringPages.filter((page) => page.categorySlug === slug);
   const flowerIntroduction = slug === "flowers-plants" ? "Flower and plant coloring pages are a calm way to explore petals, leaves, stems, and garden scenes. Browse free printable flower coloring sheets for a quick creative break, a classroom activity, or a quiet afternoon at home. Each page includes clean line art to print, a PNG download option, and a color reference for inspiration. Choose delicate tones for a botanical study, make a bright bouquet, or use any colors that suit your style. Start with individual blossoms such as calla lilies and cosmos, then continue through our real collection of roses, sunflowers, orchids, lotuses, peonies, and more." : null;
+  const flowerAnswer = slug === "flowers-plants" ? "Flowers and plants are useful coloring subjects because their petals, leaves, stems, and centers create clear areas for simple color choices or detailed shading. The pages in this collection focus on real plant features without requiring botanical knowledge: use the color reference when it helps, or choose an imaginative palette of your own." : null;
   const url = `${siteUrl}/coloring-pages/${slug}/`;
   return (
     <div className="wrap page-content">
@@ -41,6 +42,7 @@ export default async function CategoryPage({ params }: Props) {
         <p>{category.description}</p>
       </header>
       {flowerIntroduction && <section className="prose category-introduction"><p>{flowerIntroduction}</p></section>}
+      {flowerAnswer && <section className="prose entity-summary"><h2>About Flower and Plant Coloring Pages</h2><p>{flowerAnswer}</p></section>}
       {pages.length ? (
         <StandardCategoryGrid items={pages} />
       ) : (

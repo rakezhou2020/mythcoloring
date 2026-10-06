@@ -20,6 +20,7 @@ export default function Page() {
         </p>
       </header>
       <section className="prose category-introduction"><p>These printable mythical creatures bring folklore and ancient imagination to the coloring table. Each real entry in this collection pairs a coloring page with creature notes about its appearance, origins, mythology, and symbolism. Meet legendary creatures from Chinese mythology, including the Azure Dragon Qinglong and the Four Symbols, then print clean line art or use the color reference as a starting point. The collection will grow from genuine artwork and researched stories, rather than empty category pages.</p></section>
+      <section className="prose entity-summary" aria-labelledby="creature-quick-guide"><h2 id="creature-quick-guide">What You Will Find Here</h2><p>Each creature page gives a direct answer to what the being is, then separates traditional origin and cultural context from the site&apos;s own artwork interpretation. When a printable is available, the page also explains how to print or download it.</p></section>
       <div className="creature-grid">
         {publishedCreatures.map((c) => (
           <Link

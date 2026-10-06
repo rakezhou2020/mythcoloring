@@ -6,6 +6,7 @@ import { StandardColoringGrid } from "../../../../components/standard-coloring-g
 import { publishedStandardColoringCategories, publishedStandardColoringPages } from "../../../../data/standard-coloring-pages";
 import { pageMetadata, siteUrl } from "../../../../lib/seo";
 import { printableIntroduction, relatedStandardPages, standardPageSeo } from "../../../../lib/standard-seo";
+import { coloringPageEntityNote } from "../../../../lib/entity-context";
 
 type Props = { params: Promise<{ category: string; slug: string }> };
 export const dynamicParams = false;
@@ -36,6 +37,7 @@ export default async function StandardPage({ params }: Props) {
   const seo = standardPageSeo(page, category);
   const related = relatedStandardPages(page, publishedStandardColoringPages);
   const relatedHeading = categorySlug === "flowers-plants" ? "More Flower Coloring Pages" : "More Coloring Pages You May Like";
+  const entityNote = coloringPageEntityNote(page);
   return (
     <div className="wrap page-content">
       <JsonLd data={{ "@context": "https://schema.org", "@graph": [
@@ -57,6 +59,7 @@ export default async function StandardPage({ params }: Props) {
       <header className="page-heading"><p className="eyebrow">{category.name}</p><h1>{page.title}</h1></header>
       <StandardColoringPage page={page} />
       <section className="prose standard-content"><h2>About this coloring page</h2><p>{page.shortIntroduction}</p><p>{printableIntroduction(page, category)}</p></section>
+      {entityNote && <section className="prose standard-content entity-summary"><h2>About the Subject</h2><p>{entityNote}</p></section>}
       <section className="prose standard-content"><h2>Coloring Tips</h2><ul className="printing-tips">{page.coloringTips.map((tip) => <li key={tip}>{tip}</li>)}</ul></section>
       <section className="prose standard-content"><h2>Frequently Asked Questions</h2><h3>Is this coloring page free?</h3><p>Yes. This {page.title.toLowerCase()} is free to print or download from MythColoring.</p><h3>Can I print this coloring page?</h3><p>Yes. Use the Print Coloring Page button to print the current line-art view, designed for an A4 portrait page.</p><h3>Can I download the coloring page as PNG?</h3><p>Yes. Select the line-art or color view, then choose Download PNG.</p></section>
       <section className="standard-content"><h2>{relatedHeading}</h2><StandardColoringGrid items={related} limit={8} /></section>

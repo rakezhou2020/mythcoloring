@@ -7,6 +7,7 @@ import { Artwork } from "../../../components/artwork";
 import { Breadcrumbs } from "../../../components/breadcrumbs";
 import { JsonLd } from "../../../components/json-ld";
 import { pageMetadata, siteUrl } from "../../../lib/seo";
+import { creatureEntityContext } from "../../../lib/entity-context";
 type Props = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;
 
@@ -200,6 +201,7 @@ export default async function Page({ params }: Props) {
     (p) => p.creatureSlug !== slug,
   );
   const primaryPage = printablePages[0];
+  const entityContext = creatureEntityContext(c);
   const finishedArtwork = primaryPage?.finishedImage ?? c.heroImage;
   const pageUrl = siteUrl + "/creatures/" + slug + "/";
   const description = creatureMetaDescription(c.name, c.shortDescription);
@@ -245,6 +247,15 @@ export default async function Page({ params }: Props) {
         <h1>{c.name}</h1>
         <p>{c.shortDescription}</p>
       </header>
+      <section className="prose entity-summary" aria-labelledby="quick-facts">
+        <h2 id="quick-facts">Quick Facts about {c.name}</h2>
+        <p>{c.shortDescription}</p>
+        <dl>
+          <div><dt>Chinese name</dt><dd>{c.localName}</dd></div>
+          {entityContext.aliases.length > 0 && <div><dt>Also known as</dt><dd>{entityContext.aliases.join("; ")}</dd></div>}
+          <div><dt>Cultural context</dt><dd>{entityContext.culturalContext}</dd></div>
+        </dl>
+      </section>
       <section className="creature-overview section" aria-labelledby="about-creature">
         <div className="prose">
           <h2 id="about-creature">What is {c.name}?</h2>
@@ -288,6 +299,12 @@ export default async function Page({ params }: Props) {
             </div>
           </div>
           <ColoringGrid items={[primaryPage]} />
+        </section>
+      )}
+      {entityContext.references.length > 0 && (
+        <section className="prose source-references" aria-labelledby="sources-references">
+          <h2 id="sources-references">Sources and References</h2>
+          <ul>{entityContext.references.map((reference) => <li key={reference.href}><a href={reference.href} target="_blank" rel="noreferrer">{reference.label}</a> — {reference.note}</li>)}</ul>
         </section>
       )}
       <section className="coloring-ideas section" aria-labelledby="coloring-ideas">
