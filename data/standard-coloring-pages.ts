@@ -9,6 +9,7 @@ import { septemberAnimePages } from "./september-anime-pages";
 import { septemberArchitecturePages } from "./september-architecture-pages";
 import { sciFiActionPages } from "./sci-fi-action-pages";
 import { octoberCreaturePages } from "./october-creature-pages";
+import { chineseFolklorePages } from "./chinese-folklore-pages";
 
 // This catalog is intentionally independent from data/coloring-pages.ts.
 // Add ordinary printable content here; mythology creatures remain in their
@@ -30,6 +31,7 @@ export const standardColoringCategories: StandardColoringCategory[] = [
   { slug: "fantasy-warriors", name: "Fantasy Warriors", description: "Armored knights, enchanted fighters, and heroic fantasy scenes to color.", status: "published" },
   { slug: "fantasy-creatures", name: "Fantasy Creatures", description: "Whimsical goblins, magical beasts, riders, and imaginative beings to color.", status: "published" },
   { slug: "monster-creatures", name: "Monster Creatures", description: "Detailed alien, insectoid, and otherworldly creature coloring pages.", status: "published" },
+  { slug: "chinese-folklore-characters", name: "Chinese Folklore Characters", description: "Traditional-inspired scholars, travelers, musicians, warriors, and folk characters to color.", status: "published" },
   { slug: "buildings", name: "Buildings", description: "Homes, landmarks, and architectural coloring pages.", status: "draft" },
   { slug: "food", name: "Food", description: "Delicious, playful food coloring pages.", status: "draft" },
   { slug: "vehicles", name: "Vehicles", description: "Things that move, ready to color.", status: "published" },
@@ -40,6 +42,7 @@ export const standardColoringCategories: StandardColoringCategory[] = [
 const imageOrigin = "https://images.mythcoloring.com";
 
 export const standardColoringPages: StandardColoringPage[] = [
+  ...chineseFolklorePages,
   ...octoberCreaturePages,
   {
     slug: "orchid",
