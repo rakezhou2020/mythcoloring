@@ -8,6 +8,7 @@ import { septemberObjectPages } from "./september-objects-pages";
 import { septemberAnimePages } from "./september-anime-pages";
 import { septemberArchitecturePages } from "./september-architecture-pages";
 import { sciFiActionPages } from "./sci-fi-action-pages";
+import { octoberCreaturePages } from "./october-creature-pages";
 
 // This catalog is intentionally independent from data/coloring-pages.ts.
 // Add ordinary printable content here; mythology creatures remain in their
@@ -27,6 +28,8 @@ export const standardColoringCategories: StandardColoringCategory[] = [
   { slug: "sci-fi-robots", name: "Sci-Fi & Robots", description: "Robots, cyborgs, mechs, and imaginative space-age machines to color.", status: "published" },
   { slug: "action-adventure", name: "Action & Adventure", description: "Bold explorers, armored heroes, and action-packed scenes to color.", status: "published" },
   { slug: "fantasy-warriors", name: "Fantasy Warriors", description: "Armored knights, enchanted fighters, and heroic fantasy scenes to color.", status: "published" },
+  { slug: "fantasy-creatures", name: "Fantasy Creatures", description: "Whimsical goblins, magical beasts, riders, and imaginative beings to color.", status: "published" },
+  { slug: "monster-creatures", name: "Monster Creatures", description: "Detailed alien, insectoid, and otherworldly creature coloring pages.", status: "published" },
   { slug: "buildings", name: "Buildings", description: "Homes, landmarks, and architectural coloring pages.", status: "draft" },
   { slug: "food", name: "Food", description: "Delicious, playful food coloring pages.", status: "draft" },
   { slug: "vehicles", name: "Vehicles", description: "Things that move, ready to color.", status: "published" },
@@ -37,6 +40,7 @@ export const standardColoringCategories: StandardColoringCategory[] = [
 const imageOrigin = "https://images.mythcoloring.com";
 
 export const standardColoringPages: StandardColoringPage[] = [
+  ...octoberCreaturePages,
   {
     slug: "orchid",
     categorySlug: "flowers-plants",

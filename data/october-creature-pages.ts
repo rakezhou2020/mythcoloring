@@ -1,0 +1,66 @@
+import type { StandardColoringPage } from "./types";
+
+type Seed = { slug: string; name: string; categorySlug: string; line: string; color: string };
+const a = (id: string) => `/coloring-pages/creature-collection/codex-clipboard-${id}`;
+
+const pages: Seed[] = [
+  { slug: "goblin-traveler", name: "Goblin Traveler", categorySlug: "fantasy-creatures", line: "bca46655-5c9f-4949-af3a-bf05547a224d.jpg", color: "1a70ecc7-af59-4da0-a49e-51acff7928e9.jpg" },
+  { slug: "skeletal-horned-beast", name: "Skeletal Horned Beast", categorySlug: "monster-creatures", line: "19df1836-ff3b-48be-871e-3924e02ca6c4.jpg", color: "19df1836-ff3b-48be-871e-3924e02ca6c4.jpg" },
+  { slug: "woolly-multieye-creature", name: "Woolly Multi-Eye Creature", categorySlug: "fantasy-creatures", line: "3a102fc0-41ab-42b7-90bc-338157fb9c2c.jpg", color: "72ccf2ce-bc40-4b8a-b517-f4c6ab386501.jpg" },
+  { slug: "armored-tiger-beast", name: "Armored Tiger Beast", categorySlug: "fantasy-creatures", line: "69492363-b991-482a-ba19-93ec2df032b3.jpg", color: "815453a0-ede8-416d-9652-dff4b782dd12.jpg" },
+  { slug: "cyclops-beetle-creature", name: "Cyclops Beetle Creature", categorySlug: "monster-creatures", line: "5063a78b-f947-4eb5-993a-2d7249bdb899.jpg", color: "9df956a9-a700-4f39-9ca4-b2d6b2252dc6.jpg" },
+  { slug: "goblin-cleaver-keeper", name: "Goblin Cleaver Keeper", categorySlug: "fantasy-creatures", line: "b702dc0f-7ae7-4be5-a905-4659ee532303.jpg", color: "3db7d16a-a332-422f-8e92-25eae8d85e83.jpg" },
+  { slug: "horned-spear-guardian", name: "Horned Spear Guardian", categorySlug: "fantasy-creatures", line: "32090225-b8b2-47d4-bc9f-3359736333e4.jpg", color: "4ef83d49-b5d4-43d2-b23d-b71a79745a8a.jpg" },
+  { slug: "tiger-gremlin", name: "Tiger Gremlin", categorySlug: "fantasy-creatures", line: "d67c2c29-0df4-422b-9eaf-bdc7c3d772cb.png", color: "a8d76470-4f1c-495a-86e9-e0ec87b0fc2e.png" },
+  { slug: "fluffy-lion", name: "Fluffy Lion", categorySlug: "animals", line: "c8caf9f0-52b6-4ec4-be19-662da9720cad.jpg", color: "254fa12c-96e7-4a4a-951d-89b30c6e0508.png" },
+  { slug: "lynx", name: "Lynx", categorySlug: "animals", line: "091ba10f-b675-4410-b511-8a17c64395f4.png", color: "e2e536ce-15d4-422a-983e-f71f484fa8fb.png" },
+  { slug: "mountain-goat", name: "Mountain Goat", categorySlug: "animals", line: "364dbf53-6bc1-416b-b8a9-468cb9da35bd.png", color: "7745eed9-9ec0-4f02-992b-0d4a91ec58ab.png" },
+  { slug: "giant-tortoise", name: "Giant Tortoise", categorySlug: "animals", line: "98829377-4c14-476f-a420-a7fba9bb216d.png", color: "8c52b361-f9fa-4da1-a7bd-7f0436fd4c7e.png" },
+  { slug: "spiky-skeletal-beast", name: "Spiky Skeletal Beast", categorySlug: "monster-creatures", line: "03a1b2be-40df-4763-89e6-351b6202d9f6.png", color: "08a200a9-a57b-41dd-9580-f6740bcfe880.png" },
+  { slug: "brown-bear", name: "Brown Bear", categorySlug: "animals", line: "eb795041-793e-45dd-9e6c-72fb79958041.png", color: "fb5e4379-ec2d-4dd7-8fc3-39e46d362e06.png" },
+  { slug: "fluffy-ram", name: "Fluffy Ram", categorySlug: "animals", line: "0c84afa4-9863-448a-a957-45d6da095532.png", color: "ca121c09-a634-44ec-96d4-15f3e8593f06.png" },
+  { slug: "alien-winged-beast", name: "Alien Winged Beast", categorySlug: "monster-creatures", line: "b2f5e60e-8227-4768-bea7-cfd1c4cb4885.png", color: "0ed2c6bd-67a8-4900-8cc1-c6d25e06e635.jpg" },
+  { slug: "fish-tailed-alien-beast", name: "Fish-Tailed Alien Beast", categorySlug: "monster-creatures", line: "f13fffa8-60f4-4b3e-b55c-250240c85e30.jpg", color: "5dfef752-0b6b-4a77-871b-802f8570d5c9.jpg" },
+  { slug: "brainback-predator", name: "Brainback Predator", categorySlug: "monster-creatures", line: "8b0f34d1-3aa3-4477-864f-cbd95ea16c2a.jpg", color: "997112fb-b590-4c04-baa0-ae63fc076ce8.jpg" },
+  { slug: "alien-spider", name: "Alien Spider", categorySlug: "monster-creatures", line: "445e3611-8fb0-4cc9-84d1-e72bb668276e.jpg", color: "82faf899-a288-4da3-8a67-128047f0af5a.jpg" },
+  { slug: "bat-winged-worm", name: "Bat-Winged Worm", categorySlug: "monster-creatures", line: "67edae4f-4c83-4633-a411-e6ca969ed4bd.jpg", color: "b04a4556-51df-4847-9ecb-cc5b38b0e80d.jpg" },
+  { slug: "tribal-guardian", name: "Tribal Guardian", categorySlug: "fantasy-creatures", line: "4a5172b7-9516-4581-9edb-39047041837b.jpg", color: "5ec9be43-b8b5-4e93-b5a5-ed39e2fc99fe.jpg" },
+  { slug: "armored-horned-monster", name: "Armored Horned Monster", categorySlug: "fantasy-creatures", line: "742e0f0e-25e0-434c-bc8a-89515cc3cc7e.jpg", color: "97b6a2c3-ab24-4cc0-a3eb-a1977a5976b9.jpg" },
+  { slug: "praying-horned-rider", name: "Praying Horned Rider", categorySlug: "fantasy-creatures", line: "6685ddd8-04da-4e6d-8d4d-5822687f693e.jpg", color: "0526cdee-c778-4793-997b-8d65c2ad9f05.jpg" },
+  { slug: "bulky-alien", name: "Bulky Alien", categorySlug: "monster-creatures", line: "9603c8f7-a9ea-4997-b503-c64ea111d31c.jpg", color: "4dae6610-164e-4a07-a860-08d4e931fc39.jpg" },
+  { slug: "skeletal-stalker", name: "Skeletal Stalker", categorySlug: "monster-creatures", line: "0c771626-ff34-40ff-9354-58ab35c360b1.jpg", color: "d12f6d6f-257b-4867-908f-777b6297d0e7.jpg" },
+  { slug: "horned-alien-humanoid", name: "Horned Alien Humanoid", categorySlug: "monster-creatures", line: "600e0d8f-3951-4863-a5f2-1efadfa22d42.jpg", color: "fb7709de-aa96-4c98-a278-0791f4366949.jpg" },
+  { slug: "alien-crawler", name: "Alien Crawler", categorySlug: "monster-creatures", line: "fe33c47d-c478-4e9c-90b5-283505a9d781.jpg", color: "3464bd38-9585-440f-bbaa-c2b6e4c8722f.jpg" },
+  { slug: "winged-horned-beast", name: "Winged Horned Beast", categorySlug: "fantasy-creatures", line: "f9df80bf-d467-4e95-a535-bb4985ee89d3.jpg", color: "680c188e-e65e-4b78-840c-9e132c1cdcc0.jpg" },
+  { slug: "alien-dragon-portrait", name: "Alien Dragon Portrait", categorySlug: "monster-creatures", line: "8e0404ce-0c21-49a3-8715-a2fc5723881d.jpg", color: "9f446602-e6d4-443f-9202-5da6066e8f0d.jpg" },
+  { slug: "frog-masked-portrait", name: "Frog-Masked Portrait", categorySlug: "monster-creatures", line: "445b35a7-1c00-4d1c-9a2e-4f43dcfe25b3.jpg", color: "afc6b5b1-1ab1-4dea-b542-25e6ed0839d3.jpg" },
+  { slug: "alien-fish-portrait", name: "Alien Fish Portrait", categorySlug: "monster-creatures", line: "93172164-b963-43bc-affc-a835f937b6e1.jpg", color: "e96589fc-4f24-4ef7-81d6-5a34969e0acf.jpg" },
+  { slug: "one-eyed-alien-portrait", name: "One-Eyed Alien Portrait", categorySlug: "monster-creatures", line: "f11df003-337f-46a4-88d5-fb4a6d622f24.jpg", color: "1fc5c4a7-499d-4730-b1de-31fece5bd587.jpg" },
+  { slug: "spider-humanoid", name: "Spider Humanoid", categorySlug: "monster-creatures", line: "190ba6cc-d6a2-451a-80dd-45891e5f296b.jpg", color: "c69716b2-4b28-4beb-a1b7-350d8f769f49.jpg" },
+  { slug: "fishing-walker", name: "Fishing Walker", categorySlug: "fantasy-creatures", line: "aecaf8b7-e44e-4cba-97bf-837a01bcc8cb.jpg", color: "f6948c4d-924b-4d21-8217-03993e4a39f1.jpg" },
+  { slug: "rider-on-spiked-beast", name: "Rider on Spiked Beast", categorySlug: "fantasy-creatures", line: "ee273ea9-6601-4a8c-8293-a92bb18580c9.jpg", color: "38c979ec-e606-4e94-aabe-fa6c14666d22.jpg" },
+  { slug: "rider-on-longtail-beast", name: "Rider on Longtail Beast", categorySlug: "fantasy-creatures", line: "9a81986e-2b2f-403b-a126-5011d3f4146e.jpg", color: "205c9b16-8cee-4d25-b8ea-db74c6de3588.jpg" },
+  { slug: "fisher-on-giant-walker", name: "Fisher on Giant Walker", categorySlug: "fantasy-creatures", line: "126ea3e8-3d95-4549-8115-edb56b647907.jpg", color: "e31c09b3-3351-46b5-9ed3-a56cdfdad271.jpg" },
+  { slug: "dream-guardian-puppet", name: "Dream Guardian Puppet", categorySlug: "fantasy-creatures", line: "3993684a-e96a-451e-baf1-c1cf4ef8ce3c.jpg", color: "8ed2c274-9040-456c-927e-1fd4f72ad31b.jpg" },
+  { slug: "mechanical-stunt-monster", name: "Mechanical Stunt Monster", categorySlug: "sci-fi-robots", line: "90b2fb7b-a9b7-4f7a-b03f-3c39798e458e.jpg", color: "5e9cba04-640d-4514-8de1-c7332ab3760a.jpg" },
+  { slug: "two-headed-mutant", name: "Two-Headed Mutant", categorySlug: "monster-creatures", line: "fa9ae175-1179-4b0c-bcf6-2b9d290a3d67.jpg", color: "2437184f-45e5-430e-98c2-d40c0df05e8e.jpg" },
+  { slug: "horned-rider-warrior", name: "Horned Rider Warrior", categorySlug: "fantasy-warriors", line: "1b8d34ad-aed1-4ddb-a664-74e3932f8546.jpg", color: "74de061e-e7f7-4dd5-9e3c-0729415430ee.jpg" },
+  { slug: "masked-scout", name: "Masked Scout", categorySlug: "fantasy-creatures", line: "c3a6fe9d-348a-4f62-87ad-b863659b956a.jpg", color: "58a183a3-cf9e-4db8-b15c-af23ce1bcdde.jpg" },
+  { slug: "seated-horned-giant", name: "Seated Horned Giant", categorySlug: "fantasy-creatures", line: "a735f602-5cde-41a7-9db3-9bfd3e3efe47.jpg", color: "21d2ea15-0eae-47c1-bacc-07c116d11e7e.jpg" },
+  { slug: "scarfed-wanderer", name: "Scarfed Wanderer", categorySlug: "fantasy-creatures", line: "bceaaf92-ab6e-4dc9-a6eb-21cb2c24ce58.jpg", color: "4da6d886-a77a-4b99-84c3-bfbb5df996de.jpg" },
+  { slug: "cyber-portrait", name: "Cyber Portrait", categorySlug: "sci-fi-robots", line: "c8f52dc8-6cd7-4669-8c6a-3a473007c9f7.jpg", color: "b2d268d1-89c7-4025-890d-d7d022d62042.jpg" },
+  { slug: "armored-samurai-turtle", name: "Armored Samurai Turtle", categorySlug: "fantasy-warriors", line: "47299104-9e98-4388-a8ca-da2f81157150.jpg", color: "ce101232-6039-4c04-8c7a-72f9fbbbf279.jpg" },
+  { slug: "horned-shield-warrior", name: "Horned Shield Warrior", categorySlug: "fantasy-warriors", line: "853d0c23-0bf3-4c77-b1e8-f397b1539d65.jpg", color: "53135b09-1a3b-45e0-8649-b58a6f16792d.jpg" },
+  { slug: "hybrid-insect-giant", name: "Hybrid Insect Giant", categorySlug: "monster-creatures", line: "c8d35ac0-8ef5-4597-ac94-795de7a7ffd8.jpg", color: "c8d35ac0-8ef5-4597-ac94-795de7a7ffd8.jpg" },
+];
+
+const tips = ["Use the color reference as a starting point, or invent a creature palette of your own.", "Add a darker shade near folds, joints, and overlapping forms for depth.", "Save one bright accent color for eyes, ornaments, or magical details."];
+
+export const octoberCreaturePages: StandardColoringPage[] = pages.map((page, index) => ({
+  slug: page.slug, categorySlug: page.categorySlug, title: `${page.name} Coloring Page`,
+  shortIntroduction: `Bring this detailed ${page.name.toLowerCase()} illustration to life with your own imaginative color palette.`,
+  coloringTips: tips, lineArtImage: a(page.line), colorImage: a(page.color),
+  imageAlt: `${page.name} printable coloring page with line art and color reference`,
+  seo: { title: `${page.name} Coloring Page – Free Printable`, description: `Download a free printable ${page.name.toLowerCase()} coloring page with line art and a color reference.` },
+  featured: index < 8, status: "published",
+}));
