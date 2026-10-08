@@ -5,7 +5,7 @@ const a = (id: string) => `/coloring-pages/creature-collection/codex-clipboard-$
 
 const pages: Seed[] = [
   { slug: "goblin-traveler", name: "Goblin Traveler", categorySlug: "fantasy-creatures", line: "bca46655-5c9f-4949-af3a-bf05547a224d.jpg", color: "1a70ecc7-af59-4da0-a49e-51acff7928e9.jpg" },
-  { slug: "skeletal-horned-beast", name: "Skeletal Horned Beast", categorySlug: "monster-creatures", line: "19df1836-ff3b-48be-871e-3924e02ca6c4.jpg", color: "19df1836-ff3b-48be-871e-3924e02ca6c4.jpg" },
+  { slug: "skeletal-horned-beast", name: "Skeletal Horned Beast", categorySlug: "monster-creatures", line: "19df1836-ff3b-48be-871e-3924e02ca6c4.jpg", color: "c8d35ac0-8ef5-4597-ac94-795de7a7ffd8.jpg" },
   { slug: "woolly-multieye-creature", name: "Woolly Multi-Eye Creature", categorySlug: "fantasy-creatures", line: "3a102fc0-41ab-42b7-90bc-338157fb9c2c.jpg", color: "72ccf2ce-bc40-4b8a-b517-f4c6ab386501.jpg" },
   { slug: "armored-tiger-beast", name: "Armored Tiger Beast", categorySlug: "fantasy-creatures", line: "69492363-b991-482a-ba19-93ec2df032b3.jpg", color: "815453a0-ede8-416d-9652-dff4b782dd12.jpg" },
   { slug: "cyclops-beetle-creature", name: "Cyclops Beetle Creature", categorySlug: "monster-creatures", line: "5063a78b-f947-4eb5-993a-2d7249bdb899.jpg", color: "9df956a9-a700-4f39-9ca4-b2d6b2252dc6.jpg" },
@@ -51,7 +51,6 @@ const pages: Seed[] = [
   { slug: "cyber-portrait", name: "Cyber Portrait", categorySlug: "sci-fi-robots", line: "c8f52dc8-6cd7-4669-8c6a-3a473007c9f7.jpg", color: "b2d268d1-89c7-4025-890d-d7d022d62042.jpg" },
   { slug: "armored-samurai-turtle", name: "Armored Samurai Turtle", categorySlug: "fantasy-warriors", line: "47299104-9e98-4388-a8ca-da2f81157150.jpg", color: "ce101232-6039-4c04-8c7a-72f9fbbbf279.jpg" },
   { slug: "horned-shield-warrior", name: "Horned Shield Warrior", categorySlug: "fantasy-warriors", line: "853d0c23-0bf3-4c77-b1e8-f397b1539d65.jpg", color: "53135b09-1a3b-45e0-8649-b58a6f16792d.jpg" },
-  { slug: "hybrid-insect-giant", name: "Hybrid Insect Giant", categorySlug: "monster-creatures", line: "c8d35ac0-8ef5-4597-ac94-795de7a7ffd8.jpg", color: "c8d35ac0-8ef5-4597-ac94-795de7a7ffd8.jpg" },
 ];
 
 const tips = ["Use the color reference as a starting point, or invent a creature palette of your own.", "Add a darker shade near folds, joints, and overlapping forms for depth.", "Save one bright accent color for eyes, ornaments, or magical details."];
