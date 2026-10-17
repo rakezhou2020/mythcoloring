@@ -13,6 +13,27 @@ export const metadata = pageMetadata(
   "/",
 );
 export default function Home() {
+  const flowers = publishedStandardColoringCategories.find((category) => category.slug === "flowers-plants");
+  const animals = publishedStandardColoringCategories.find((category) => category.slug === "animals");
+  const flowerPages = publishedStandardColoringPages.filter((page) => page.categorySlug === "flowers-plants");
+  const animalPages = publishedStandardColoringPages.filter((page) => page.categorySlug === "animals");
+  const callaLily = flowerPages.find((page) => page.slug === "calla-lily");
+  const cosmos = flowerPages.find((page) => page.slug === "cosmos");
+  const animalPreview = animalPages.find((page) => page.slug === "round-hen") ?? animalPages[0];
+  const qinglongPage = publishedColoringPages.find((page) => page.slug === "qinglong");
+  const popularCategories = [
+    flowers && { name: flowers.name, description: flowers.description, count: `${flowerPages.length} Coloring Pages`, href: `/coloring-pages/${flowers.slug}/`, image: callaLily?.lineArtImage ?? flowerPages[0]?.lineArtImage, alt: callaLily?.imageAlt ?? flowerPages[0]?.imageAlt ?? "Flowers and plants coloring pages" },
+    animals && { name: animals.name, description: animals.description, count: `${animalPages.length} Coloring Pages`, href: `/coloring-pages/${animals.slug}/`, image: animalPreview?.lineArtImage, alt: animalPreview?.imageAlt ?? "Animal coloring pages" },
+    { name: "Mythical Creatures", description: "Legendary creatures from ancient stories, ready to color.", count: `${publishedColoringPages.length} Creatures`, href: "/themes/shan-hai-jing/", image: qinglongPage?.lineArtImage, alt: "Qinglong mythical creature printable line art" },
+  ].filter((category): category is NonNullable<typeof category> => Boolean(category));
+  const explorePages = [
+    { title: "Flower Coloring Pages", label: "Category", href: "/coloring-pages/flowers-plants/", image: callaLily?.lineArtImage, alt: callaLily?.imageAlt ?? "Flower coloring pages" },
+    { title: "Animal Coloring Pages", label: "Category", href: "/coloring-pages/animals/", image: animalPreview?.lineArtImage, alt: animalPreview?.imageAlt ?? "Animal coloring pages" },
+    { title: "Mythical Creatures Coloring Pages", label: "Creatures · Stories", href: "/creatures/", image: qinglongPage?.lineArtImage, alt: "Qinglong mythical creature printable line art" },
+    { title: "Calla Lily Coloring Page", label: "Flower · Printable", href: "/coloring-pages/flowers-plants/calla-lily/", image: callaLily?.lineArtImage, alt: callaLily?.imageAlt ?? "Calla Lily coloring page" },
+    { title: "Cosmos Coloring Page", label: "Flower · Printable", href: "/coloring-pages/flowers-plants/cosmos/", image: cosmos?.lineArtImage, alt: cosmos?.imageAlt ?? "Cosmos coloring page" },
+    { title: "Qinglong", label: "Mythical Creature · Story & Coloring", href: "/creatures/qinglong/", image: qinglongPage?.lineArtImage, alt: "Qinglong printable coloring page" },
+  ];
   const heroItems: HeroRevealItem[] = [
     ...publishedStandardColoringPages.filter((page) => page.featured).map((page) => ({ slug: `standard-${page.slug}`, title: page.title, lineArtImage: page.lineArtImage, colorImage: page.colorImage, imageAlt: page.imageAlt })),
     ...publishedColoringPages.filter((page) => page.featured && page.lineArtImage && (page.colorGuideImage || page.finishedImage)).map((page) => ({ slug: `myth-${page.slug}`, title: page.title, lineArtImage: page.lineArtImage!, colorImage: page.colorGuideImage ?? page.finishedImage!, imageAlt: `${page.title} printable coloring page` })),
@@ -73,20 +94,21 @@ export default function Home() {
       </section>
       <section className="section wrap home-popular-categories">
         <div className="section-heading"><div><p className="eyebrow">Start exploring</p><h2>Popular Categories</h2></div><Link className="text-link" href="/coloring-pages/">View All Coloring Pages →</Link></div>
-        <div className="home-category-grid">
-          {["flowers-plants", "animals"].flatMap((slug) => publishedStandardColoringCategories.filter((category) => category.slug === slug)).map((category) => <Link className="home-category-card" href={`/coloring-pages/${category.slug}/`} key={category.slug}><h3>{category.name}</h3><p>{category.description}</p><span className="text-link">Explore →</span></Link>)}
-          <Link className="home-category-card" href="/themes/shan-hai-jing/"><h3>Mythical Creatures</h3><p>Legendary creatures from ancient stories, ready to color.</p><span className="text-link">Explore →</span></Link>
+        <div className="popular-category-grid">
+          {popularCategories.map((category) => <Link className="popular-category-card" href={category.href} key={category.name}>
+            <div className="popular-category-copy"><p className="eyebrow">{category.count}</p><h3>{category.name}</h3><p>{category.description}</p><span className="card-cta">Explore <span aria-hidden="true">→</span></span></div>
+            <div className="popular-category-art"><Artwork name={category.name} src={category.image} alt={category.alt} /></div>
+          </Link>)}
         </div>
       </section>
-      <section className="section wrap home-popular-categories" aria-labelledby="explore-coloring-pages">
+      <section className="section wrap explore-coloring-section" aria-labelledby="explore-coloring-pages">
         <div className="section-heading"><div><p className="eyebrow">Start here</p><h2 id="explore-coloring-pages">Explore Coloring Pages</h2></div></div>
-        <div className="home-category-grid">
-          <Link className="home-category-card" href="/coloring-pages/flowers-plants/">Flower Coloring Pages</Link>
-          <Link className="home-category-card" href="/coloring-pages/animals/">Animal Coloring Pages</Link>
-          <Link className="home-category-card" href="/creatures/">Mythical Creatures Coloring Pages</Link>
-          <Link className="home-category-card" href="/coloring-pages/flowers-plants/calla-lily/">Calla Lily Coloring Page</Link>
-          <Link className="home-category-card" href="/coloring-pages/flowers-plants/cosmos/">Cosmos Coloring Page</Link>
-          <Link className="home-category-card" href="/creatures/qinglong/">Qinglong</Link>
+        <div className="explore-page-grid">
+          {explorePages.map((page) => <Link className="explore-page-card" href={page.href} key={page.href}>
+            <div className="explore-page-art"><Artwork name={page.title} src={page.image} alt={page.alt} /></div>
+            <div className="explore-page-copy"><h3>{page.title}</h3><p>{page.label}</p></div>
+            <span className="explore-page-arrow" aria-hidden="true">→</span>
+          </Link>)}
         </div>
       </section>
       <section className="section wrap">
