@@ -10,6 +10,7 @@ import { septemberArchitecturePages } from "./september-architecture-pages";
 import { sciFiActionPages } from "./sci-fi-action-pages";
 import { octoberCreaturePages } from "./october-creature-pages";
 import { chineseFolklorePages } from "./chinese-folklore-pages";
+import { octoberAnimeCharacterPages } from "./october-anime-character-pages";
 
 // This catalog is intentionally independent from data/coloring-pages.ts.
 // Add ordinary printable content here; mythology creatures remain in their
@@ -42,6 +43,7 @@ export const standardColoringCategories: StandardColoringCategory[] = [
 const imageOrigin = "https://images.mythcoloring.com";
 
 export const standardColoringPages: StandardColoringPage[] = [
+  ...octoberAnimeCharacterPages,
   ...chineseFolklorePages,
   ...octoberCreaturePages,
   {
