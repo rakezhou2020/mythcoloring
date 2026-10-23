@@ -36,7 +36,7 @@ export default async function StandardPage({ params }: Props) {
   const url = `${siteUrl}/coloring-pages/${categorySlug}/${slug}/`;
   const seo = standardPageSeo(page, category);
   const related = relatedStandardPages(page, publishedStandardColoringPages);
-  const relatedHeading = categorySlug === "flowers-plants" ? "More Flower Coloring Pages" : "More Coloring Pages You May Like";
+  const relatedHeading = categorySlug === "halloween" ? "More Halloween Coloring Pages" : categorySlug === "flowers-plants" ? "More Flower Coloring Pages" : "More Coloring Pages You May Like";
   const entityNote = coloringPageEntityNote(page);
   return (
     <div className="wrap page-content">

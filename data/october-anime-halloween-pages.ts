@@ -38,7 +38,7 @@ export const octoberAnimeHalloweenPages: StandardColoringPage[] = seeds.map((see
   ],
   lineArtImage: image(seed.line),
   colorImage: image(seed.color),
-  imageAlt: `${seed.title} printable coloring page with line art and color reference`,
+  imageAlt: seed.categorySlug === "halloween" ? `${seed.title} Halloween coloring page printable line art` : `${seed.title} printable coloring page with line art and color reference`,
   seo: {
     title: `${seed.title} Coloring Page – Free Printable`,
     description: `Download a free printable ${seed.title.toLowerCase()} coloring page with line art and a color reference.`,

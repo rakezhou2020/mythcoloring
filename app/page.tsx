@@ -17,9 +17,11 @@ export default function Home() {
   const animals = publishedStandardColoringCategories.find((category) => category.slug === "animals");
   const flowerPages = publishedStandardColoringPages.filter((page) => page.categorySlug === "flowers-plants");
   const animalPages = publishedStandardColoringPages.filter((page) => page.categorySlug === "animals");
+  const halloweenPages = publishedStandardColoringPages.filter((page) => page.categorySlug === "halloween");
   const callaLily = flowerPages.find((page) => page.slug === "calla-lily");
   const cosmos = flowerPages.find((page) => page.slug === "cosmos");
   const animalPreview = animalPages.find((page) => page.slug === "round-hen") ?? animalPages[0];
+  const halloweenPreview = halloweenPages.find((page) => page.slug === "jack-o-lantern") ?? halloweenPages[0];
   const qinglongPage = publishedColoringPages.find((page) => page.slug === "qinglong");
   const popularCategories = [
     flowers && { name: flowers.name, description: flowers.description, count: `${flowerPages.length} Coloring Pages`, href: `/coloring-pages/${flowers.slug}/`, image: callaLily?.lineArtImage ?? flowerPages[0]?.lineArtImage, alt: callaLily?.imageAlt ?? flowerPages[0]?.imageAlt ?? "Flowers and plants coloring pages" },
@@ -101,6 +103,10 @@ export default function Home() {
           </Link>)}
         </div>
       </section>
+      {halloweenPreview && <section className="section wrap halloween-home-entry" aria-labelledby="halloween-home-entry">
+        <div className="halloween-home-copy"><p className="eyebrow">Seasonal collection</p><h2 id="halloween-home-entry">Halloween Coloring Pages <span aria-hidden="true">🎃</span></h2><p>Explore printable pumpkins, ghosts, witches, haunted houses, and spooky Halloween designs.</p><Link className="text-link" href="/coloring-pages/halloween/">Explore Halloween Pages <span aria-hidden="true">→</span></Link></div>
+        <div className="halloween-home-art"><Artwork name="Halloween Coloring Pages" src={halloweenPreview.lineArtImage} alt={halloweenPreview.imageAlt} /></div>
+      </section>}
       <section className="section wrap explore-coloring-section" aria-labelledby="explore-coloring-pages">
         <div className="section-heading"><div><p className="eyebrow">Start here</p><h2 id="explore-coloring-pages">Explore Coloring Pages</h2></div></div>
         <div className="explore-page-grid">

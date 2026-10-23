@@ -1,4 +1,5 @@
 import type { StandardColoringCategory, StandardColoringPage } from "../data/types";
+import { halloweenPrintableIntroduction, halloweenThemeForSlug } from "./halloween";
 
 function subjectName(title: string) {
   return title.replace(/ Coloring Page$/, "");
@@ -6,6 +7,14 @@ function subjectName(title: string) {
 
 export function standardPageSeo(page: StandardColoringPage, category: StandardColoringCategory) {
   const subject = subjectName(page.title);
+  if (category.slug === "halloween") {
+    const title = subject === "Haunted House"
+      ? "Haunted House Coloring Page – Printable Halloween Page"
+      : `${subject} Halloween Coloring Page – Free Printable`;
+    const theme = halloweenThemeForSlug(page.slug);
+    const description = `Print or download this free ${subject.toLowerCase()} Halloween coloring page with clean line art, a color reference, and ${theme ? theme.title.toLowerCase() : "spooky-season"} inspiration.`;
+    return { title, description, subject };
+  }
   const categoryLabel = category.slug === "flowers-plants"
     ? "Flower"
     : category.slug === "animals"
@@ -19,6 +28,10 @@ export function standardPageSeo(page: StandardColoringPage, category: StandardCo
 /** Adds useful, category-specific context without replacing the page's own editorial introduction. */
 export function printableIntroduction(page: StandardColoringPage, category: StandardColoringCategory) {
   const subject = subjectName(page.title);
+  if (category.slug === "halloween") {
+    // Kept in a small seasonal helper so each real Halloween subject gets tailored copy.
+    return halloweenPrintableIntroduction(page);
+  }
   if (category.slug === "flowers-plants") {
     return `This free printable ${subject.toLowerCase()} coloring sheet gives you petals, leaves, and natural shapes to color at your own pace. Print the line art for an A4 page, or download the PNG to keep on hand. The color reference is optional inspiration—try soft blends, bright garden colors, or a palette of your own.`;
   }
@@ -30,6 +43,15 @@ export function printableIntroduction(page: StandardColoringPage, category: Stan
 
 export function relatedStandardPages(page: StandardColoringPage, pages: StandardColoringPage[]) {
   const sameCategory = pages.filter((item) => item.categorySlug === page.categorySlug && item.slug !== page.slug);
+  if (page.categorySlug === "halloween") {
+    const theme = halloweenThemeForSlug(page.slug);
+    const sameTheme = (theme?.slugs ?? [])
+      .filter((slug) => slug !== page.slug)
+      .map((slug) => sameCategory.find((item) => item.slug === slug))
+      .filter((item): item is StandardColoringPage => Boolean(item));
+    const remaining = sameCategory.filter((item) => !sameTheme.some((preferred) => preferred.slug === item.slug));
+    return [...sameTheme, ...remaining].slice(0, 8);
+  }
   const preferred = (page.relatedSlugs ?? [])
     .map((slug) => sameCategory.find((item) => item.slug === slug))
     .filter((item): item is StandardColoringPage => Boolean(item));

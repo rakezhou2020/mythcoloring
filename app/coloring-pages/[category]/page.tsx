@@ -5,6 +5,7 @@ import { StandardCategoryGrid } from "../../../components/standard-category-grid
 import { publishedStandardColoringCategories, publishedStandardColoringPages } from "../../../data/standard-coloring-pages";
 import { JsonLd } from "../../../components/json-ld";
 import { pageMetadata, siteUrl } from "../../../lib/seo";
+import { halloweenThemeGroups } from "../../../lib/halloween";
 
 type Props = { params: Promise<{ category: string }> };
 export const dynamicParams = false;
@@ -17,11 +18,12 @@ export async function generateMetadata({ params }: Props) {
   const { category: slug } = await params;
   const category = publishedStandardColoringCategories.find((item) => item.slug === slug);
   if (!category) notFound();
-  return pageMetadata(
-    `${category.name} Coloring Pages`,
-    `Browse free printable ${category.name.toLowerCase()} coloring pages with line art, color inspiration, and PNG downloads.`,
-    `/coloring-pages/${slug}/`,
+  if (slug === "halloween") return pageMetadata(
+    "Halloween Coloring Pages – Free Printable Spooky & Cute Designs",
+    "Free printable Halloween coloring pages featuring pumpkins, ghosts, witches, bats, haunted houses, trick-or-treat scenes, and cute spooky designs for creative Halloween fun.",
+    "/coloring-pages/halloween/",
   );
+  return pageMetadata(`${category.name} Coloring Pages`, `Browse free printable ${category.name.toLowerCase()} coloring pages with line art, color inspiration, and PNG downloads.`, `/coloring-pages/${slug}/`);
 }
 
 export default async function CategoryPage({ params }: Props) {
@@ -31,6 +33,9 @@ export default async function CategoryPage({ params }: Props) {
   const pages = publishedStandardColoringPages.filter((page) => page.categorySlug === slug);
   const flowerIntroduction = slug === "flowers-plants" ? "Flower and plant coloring pages are a calm way to explore petals, leaves, stems, and garden scenes. Browse free printable flower coloring sheets for a quick creative break, a classroom activity, or a quiet afternoon at home. Each page includes clean line art to print, a PNG download option, and a color reference for inspiration. Choose delicate tones for a botanical study, make a bright bouquet, or use any colors that suit your style. Start with individual blossoms such as calla lilies and cosmos, then continue through our real collection of roses, sunflowers, orchids, lotuses, peonies, and more." : null;
   const flowerAnswer = slug === "flowers-plants" ? "Flowers and plants are useful coloring subjects because their petals, leaves, stems, and centers create clear areas for simple color choices or detailed shading. The pages in this collection focus on real plant features without requiring botanical knowledge: use the color reference when it helps, or choose an imaginative palette of your own." : null;
+  const halloweenIntroduction = slug === "halloween" ? "Welcome to our collection of Halloween coloring pages: a printable mix of cute, spooky, and classic seasonal designs. Browse free printable Halloween coloring pages with pumpkins, jack-o'-lanterns, ghosts, witches, bats, a haunted house, and friendly costumed creatures. Each page includes clean line art to print, a PNG download option, and a matching color reference for inspiration. Choose a gentle palette for cute Halloween coloring pages, or add deeper shades for a more dramatic spooky look. These printable Halloween coloring sheets are useful for creative time at home, a classroom activity, a Halloween party table, or a quiet autumn afternoon. Start with a pumpkin coloring page, ghost coloring page, or witch coloring page, then explore the collection by theme below." : null;
+  const halloweenAnswer = slug === "halloween" ? "Halloween coloring pages are printable drawings based on familiar seasonal subjects such as pumpkins, ghosts, witches, bats, and haunted houses. They give children and families a simple creative activity for home, classrooms, parties, or any autumn day." : null;
+  const halloweenGroups = slug === "halloween" ? halloweenThemeGroups(pages) : [];
   const url = `${siteUrl}/coloring-pages/${slug}/`;
   return (
     <div className="wrap page-content">
@@ -43,7 +48,13 @@ export default async function CategoryPage({ params }: Props) {
       </header>
       {flowerIntroduction && <section className="prose category-introduction"><p>{flowerIntroduction}</p></section>}
       {flowerAnswer && <section className="prose entity-summary"><h2>About Flower and Plant Coloring Pages</h2><p>{flowerAnswer}</p></section>}
-      {pages.length ? (
+      {halloweenIntroduction && <section className="prose category-introduction"><p>{halloweenIntroduction}</p></section>}
+      {halloweenAnswer && <section className="prose entity-summary"><h2>What are Halloween coloring pages?</h2><p>{halloweenAnswer}</p></section>}
+      {halloweenGroups.length ? (
+        <div className="halloween-theme-groups">
+          {halloweenGroups.map((group) => <section key={group.title} aria-labelledby={group.title.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}><div className="halloween-theme-heading"><h2 id={group.title.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}>{group.title}</h2><p>{group.description}</p></div><StandardCategoryGrid items={group.pages} /></section>)}
+        </div>
+      ) : pages.length ? (
         <StandardCategoryGrid items={pages} />
       ) : (
         <section className="empty-state">

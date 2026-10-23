@@ -320,6 +320,11 @@ p {
 .home-collection-card.is-myth { background: #f1e5d3; }
 .home-collection-card h3 { font-size: 34px; }
 .home-popular-categories { padding-bottom: 34px; }
+.halloween-home-entry { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(180px, .65fr); align-items: center; gap: 28px; padding: clamp(26px, 4vw, 42px); border: 1px solid var(--line); border-radius: 15px; background: #f3efe5; }
+.halloween-home-copy h2 { margin: 0; font-size: clamp(29px, 3.3vw, 42px); }
+.halloween-home-copy p:not(.eyebrow) { max-width: 620px; color: var(--muted); }
+.halloween-home-art { display: flex; justify-content: center; min-height: 180px; overflow: hidden; }
+.halloween-home-art img { display: block; width: min(100%, 210px); height: 220px; object-fit: contain; }
 .popular-category-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .popular-category-card { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(116px, .82fr); min-height: 238px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--white); transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease; }
 .popular-category-card:nth-child(2) { background: #f3f4eb; }.popular-category-card:nth-child(3) { background: #f7f0e6; }
@@ -357,6 +362,10 @@ p {
 .standard-content { max-width: 780px; margin: 48px auto 0; }
 .standard-content h2 { font-size: 31px; }
 .category-introduction { margin: -14px 0 36px; }
+.halloween-theme-groups { display: grid; gap: 44px; }
+.halloween-theme-heading { margin-bottom: 18px; }
+.halloween-theme-heading h2 { margin: 0; font-size: clamp(27px, 3vw, 36px); }
+.halloween-theme-heading p { margin: 7px 0 0; color: var(--muted); }
 .entity-summary { margin: 30px 0; padding: 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); }
 .entity-summary h2 { margin-top: 0; }
 .entity-summary dl { margin: 20px 0 0; }
@@ -909,6 +918,9 @@ p {
   }
   .hero-reveal { width: min(100%, 380px); justify-self: start; margin-top: 4px; }
   .popular-category-grid { grid-template-columns: 1fr; }
+  .halloween-home-entry { grid-template-columns: minmax(0, 1fr) 128px; gap: 16px; }
+  .halloween-home-art { min-height: 150px; }
+  .halloween-home-art img { width: 144px; height: 168px; }
   .popular-category-card { min-height: 214px; grid-template-columns: minmax(0, 1.5fr) minmax(130px, .8fr); }
   .explore-page-grid { column-gap: 28px; }
   .creature-overview,
