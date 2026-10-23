@@ -11,6 +11,7 @@ import { sciFiActionPages } from "./sci-fi-action-pages";
 import { octoberCreaturePages } from "./october-creature-pages";
 import { chineseFolklorePages } from "./chinese-folklore-pages";
 import { octoberAnimeCharacterPages } from "./october-anime-character-pages";
+import { octoberAnimalsDinosaursPages } from "./october-animals-dinosaurs-pages";
 
 // This catalog is intentionally independent from data/coloring-pages.ts.
 // Add ordinary printable content here; mythology creatures remain in their
@@ -23,6 +24,7 @@ export const standardColoringCategories: StandardColoringCategory[] = [
     status: "published",
   },
   { slug: "animals", name: "Animals", description: "Sweet, everyday animal coloring pages for quiet creative time.", status: "published" },
+  { slug: "dinosaurs", name: "Dinosaurs", description: "Friendly dinosaur coloring pages, from playful cartoons to detailed prehistoric favorites.", status: "published" },
   { slug: "bags-travel", name: "Bags & Travel", description: "Handbags, satchels, suitcases, and other everyday travel accessories to color.", status: "published" },
   { slug: "road-safety", name: "Road Safety", description: "Traffic signs, signals, and road-safety objects to color and explore.", status: "published" },
   { slug: "anime-character-art", name: "Anime & Character Art", description: "Anime-style characters, costumes, and expressive portraits ready to color.", status: "published" },
@@ -43,6 +45,7 @@ export const standardColoringCategories: StandardColoringCategory[] = [
 const imageOrigin = "https://images.mythcoloring.com";
 
 export const standardColoringPages: StandardColoringPage[] = [
+  ...octoberAnimalsDinosaursPages,
   ...octoberAnimeCharacterPages,
   ...chineseFolklorePages,
   ...octoberCreaturePages,
