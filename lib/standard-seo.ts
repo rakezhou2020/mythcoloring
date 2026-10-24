@@ -45,10 +45,7 @@ export function relatedStandardPages(page: StandardColoringPage, pages: Standard
   const sameCategory = pages.filter((item) => item.categorySlug === page.categorySlug && item.slug !== page.slug);
   if (page.categorySlug === "halloween") {
     const theme = halloweenThemeForSlug(page.slug);
-    const sameTheme = (theme?.slugs ?? [])
-      .filter((slug) => slug !== page.slug)
-      .map((slug) => sameCategory.find((item) => item.slug === slug))
-      .filter((item): item is StandardColoringPage => Boolean(item));
+    const sameTheme = sameCategory.filter((item) => halloweenThemeForSlug(item.slug)?.title === theme?.title);
     const remaining = sameCategory.filter((item) => !sameTheme.some((preferred) => preferred.slug === item.slug));
     return [...sameTheme, ...remaining].slice(0, 8);
   }

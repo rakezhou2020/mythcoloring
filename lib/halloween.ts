@@ -3,34 +3,44 @@ import type { StandardColoringPage } from "../data/types";
 type HalloweenTheme = {
   title: string;
   description: string;
-  slugs: string[];
+  matches: (slug: string) => boolean;
 };
 
 export const halloweenThemes: HalloweenTheme[] = [
   {
     title: "Pumpkins & Jack-o'-Lanterns",
     description: "Carved faces, pumpkin candles, and playful pumpkin scenes.",
-    slugs: ["jack-o-lantern", "stacked-pumpkins", "ghost-witch-pumpkin", "vampire-pumpkin-treat-bag"],
+    matches: (slug) => /pumpkin|jack-o/.test(slug),
   },
   {
     title: "Ghosts & Witches",
     description: "Floating ghosts, witch hats, and broomstick adventures.",
-    slugs: ["cute-ghost", "waving-ghost", "ghost-witch", "little-witch", "witch-on-broom", "flying-witch"],
+    matches: (slug) => /ghost|witch/.test(slug),
   },
   {
-    title: "Bats & Nighttime Friends",
-    description: "Friendly bats and nighttime Halloween characters.",
-    slugs: ["flying-bat", "friendly-bat", "vampire-bat", "bat-with-balloon", "vampire-with-bats"],
+    title: "Bats & Black Cats",
+    description: "Flying bats, black cats, and other nighttime Halloween friends.",
+    matches: (slug) => /bat|black-cat|bat-cat/.test(slug),
   },
   {
-    title: "Haunted Houses & Halloween Fun",
-    description: "A haunted house and costume-ready Halloween scenes.",
-    slugs: ["haunted-house", "chibi-costumed-character"],
+    title: "Spiders & Creepy Crawlers",
+    description: "Halloween spiders, webs, and other crawly characters.",
+    matches: (slug) => /spider|worm/.test(slug),
+  },
+  {
+    title: "Haunted Houses & Trick-or-Treat",
+    description: "A haunted house, treat bags, and Halloween party scenes.",
+    matches: (slug) => /haunted|trick-or-treat|treat-bag|candy-house/.test(slug),
+  },
+  {
+    title: "Halloween Treats & Decorations",
+    description: "Seasonal cupcakes, candy, cauldrons, and playful decorations.",
+    matches: (slug) => /cupcake|candy|lollipop|apple|cauldron|jelly-beans|gift/.test(slug),
   },
   {
     title: "Spooky Creatures",
     description: "Mummies, vampires, a werewolf, and other friendly spooky characters.",
-    slugs: ["little-vampire", "little-vampire-boy", "vampire-girl", "waving-vampire", "mummy-vampire", "waving-mummy", "mummy-peace-sign", "mummy-with-present", "dancing-mummy", "friendly-skull", "cute-skull", "werewolf"],
+    matches: () => true,
   },
 ];
 
@@ -67,12 +77,12 @@ const halloweenDetailCopy: Record<string, string> = {
 };
 
 export function halloweenThemeForSlug(slug: string) {
-  return halloweenThemes.find((theme) => theme.slugs.includes(slug));
+  return halloweenThemes.find((theme) => theme.matches(slug));
 }
 
 export function halloweenThemeGroups(pages: StandardColoringPage[]) {
   return halloweenThemes
-    .map((theme) => ({ ...theme, pages: theme.slugs.map((slug) => pages.find((page) => page.slug === slug)).filter((page): page is StandardColoringPage => Boolean(page)) }))
+    .map((theme) => ({ ...theme, pages: pages.filter((page) => halloweenThemeForSlug(page.slug)?.title === theme.title) }))
     .filter((theme) => theme.pages.length > 0);
 }
 
