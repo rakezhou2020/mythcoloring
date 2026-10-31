@@ -15,6 +15,7 @@ import { octoberAnimalsDinosaursPages } from "./october-animals-dinosaurs-pages"
 import { octoberAnimeHalloweenPages } from "./october-anime-halloween-pages";
 import { octoberHalloweenCharacterPages } from "./october-halloween-characters-pages";
 import { octoberHalloweenMiniPages } from "./october-halloween-mini-pages";
+import { october29Pages } from "./october-29-pages";
 
 // This catalog is intentionally independent from data/coloring-pages.ts.
 // Add ordinary printable content here; mythology creatures remain in their
@@ -40,7 +41,9 @@ export const standardColoringCategories: StandardColoringCategory[] = [
   { slug: "monster-creatures", name: "Monster Creatures", description: "Detailed alien, insectoid, and otherworldly creature coloring pages.", status: "published" },
   { slug: "chinese-folklore-characters", name: "Chinese Folklore Characters", description: "Traditional-inspired scholars, travelers, musicians, warriors, and folk characters to color.", status: "published" },
   { slug: "buildings", name: "Buildings", description: "Homes, landmarks, and architectural coloring pages.", status: "draft" },
-  { slug: "food", name: "Food", description: "Delicious, playful food coloring pages.", status: "draft" },
+  { slug: "food", name: "Food", description: "Delicious, playful food coloring pages.", status: "published" },
+  { slug: "mushrooms", name: "Mushrooms", description: "Whimsical mushroom coloring pages inspired by the woodland floor.", status: "published" },
+  { slug: "toys-games", name: "Toys & Games", description: "Playful toys, games, and familiar objects to color.", status: "published" },
   { slug: "vehicles", name: "Vehicles", description: "Things that move, ready to color.", status: "published" },
   { slug: "nature", name: "Nature", description: "Landscapes and the natural world to color.", status: "draft" },
   { slug: "fantasy", name: "Fantasy", description: "Imaginative worlds beyond the creature stories.", status: "draft" },
@@ -49,6 +52,7 @@ export const standardColoringCategories: StandardColoringCategory[] = [
 const imageOrigin = "https://images.mythcoloring.com";
 
 export const standardColoringPages: StandardColoringPage[] = [
+  ...october29Pages,
   ...octoberHalloweenMiniPages,
   ...octoberHalloweenCharacterPages,
   ...octoberAnimeHalloweenPages,
@@ -471,7 +475,7 @@ export const contentThemes: ContentTheme[] = [
     slug: "nature",
     name: "Nature",
     description: "Flowers, plants, animals, birds, insects, and the outdoors in one creative world.",
-    categorySlugs: ["flowers-plants", "animals", "nature"],
+    categorySlugs: ["flowers-plants", "animals", "mushrooms", "nature"],
     status: "published",
   },
   {
@@ -485,7 +489,7 @@ export const contentThemes: ContentTheme[] = [
     slug: "everyday-objects",
     name: "Everyday Objects",
     description: "Practical objects, travel accessories, and road-safety symbols for creative play.",
-    categorySlugs: ["bags-travel", "road-safety", "vehicles"],
+    categorySlugs: ["bags-travel", "road-safety", "toys-games", "vehicles"],
     status: "published",
   },
   {
@@ -513,7 +517,7 @@ export const contentThemes: ContentTheme[] = [
     slug: "seasonal",
     name: "Seasonal",
     description: "Spring, Halloween, Christmas, and more moments to color through the year.",
-    categorySlugs: [],
-    status: "draft",
+    categorySlugs: ["halloween"],
+    status: "published",
   },
 ];
