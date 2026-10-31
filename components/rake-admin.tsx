@@ -22,6 +22,7 @@ const ui = {
 
 const nav = [[ui.dashboard, "/rake/"], [ui.pages, "/rake/coloring-pages/"], [ui.themes, "/rake/themes/"], [ui.amazonLinks, "/rake/product-links/"]];
 const localizeError = (message: string) => {
+  if (/[\u4e00-\u9fff]/.test(message)) return message;
   if (/incorrect password/i.test(message)) return "密码错误";
   if (/administrator login is required|unauthorized/i.test(message)) return "未登录或无权限";
   if (/session/i.test(message)) return "登录已过期，请重新登录";
