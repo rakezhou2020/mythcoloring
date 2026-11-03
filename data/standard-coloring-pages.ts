@@ -16,6 +16,7 @@ import { octoberAnimeHalloweenPages } from "./october-anime-halloween-pages";
 import { octoberHalloweenCharacterPages } from "./october-halloween-characters-pages";
 import { octoberHalloweenMiniPages } from "./october-halloween-mini-pages";
 import { october29Pages } from "./october-29-pages";
+import { november1ThanksgivingPages } from "./november-1-thanksgiving-pages";
 
 // This catalog is intentionally independent from data/coloring-pages.ts.
 // Add ordinary printable content here; mythology creatures remain in their
@@ -44,6 +45,7 @@ export const standardColoringCategories: StandardColoringCategory[] = [
   { slug: "food", name: "Food", description: "Delicious, playful food coloring pages.", status: "published" },
   { slug: "mushrooms", name: "Mushrooms", description: "Whimsical mushroom coloring pages inspired by the woodland floor.", status: "published" },
   { slug: "toys-games", name: "Toys & Games", description: "Playful toys, games, and familiar objects to color.", status: "published" },
+  { slug: "thanksgiving", name: "Thanksgiving", description: "Turkeys, harvest scenes, thankful moments, and autumn holiday coloring pages.", status: "published" },
   { slug: "vehicles", name: "Vehicles", description: "Things that move, ready to color.", status: "published" },
   { slug: "nature", name: "Nature", description: "Landscapes and the natural world to color.", status: "draft" },
   { slug: "fantasy", name: "Fantasy", description: "Imaginative worlds beyond the creature stories.", status: "draft" },
@@ -53,6 +55,7 @@ const imageOrigin = "https://images.mythcoloring.com";
 
 export const standardColoringPages: StandardColoringPage[] = [
   ...october29Pages,
+  ...november1ThanksgivingPages,
   ...octoberHalloweenMiniPages,
   ...octoberHalloweenCharacterPages,
   ...octoberAnimeHalloweenPages,
@@ -517,7 +520,7 @@ export const contentThemes: ContentTheme[] = [
     slug: "seasonal",
     name: "Seasonal",
     description: "Spring, Halloween, Christmas, and more moments to color through the year.",
-    categorySlugs: ["halloween"],
+    categorySlugs: ["halloween", "thanksgiving"],
     status: "published",
   },
 ];
