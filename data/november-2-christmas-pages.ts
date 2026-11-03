@@ -1,0 +1,33 @@
+import type { StandardColoringPage } from "./types";
+type Category = "christmas" | "halloween";
+type Seed = { number: number; slug: string; title: string; categorySlug: Category };
+const image = (number: number, kind: "line" | "color") => `/coloring-pages/november-2/${number}-${kind}.jpg`;
+const seeds: Seed[] = [
+  { number: 511, slug: "santa-hat-dog-and-cat", title: "Santa Hat Dog and Cat", categorySlug: "christmas" }, { number: 512, slug: "snowman-and-reindeer", title: "Snowman and Reindeer", categorySlug: "christmas" },
+  { number: 514, slug: "reindeer-and-snowman", title: "Reindeer and Snowman", categorySlug: "christmas" }, { number: 515, slug: "christmas-character-row", title: "Christmas Character Row", categorySlug: "christmas" },
+  { number: 516, slug: "reindeer-dog", title: "Reindeer Dog", categorySlug: "christmas" }, { number: 517, slug: "snowman-and-reindeer-friends", title: "Snowman and Reindeer Friends", categorySlug: "christmas" },
+  { number: 518, slug: "santa-reindeer-snowman", title: "Santa Reindeer Snowman", categorySlug: "christmas" }, { number: 519, slug: "christmas-character-trio", title: "Christmas Character Trio", categorySlug: "christmas" },
+  { number: 520, slug: "snowman-reindeer-friends", title: "Snowman Reindeer Friends", categorySlug: "christmas" }, { number: 521, slug: "christmas-dog-and-cat", title: "Christmas Dog and Cat", categorySlug: "christmas" },
+  { number: 522, slug: "merry-christmas-snowman-reindeer", title: "Merry Christmas Snowman and Reindeer", categorySlug: "christmas" }, { number: 523, slug: "santa-and-christmas-friends", title: "Santa and Christmas Friends", categorySlug: "christmas" },
+  { number: 524, slug: "merry-christmas-tree", title: "Merry Christmas Tree", categorySlug: "christmas" }, { number: 525, slug: "santa-snowman-and-bear", title: "Santa Snowman and Bear", categorySlug: "christmas" },
+  { number: 526, slug: "star-christmas-stocking", title: "Star Christmas Stocking", categorySlug: "christmas" }, { number: 527, slug: "ornament-christmas-stocking", title: "Ornament Christmas Stocking", categorySlug: "christmas" },
+  { number: 528, slug: "santa-christmas-stocking", title: "Santa Christmas Stocking", categorySlug: "christmas" }, { number: 529, slug: "snowman-christmas-stocking", title: "Snowman Christmas Stocking", categorySlug: "christmas" },
+  { number: 530, slug: "holly-christmas-stocking", title: "Holly Christmas Stocking", categorySlug: "christmas" }, { number: 531, slug: "angel-christmas-stocking", title: "Angel Christmas Stocking", categorySlug: "christmas" },
+  { number: 532, slug: "tree-christmas-stocking", title: "Tree Christmas Stocking", categorySlug: "christmas" }, { number: 533, slug: "starburst-christmas-stocking", title: "Starburst Christmas Stocking", categorySlug: "christmas" },
+  { number: 534, slug: "fireplace-with-stockings", title: "Fireplace with Stockings", categorySlug: "christmas" }, { number: 535, slug: "bunny-decorating-fireplace", title: "Bunny Decorating Fireplace", categorySlug: "christmas" },
+  { number: 536, slug: "gingerbread-family", title: "Gingerbread Family", categorySlug: "christmas" }, { number: 537, slug: "gingerbread-cookie", title: "Gingerbread Cookie", categorySlug: "christmas" },
+  { number: 538, slug: "child-decorating-fireplace", title: "Child Decorating Fireplace", categorySlug: "christmas" }, { number: 539, slug: "santa-and-snowman", title: "Santa and Snowman", categorySlug: "christmas" },
+  { number: 540, slug: "cat-by-fireplace", title: "Cat by Fireplace", categorySlug: "christmas" }, { number: 541, slug: "shooting-star-stocking", title: "Shooting Star Stocking", categorySlug: "christmas" },
+  { number: 542, slug: "snowflake-christmas-stocking", title: "Snowflake Christmas Stocking", categorySlug: "christmas" }, { number: 543, slug: "ornament-toe-stocking", title: "Ornament Toe Stocking", categorySlug: "christmas" },
+  { number: 544, slug: "stocking-fireplace", title: "Stocking Fireplace", categorySlug: "christmas" }, { number: 545, slug: "gingerbread-friends", title: "Gingerbread Friends", categorySlug: "christmas" },
+  { number: 546, slug: "gingerbread-person", title: "Gingerbread Person", categorySlug: "christmas" }, { number: 547, slug: "church-snow-globe", title: "Church Snow Globe", categorySlug: "christmas" },
+  { number: 548, slug: "christmas-tree-snow-globe", title: "Christmas Tree Snow Globe", categorySlug: "christmas" }, { number: 549, slug: "village-snow-globe", title: "Village Snow Globe", categorySlug: "christmas" },
+  { number: 550, slug: "santa-snow-globe", title: "Santa Snow Globe", categorySlug: "christmas" }, { number: 552, slug: "winter-village-snow-globe", title: "Winter Village Snow Globe", categorySlug: "christmas" },
+  { number: 553, slug: "christmas-fireplace", title: "Christmas Fireplace", categorySlug: "christmas" }, { number: 554, slug: "stockings-fireplace", title: "Stockings Fireplace", categorySlug: "christmas" },
+  { number: 555, slug: "cute-christmas-stocking", title: "Cute Christmas Stocking", categorySlug: "christmas" }, { number: 556, slug: "holly-stocking", title: "Holly Stocking", categorySlug: "christmas" },
+  { number: 557, slug: "christmas-tree-cemetery", title: "Christmas Tree Cemetery", categorySlug: "halloween" }, { number: 558, slug: "moonlit-snowy-village", title: "Moonlit Snowy Village", categorySlug: "halloween" },
+  { number: 559, slug: "snowy-haunted-house", title: "Snowy Haunted House", categorySlug: "halloween" }, { number: 560, slug: "haunted-gingerbread-house", title: "Haunted Gingerbread House", categorySlug: "halloween" },
+  { number: 561, slug: "christmas-stockings-fireplace", title: "Christmas Stockings Fireplace", categorySlug: "christmas" },
+];
+const tips = ["Use the color reference as inspiration, then choose a palette that suits the subject.", "Add a slightly darker shade near outlines and small details for depth.", "Leave a few highlights light to keep the finished picture crisp and clear."];
+export const november2ChristmasPages: StandardColoringPage[] = seeds.map((seed, index) => ({ slug: `november-2-${seed.slug}`, categorySlug: seed.categorySlug, title: `${seed.title} Coloring Page`, shortIntroduction: `Color this ${seed.title.toLowerCase()} illustration with printable line art and a matching color reference.`, coloringTips: tips, lineArtImage: image(seed.number, "line"), colorImage: image(seed.number, "color"), imageAlt: `${seed.title} printable coloring page with line art and color reference`, seo: { title: `${seed.title} Coloring Page – Free Printable`, description: `Download a free printable ${seed.title.toLowerCase()} coloring page with clean line art and a matching color reference.` }, featured: index < 8, status: "published" }));
