@@ -18,6 +18,7 @@ import { octoberHalloweenMiniPages } from "./october-halloween-mini-pages";
 import { october29Pages } from "./october-29-pages";
 import { november1ThanksgivingPages } from "./november-1-thanksgiving-pages";
 import { november2ChristmasPages } from "./november-2-christmas-pages";
+import { november3ChristmasPages } from "./november-3-christmas-pages";
 
 // This catalog is intentionally independent from data/coloring-pages.ts.
 // Add ordinary printable content here; mythology creatures remain in their
@@ -59,6 +60,7 @@ export const standardColoringPages: StandardColoringPage[] = [
   ...october29Pages,
   ...november1ThanksgivingPages,
   ...november2ChristmasPages,
+  ...november3ChristmasPages,
   ...octoberHalloweenMiniPages,
   ...octoberHalloweenCharacterPages,
   ...octoberAnimeHalloweenPages,
