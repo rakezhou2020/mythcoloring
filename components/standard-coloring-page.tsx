@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import type { StandardColoringPage } from "../data/types";
+import { trackColoringEvent } from "../lib/analytics";
 
 export function StandardColoringPage({ page }: { page: StandardColoringPage }) {
   const [view, setView] = useState<"line" | "color">("line");
   const image = view === "line" ? page.lineArtImage : page.colorImage;
 
   async function printCurrentImage() {
+    trackColoringEvent("print_coloring_page", { slug: page.slug, category: page.categorySlug, title: page.title });
     // Open synchronously from the click so browsers do not block the window,
     // then print a local document once the original PNG bytes have loaded.
     const popup = window.open("", "_blank");
@@ -42,6 +44,7 @@ export function StandardColoringPage({ page }: { page: StandardColoringPage }) {
   }
 
   async function downloadCurrentImage() {
+    trackColoringEvent("download_coloring_page", { slug: page.slug, category: page.categorySlug, title: page.title });
     const response = await fetch(image);
     if (!response.ok) return;
     const blob = await response.blob();
@@ -59,7 +62,7 @@ export function StandardColoringPage({ page }: { page: StandardColoringPage }) {
     <section className="standard-page-art" aria-label={page.title + " artwork"}>
       <div className="artwork-views" role="tablist" aria-label="Artwork view">
         <button role="tab" aria-selected={view === "line"} onClick={() => setView("line")}>Line Art</button>
-        <button role="tab" aria-selected={view === "color"} onClick={() => setView("color")}>Color</button>
+        <button role="tab" aria-selected={view === "color"} onClick={() => { setView("color"); trackColoringEvent("color_reference_view", { slug: page.slug, category: page.categorySlug, title: page.title }); }}>Color</button>
       </div>
       <img className="standard-artwork" src={image} alt={page.imageAlt} width={1200} height={1500} />
       <div className="standard-actions">

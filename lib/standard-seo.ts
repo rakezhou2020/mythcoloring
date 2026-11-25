@@ -1,5 +1,6 @@
 import type { StandardColoringCategory, StandardColoringPage } from "../data/types";
 import { halloweenPrintableIntroduction, halloweenThemeForSlug } from "./halloween";
+import { christmasPrintableIntroduction } from "./christmas";
 
 function subjectName(title: string) {
   return title.replace(/ Coloring Page$/, "");
@@ -14,6 +15,9 @@ export function standardPageSeo(page: StandardColoringPage, category: StandardCo
     const theme = halloweenThemeForSlug(page.slug);
     const description = `Print or download this free ${subject.toLowerCase()} Halloween coloring page with clean line art, a color reference, and ${theme ? theme.title.toLowerCase() : "spooky-season"} inspiration.`;
     return { title, description, subject };
+  }
+  if (category.slug === "christmas") {
+    return { title: `${subject} Christmas Coloring Page – Free Printable`, description: `Print or download this free ${subject.toLowerCase()} Christmas coloring page with clean line art and a color reference for holiday activities.`, subject };
   }
   const categoryLabel = category.slug === "flowers-plants"
     ? "Flower"
@@ -32,6 +36,7 @@ export function printableIntroduction(page: StandardColoringPage, category: Stan
     // Kept in a small seasonal helper so each real Halloween subject gets tailored copy.
     return halloweenPrintableIntroduction(page);
   }
+  if (category.slug === "christmas") return christmasPrintableIntroduction(page);
   if (category.slug === "flowers-plants") {
     return `This free printable ${subject.toLowerCase()} coloring sheet gives you petals, leaves, and natural shapes to color at your own pace. Print the line art for an A4 page, or download the PNG to keep on hand. The color reference is optional inspiration—try soft blends, bright garden colors, or a palette of your own.`;
   }
@@ -49,6 +54,7 @@ export function relatedStandardPages(page: StandardColoringPage, pages: Standard
     const remaining = sameCategory.filter((item) => !sameTheme.some((preferred) => preferred.slug === item.slug));
     return [...sameTheme, ...remaining].slice(0, 8);
   }
+  if (page.categorySlug === "christmas") return sameCategory.slice(0, 8);
   const preferred = (page.relatedSlugs ?? [])
     .map((slug) => sameCategory.find((item) => item.slug === slug))
     .filter((item): item is StandardColoringPage => Boolean(item));

@@ -7,6 +7,8 @@ export function creatureEntityContext(creature: Creature): {
   culturalContext: string;
   references: CreatureReference[];
 } {
+  const shanHaiJingCreatures = new Set(["xuan-gui", "lushu", "cong-long", "qu-ru", "qiongqi"]);
+  const fourSymbols = new Set(["qinglong", "xuanwu", "zhuque"]);
   if (creature.slug === "qinglong") {
     return {
       aliases: ["Azure Dragon", "Qing Long"],
@@ -16,6 +18,22 @@ export function creatureEntityContext(creature: Creature): {
         href: "https://hirshhorn.si.edu/explore/zodiac-heads-dragon/",
         note: "Background on the Qinglong constellation as a symbol of the east.",
       }],
+    };
+  }
+
+  if (fourSymbols.has(creature.slug)) {
+    return {
+      aliases: creature.slug === "xuanwu" ? ["Black Tortoise", "Black Warrior"] : creature.slug === "zhuque" ? ["Vermilion Bird"] : [],
+      culturalContext: "This creature belongs to the Four Symbols of traditional Chinese celestial imagery; the page separates that astronomical and cultural context from MythColoring's artwork interpretation.",
+      references: [{ label: "British Library: The regions of the Chinese sky", href: "https://idp.bl.uk/discover/learning/chinese-astronomy/articles/the-chinese-sky/the-regions-of-the-sky/", note: "Background on the Four Symbols and their directional celestial associations." }],
+    };
+  }
+
+  if (shanHaiJingCreatures.has(creature.slug)) {
+    return {
+      aliases: [],
+      culturalContext: "This creature is presented from the Classic of Mountains and Seas tradition; visual details beyond the surviving text are identified as MythColoring's interpretation.",
+      references: [{ label: "Chinese Text Project: Classic of Mountains and Seas", href: "https://ctext.org/shan-hai-jing", note: "Primary-text collection for the Shan Hai Jing tradition." }],
     };
   }
 

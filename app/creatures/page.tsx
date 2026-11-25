@@ -9,6 +9,12 @@ export const metadata = pageMetadata(
   "/creatures/",
 );
 export default function Page() {
+  const creatureGroups = [
+    { title: "Four Symbols of Chinese Mythology", slugs: ["qinglong", "white-tiger", "zhuque", "xuanwu"] },
+    { title: "Four Perils of Chinese Mythology", slugs: ["hundun", "taowu", "qiongqi", "taotie"] },
+    { title: "Chinese Mythical Birds", slugs: ["zhuque", "fenghuang", "qu-ru", "guan-guan", "lei-bird"] },
+    { title: "Chinese Mythical Beasts", slugs: ["lushu", "cong-long", "xuan-gui", "qiongqi", "hundun", "taowu"] },
+  ].map((group) => ({ ...group, creatures: group.slugs.map((slug) => publishedCreatures.find((creature) => creature.slug === slug)).filter((creature): creature is typeof publishedCreatures[number] => Boolean(creature)) })).filter((group) => group.creatures.length > 0);
   return (
     <div className="wrap page-content">
       <JsonLd data={{ "@context": "https://schema.org", "@graph": [{ "@type": "WebPage", name: "Mythical Creatures Coloring Pages", url: siteUrl + "/creatures/" }, { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: siteUrl + "/" }, { "@type": "ListItem", position: 2, name: "Mythical Creatures", item: siteUrl + "/creatures/" }] }] }} />
@@ -21,6 +27,9 @@ export default function Page() {
       </header>
       <section className="prose category-introduction"><p>These printable mythical creatures bring folklore and ancient imagination to the coloring table. Each real entry in this collection pairs a coloring page with creature notes about its appearance, origins, mythology, and symbolism. Meet legendary creatures from Chinese mythology, including the Azure Dragon Qinglong and the Four Symbols, then print clean line art or use the color reference as a starting point. The collection will grow from genuine artwork and researched stories, rather than empty category pages.</p></section>
       <section className="prose entity-summary" aria-labelledby="creature-quick-guide"><h2 id="creature-quick-guide">What You Will Find Here</h2><p>Each creature page gives a direct answer to what the being is, then separates traditional origin and cultural context from the site&apos;s own artwork interpretation. When a printable is available, the page also explains how to print or download it.</p></section>
+      <section className="creature-topic-groups" aria-label="Chinese mythology creature topics">
+        {creatureGroups.map((group) => <section key={group.title}><h2>{group.title}</h2><p>{group.creatures.map((creature, index) => <span key={creature.slug}>{index > 0 && " · "}<Link href={`/creatures/${creature.slug}/`}>{creature.name}</Link></span>)}</p></section>)}
+      </section>
       <div className="creature-grid">
         {publishedCreatures.map((c) => (
           <Link

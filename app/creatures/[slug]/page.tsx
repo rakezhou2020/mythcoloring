@@ -16,6 +16,11 @@ const archiveMetadata: Record<string, { title: string; description: string }> = 
     title: "Qinglong Dragon Coloring Page | Azure Dragon of Chinese Mythology",
     description: "Learn about Qinglong, the Azure Dragon of the East in Chinese mythology, and print a free Qinglong dragon coloring page.",
   },
+  hundun: { title: "Hundun in Chinese Mythology | Four Perils Coloring Page", description: "Learn about Hundun, also called Huntun or Chaos in Chinese tradition, and print a free Hundun coloring page." },
+  taowu: { title: "Taowu in Chinese Mythology | Four Perils Coloring Page", description: "Learn about Taowu, one of the Four Perils in Chinese tradition, and print a free Taowu coloring page." },
+  xuanwu: { title: "Xuanwu | Black Tortoise of Chinese Mythology Coloring Page", description: "Learn about Xuanwu, the Black Tortoise of the north in Chinese mythology, and print a free coloring page." },
+  zhuque: { title: "Zhuque | Vermilion Bird of Chinese Mythology Coloring Page", description: "Learn about Zhuque, the Vermilion Bird of the south in Chinese mythology, and print a free coloring page." },
+  qiongqi: { title: "Qiongqi in Chinese Mythology | Four Perils Coloring Page", description: "Learn about Qiongqi, a creature recorded in the Classic of Mountains and Seas and later linked with the Four Perils, then print a coloring page." },
   "xuan-gui": {
     title: "Xuan Gui Coloring Page | Chinese Mythical Creature from Shan Hai Jing",
     description:
@@ -182,12 +187,14 @@ export async function generateMetadata({ params }: Props) {
       tailoredMetadata.title,
       tailoredMetadata.description,
       "/creatures/" + slug + "/",
+      c.heroImage ? { url: c.heroImage, alt: `${c.name} mythical creature artwork` } : undefined,
     );
   }
   return pageMetadata(
     c.name + " Coloring Page – Free Printable",
     creatureMetaDescription(c.name, c.shortDescription),
     "/creatures/" + slug + "/",
+    c.heroImage ? { url: c.heroImage, alt: `${c.name} mythical creature artwork` } : undefined,
   );
 }
 export default async function Page({ params }: Props) {

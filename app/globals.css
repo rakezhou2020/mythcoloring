@@ -321,6 +321,7 @@ p {
 .home-collection-card h3 { font-size: 34px; }
 .home-popular-categories { padding-bottom: 34px; }
 .halloween-home-entry { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(180px, .65fr); align-items: center; gap: 28px; padding: clamp(26px, 4vw, 42px); border: 1px solid var(--line); border-radius: 15px; background: #f3efe5; }
+.christmas-home-entry { background: #edf3f1; }
 .halloween-home-copy h2 { margin: 0; font-size: clamp(29px, 3.3vw, 42px); }
 .halloween-home-copy p:not(.eyebrow) { max-width: 620px; color: var(--muted); }
 .halloween-home-art { display: flex; justify-content: center; min-height: 180px; overflow: hidden; }
@@ -373,6 +374,10 @@ p {
 .entity-summary dt { font-weight: 700; }
 .entity-summary dd { margin: 0; color: var(--muted); }
 .source-references { margin: 42px 0; }
+.creature-topic-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 28px; margin: 34px 0 42px; }
+.creature-topic-groups section { padding: 16px 0; border-top: 1px solid var(--line); }
+.creature-topic-groups h2 { margin: 0; font-size: 21px; }
+.creature-topic-groups p { margin: 8px 0 0; color: var(--muted); }
 .standard-page-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .standard-page-grid a { padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); font-family: Georgia, serif; font-size: 20px; }
 .standard-page-grid a:hover { border-color: var(--jade); color: var(--rust); }
@@ -870,6 +875,7 @@ p {
   }
 }
 @media (max-width: 760px) {
+  .creature-topic-groups { grid-template-columns: 1fr; }
   .hero {
     grid-template-columns: 1fr;
     padding-block: 46px 20px;

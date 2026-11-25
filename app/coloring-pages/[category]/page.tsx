@@ -6,6 +6,7 @@ import { publishedStandardColoringCategories, publishedStandardColoringPages } f
 import { JsonLd } from "../../../components/json-ld";
 import { pageMetadata, siteUrl } from "../../../lib/seo";
 import { halloweenThemeGroups } from "../../../lib/halloween";
+import { christmasThemeGroups } from "../../../lib/christmas";
 
 type Props = { params: Promise<{ category: string }> };
 export const dynamicParams = false;
@@ -23,6 +24,11 @@ export async function generateMetadata({ params }: Props) {
     "Free printable Halloween coloring pages featuring pumpkins, ghosts, witches, bats, haunted houses, trick-or-treat scenes, and cute spooky designs for creative Halloween fun.",
     "/coloring-pages/halloween/",
   );
+  if (slug === "christmas") return pageMetadata(
+    "Christmas Coloring Pages – Free Printable Holiday Coloring Sheets",
+    "Free printable Christmas coloring pages with Santa Claus, Christmas trees, snowmen, reindeer, gingerbread, stockings, ornaments, and winter scenes.",
+    "/coloring-pages/christmas/",
+  );
   return pageMetadata(`${category.name} Coloring Pages`, `Browse free printable ${category.name.toLowerCase()} coloring pages with line art, color inspiration, and PNG downloads.`, `/coloring-pages/${slug}/`);
 }
 
@@ -36,6 +42,8 @@ export default async function CategoryPage({ params }: Props) {
   const halloweenIntroduction = slug === "halloween" ? "Welcome to our collection of Halloween coloring pages: a printable mix of cute, spooky, and classic seasonal designs. Browse free printable Halloween coloring pages with pumpkins, jack-o'-lanterns, ghosts, witches, bats, a haunted house, and friendly costumed creatures. Each page includes clean line art to print, a PNG download option, and a matching color reference for inspiration. Choose a gentle palette for cute Halloween coloring pages, or add deeper shades for a more dramatic spooky look. These printable Halloween coloring sheets are useful for creative time at home, a classroom activity, a Halloween party table, or a quiet autumn afternoon. Start with a pumpkin coloring page, ghost coloring page, or witch coloring page, then explore the collection by theme below." : null;
   const halloweenAnswer = slug === "halloween" ? "Halloween coloring pages are printable drawings based on familiar seasonal subjects such as pumpkins, ghosts, witches, bats, and haunted houses. They give children and families a simple creative activity for home, classrooms, parties, or any autumn day." : null;
   const halloweenGroups = slug === "halloween" ? halloweenThemeGroups(pages) : [];
+  const christmasIntroduction = slug === "christmas" ? "Celebrate the season with free printable Christmas coloring pages for creative time at home, in classrooms, or at holiday gatherings. Browse real Santa, tree, snowman, reindeer, gingerbread, stocking, decoration, and winter designs. Every page includes clean line art to print, a PNG download option, and a matching color reference for inspiration." : null;
+  const christmasGroups = slug === "christmas" ? christmasThemeGroups(pages) : [];
   const url = `${siteUrl}/coloring-pages/${slug}/`;
   return (
     <div className="wrap page-content">
@@ -49,10 +57,15 @@ export default async function CategoryPage({ params }: Props) {
       {flowerIntroduction && <section className="prose category-introduction"><p>{flowerIntroduction}</p></section>}
       {flowerAnswer && <section className="prose entity-summary"><h2>About Flower and Plant Coloring Pages</h2><p>{flowerAnswer}</p></section>}
       {halloweenIntroduction && <section className="prose category-introduction"><p>{halloweenIntroduction}</p></section>}
+      {christmasIntroduction && <section className="prose category-introduction"><p>{christmasIntroduction}</p></section>}
       {halloweenAnswer && <section className="prose entity-summary"><h2>What are Halloween coloring pages?</h2><p>{halloweenAnswer}</p></section>}
       {halloweenGroups.length ? (
         <div className="halloween-theme-groups">
           {halloweenGroups.map((group) => <section key={group.title} aria-labelledby={group.title.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}><div className="halloween-theme-heading"><h2 id={group.title.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}>{group.title}</h2><p>{group.description}</p></div><StandardCategoryGrid items={group.pages} /></section>)}
+        </div>
+      ) : christmasGroups.length ? (
+        <div className="halloween-theme-groups">
+          {christmasGroups.map((group) => <section key={group.title} aria-labelledby={group.title.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}><div className="halloween-theme-heading"><h2 id={group.title.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}>{group.title}</h2></div><StandardCategoryGrid items={group.pages} /></section>)}
         </div>
       ) : pages.length ? (
         <StandardCategoryGrid items={pages} />

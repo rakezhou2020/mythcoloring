@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import type { ColoringPage } from "../data/types";
 import { Artwork } from "./artwork";
 import { weeklyStableOrder } from "../lib/stable-order";
+import { trackColoringEvent } from "../lib/analytics";
 type ColoringGridProps = {
   items: ColoringPage[];
   randomize?: boolean;
@@ -64,7 +65,7 @@ export function ColoringGrid({ items, randomize = false, limit }: ColoringGridPr
               </p>
               <div className="card-actions">
                 {item.printPdf ? (
-                  <a href={item.printPdf} target="_blank" rel="noreferrer">
+                  <a href={item.printPdf} target="_blank" rel="noreferrer" onClick={() => trackColoringEvent("print_coloring_page", { slug: item.slug, title: item.title })}>
                     Print
                   </a>
                 ) : (
@@ -73,7 +74,7 @@ export function ColoringGrid({ items, randomize = false, limit }: ColoringGridPr
                   </button>
                 )}
                 {item.printPdf ? (
-                  <a href={item.printPdf} download>
+                  <a href={item.printPdf} download onClick={() => trackColoringEvent("download_coloring_page", { slug: item.slug, title: item.title })}>
                     Download
                   </a>
                 ) : (
@@ -113,7 +114,7 @@ export function ColoringGrid({ items, randomize = false, limit }: ColoringGridPr
             {selected.colorGuideImage && selected.finishedImage && (
               <div className="artwork-views screen-only" aria-label="Artwork views">
                 {([["lineArtImage", "Line Art"], ["colorGuideImage", "Color"], ["finishedImage", "Poster"]] as const).map(([key, label]) =>
-                  <button key={key} aria-pressed={view === key} onClick={() => setView(key)}>{label}</button>)}
+                  <button key={key} aria-pressed={view === key} onClick={() => { setView(key); if (key === "colorGuideImage") trackColoringEvent("color_reference_view", { slug: selected.slug, title: selected.title }); }}>{label}</button>)}
               </div>
             )}
             <div className="screen-sheet screen-only">
@@ -164,6 +165,7 @@ export function ColoringGrid({ items, randomize = false, limit }: ColoringGridPr
                   href={selected.printPdf}
                   target="_blank"
                   rel="noreferrer"
+                  onClick={() => trackColoringEvent("print_coloring_page", { slug: selected.slug, title: selected.title })}
                 >
                   Print this page
                 </a>
