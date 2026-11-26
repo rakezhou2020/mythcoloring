@@ -26,7 +26,7 @@ const seeds: Seed[] = [
   { number: 553, slug: "christmas-fireplace", title: "Christmas Fireplace", categorySlug: "christmas" }, { number: 554, slug: "stockings-fireplace", title: "Stockings Fireplace", categorySlug: "christmas" },
   { number: 555, slug: "cute-christmas-stocking", title: "Cute Christmas Stocking", categorySlug: "christmas" }, { number: 556, slug: "holly-stocking", title: "Holly Stocking", categorySlug: "christmas" },
   { number: 557, slug: "christmas-tree-cemetery", title: "Christmas Tree Cemetery", categorySlug: "halloween" }, { number: 558, slug: "moonlit-snowy-village", title: "Moonlit Snowy Village", categorySlug: "halloween" },
-  { number: 559, slug: "snowy-haunted-house", title: "Snowy Haunted House", categorySlug: "halloween" }, { number: 560, slug: "haunted-gingerbread-house", title: "Haunted Gingerbread House", categorySlug: "halloween" },
+  { number: 559, slug: "snowy-haunted-house", title: "Snowy Haunted House", categorySlug: "halloween" },
   { number: 561, slug: "christmas-stockings-fireplace", title: "Christmas Stockings Fireplace", categorySlug: "christmas" },
 ];
 const tips = ["Use the color reference as inspiration, then choose a palette that suits the subject.", "Add a slightly darker shade near outlines and small details for depth.", "Leave a few highlights light to keep the finished picture crisp and clear."];
