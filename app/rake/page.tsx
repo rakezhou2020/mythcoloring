@@ -6,3 +6,4 @@ export const metadata: Metadata = { title: "MythColoring 后台管理", alternat
 export default function RakePage() {
   return <RakeAdmin />;
 }
+

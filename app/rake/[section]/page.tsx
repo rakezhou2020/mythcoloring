@@ -12,3 +12,4 @@ export const metadata: Metadata = { title: "MythColoring 后台管理", robots: 
 export default function RakeSectionPage() {
   return <RakeAdmin />;
 }
+
